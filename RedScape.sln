@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedScape", "RedScape.csproj", "{BEAA5300-0C2C-CB83-F94D-3FA06DC8F704}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedScape.Editor", "RedScape.Editor.csproj", "{B428F720-A38C-E650-9D23-24B059957213}"
