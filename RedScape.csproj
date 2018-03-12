@@ -638,6 +638,7 @@
     <Compile Include="Assets\[VRTK]\SDK\Ximmerse\SDK_XimmerseDefines.cs" />
     <Compile Include="Assets\[VRTK]\SDK\Ximmerse\SDK_XimmerseHeadset.cs" />
     <Compile Include="Assets\[VRTK]\SDK\Ximmerse\SDK_XimmerseSystem.cs" />
+    <Compile Include="Assets\Scripts\Lamp.cs" />
     <Compile Include="Assets\Scripts\xx_calibrating_room\CalibratingRoomLevelManager.cs" />
     <Compile Include="Assets\Scripts\xx_calibrating_room\CalibratingRoomTeleport.cs" />
     <Compile Include="Assets\Scripts\xx_calibrating_room\TeleportHeadsetCollision.cs" />
