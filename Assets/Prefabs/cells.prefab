@@ -27,9 +27,10 @@ GameObject:
   - component: {fileID: 65078777761982794}
   - component: {fileID: 65745436971484202}
   - component: {fileID: 65666258623322966}
-  m_Layer: 0
+  - component: {fileID: 65554041794221056}
+  m_Layer: 2
   m_Name: cells
-  m_TagString: Untagged
+  m_TagString: ExludeTeleportHeadsetCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,6 +101,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3502493, y: 2.9371753, z: 2.6616106}
   m_Center: {x: 4.177916, y: 1.4685876, z: -0.0808053}
+--- !u!65 &65554041794221056
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1855764244343278}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.679905, y: 2.9371753, z: 0.1976757}
+  m_Center: {x: 0.013088703, y: 1.4685876, z: -1.5125511}
 --- !u!65 &65666258623322966
 BoxCollider:
   m_ObjectHideFlags: 1
