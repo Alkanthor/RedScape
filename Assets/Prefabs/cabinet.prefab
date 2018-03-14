@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 65714496071099726}
   m_Layer: 0
   m_Name: cabinet
-  m_TagString: Untagged
+  m_TagString: ExcludeTeleport
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,7 +156,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1053339487205746}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -1.229, y: 0.192, z: 0.92}
+  m_LocalPosition: {x: -1.229, y: 1.347, z: 0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4261284661916224}
@@ -424,7 +424,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.93502533, y: 0.4333259, z: 0.72911835}
+  m_ConnectedAnchor: {x: -0.9970253, y: 1.5963259, z: 0.15911834}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -547,7 +547,7 @@ MonoBehaviour:
   touchHighlightColor: {r: 0.9269919, g: 0.9632353, b: 0.5878568, a: 0}
   allowedTouchControllers: 0
   ignoredColliders: []
-  isGrabbable: 0
+  isGrabbable: 1
   holdButtonToGrab: 1
   stayGrabbedOnTeleport: 0
   validDrop: 1
