@@ -7,15 +7,20 @@ ModelImporter:
   fileIDToRecycleName:
     100000: door_movable
     100002: //RootNode
+    100004: door_glass
     400000: door_movable
     400002: //RootNode
+    400004: door_glass
     2100000: No Name
     2300000: door_movable
     2300002: //RootNode
+    2300004: door_glass
     3300000: door_movable
     3300002: //RootNode
+    3300004: door_glass
     4300000: hall_door
     4300002: door_movable
+    4300004: door_glass
   externalObjects: {}
   materials:
     importMaterials: 1
