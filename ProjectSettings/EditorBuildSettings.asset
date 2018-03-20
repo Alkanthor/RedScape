@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/xx_calibration_room.unity
+    guid: 326a3173ac3fd734f9b6ff5c9bfa36e6
+  - enabled: 1
+    path: Assets/_Scenes/00_prison_cell_tutorial.unity
+    guid: f1edaeaed22f42342a350996b0075262
+  - enabled: 1
+    path: Assets/_Scenes/01_cabin.unity
+    guid: 8557bf289b1f1cc4a90897d43d7d4c19
