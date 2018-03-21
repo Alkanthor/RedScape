@@ -8,13 +8,12 @@ public class UIKeyboardController : MonoBehaviour {
     [SerializeField]
     private Transform _player;
     [SerializeField]
-    private float _appearDistance;
-    [SerializeField]
     public float _appearDuration = 1f;
 
     private CanvasGroup _canvasGroup;
     private bool _isAppearing;
     private InputField _input;
+    public string Name = "Body";
 	// Use this for initialization
 	void Start ()
     {
@@ -23,22 +22,27 @@ public class UIKeyboardController : MonoBehaviour {
         _input = GetComponentInChildren<InputField>();
 	}
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-
-        var distance = Vector3.Distance(_player.position, this.transform.position);
-        if (distance < _appearDistance && !_isAppearing)
+        Debug.Log("keyboard trigger enter " + other.name + " " + other.tag);
+        if (other.name == Name && !_isAppearing)
         {
-            if(_canvasGroup.alpha != 1)
-            StartCoroutine(KeyboardFade(0, 1, _appearDuration));
+            if (_canvasGroup.alpha != 1)
+                StartCoroutine(KeyboardFade(0, 1, _appearDuration));
         }
-        else if(distance > _appearDistance && !_isAppearing)
+       
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("keyboard trigger exit " + other.name + " " + other.tag);
+        if (other.name == Name && !_isAppearing)
         {
             if (_canvasGroup.alpha != 0)
                 StartCoroutine(KeyboardFade(1, 0, _appearDuration));
         }
     }
+
 
     IEnumerator KeyboardFade(float from, float to, float duration)
     {
