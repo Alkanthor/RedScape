@@ -29,4 +29,12 @@ public class TeleportMalfunctionScript : MonoBehaviour {
             Application.LoadLevel(1);
         }
     }
+
+    void OnCollisionEnter(Collision col)
+    {
+        //if (col.gameObject.name == "Camera (eye)")
+        {
+            Debug.Log("Player in hall");
+        }
+    }
 }
