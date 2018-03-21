@@ -6,10 +6,9 @@ using UnityEngine.UI;
 
 public class ScreenScript : MonoBehaviour
 {
+    public int screenTreshhold;
 
     private int actualScreen;
-
-    private int screenTreshhold;
 
     private int screenCount;
 
@@ -34,7 +33,7 @@ public class ScreenScript : MonoBehaviour
         screenCount = screenTreshhold;
 
         boardImage = GameObject.Find("InfoBoardImage").GetComponent<RawImage>();
-        boardImage.texture = (Texture)textures[1];
+        boardImage.texture = (Texture)textures[0];
         nextBtn = GameObject.Find("NextBtn").GetComponent<Button>();
         backBtn = GameObject.Find("BackBtn").GetComponent<Button>();
 
@@ -72,5 +71,6 @@ public class ScreenScript : MonoBehaviour
         levelManager.StartGame();
         screenCount = textures.Length;
         actualScreen = screenTreshhold + 1;
+        boardImage.texture = (Texture)textures[actualScreen - 1];
     }
 }
