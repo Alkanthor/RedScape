@@ -642,6 +642,7 @@
     <Compile Include="Assets\Scripts\Lamp.cs" />
     <Compile Include="Assets\Scripts\ScreenScript.cs" />
     <Compile Include="Assets\Scripts\TeleportMalfunctionScript.cs" />
+    <Compile Include="Assets\Scripts\UIKeyboardController.cs" />
     <Compile Include="Assets\Scripts\xx_calibrating_room\CalibratingRoomLevelManager.cs" />
     <Compile Include="Assets\Scripts\xx_calibrating_room\CalibratingRoomTeleport.cs" />
     <Compile Include="Assets\Scripts\xx_calibrating_room\TeleportHeadsetCollision.cs" />
