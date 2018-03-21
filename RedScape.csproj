@@ -638,6 +638,28 @@
     <Compile Include="Assets\[VRTK]\SDK\Ximmerse\SDK_XimmerseDefines.cs" />
     <Compile Include="Assets\[VRTK]\SDK\Ximmerse\SDK_XimmerseHeadset.cs" />
     <Compile Include="Assets\[VRTK]\SDK\Ximmerse\SDK_XimmerseSystem.cs" />
+    <Compile Include="Assets\MagicParticlesLite\Script.cs" />
+    <Compile Include="Assets\ParticleSystems\Scripts\AfterburnerPhysicsForce.cs" />
+    <Compile Include="Assets\ParticleSystems\Scripts\ExplosionFireAndDebris.cs" />
+    <Compile Include="Assets\ParticleSystems\Scripts\ExplosionPhysicsForce.cs" />
+    <Compile Include="Assets\ParticleSystems\Scripts\ExtinguishableParticleSystem.cs" />
+    <Compile Include="Assets\ParticleSystems\Scripts\FireLight.cs" />
+    <Compile Include="Assets\ParticleSystems\Scripts\Hose.cs" />
+    <Compile Include="Assets\ParticleSystems\Scripts\ParticleSystemMultiplier.cs" />
+    <Compile Include="Assets\ParticleSystems\Scripts\SmokeParticles.cs" />
+    <Compile Include="Assets\Scripts\00_prison_cell_tutorial\LevelManagerPrisonCell00.cs" />
+    <Compile Include="Assets\Scripts\00_prison_cell_tutorial\OutsidePrisonCellDetector.cs" />
+    <Compile Include="Assets\Scripts\00_prison_cell_tutorial\TeleportObjectHandler.cs" />
+    <Compile Include="Assets\Scripts\Lamp.cs" />
+    <Compile Include="Assets\Scripts\ScreenScript.cs" />
+    <Compile Include="Assets\Scripts\TeleportMalfunctionScript.cs" />
+    <Compile Include="Assets\Scripts\xx_calibrating_room\CalibratingRoomLevelManager.cs" />
+    <Compile Include="Assets\Scripts\xx_calibrating_room\CalibratingRoomTeleport.cs" />
+    <Compile Include="Assets\Scripts\xx_calibrating_room\TeleportHeadsetCollision.cs" />
+    <Compile Include="Assets\Tazo_fx\Script\BillBoard.cs" />
+    <Compile Include="Assets\Tazo_fx\Script\tazo_rotate.cs" />
+    <Compile Include="Assets\Tazo_fx\Script\tazo_UVScroller.cs" />
+    <Compile Include="Assets\TransportAppear.cs" />
     <Compile Include="Assets\Scripts\AudioGeneratedCodePlayer.cs" />
     <Compile Include="Assets\Scripts\Lamp.cs" />
     <Compile Include="Assets\Scripts\ScreenScript.cs" />
@@ -649,6 +671,10 @@
     <Compile Include="Assets\TestBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
+    <None Include="Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
+    <None Include="Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
+    <None Include="Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
     <None Include="Assets\[SteamVR]\InteractionSystem\Core\Shaders\SeeThru.shader" />
     <None Include="Assets\[SteamVR]\InteractionSystem\Core\Shaders\Silhouette.shader" />
     <None Include="Assets\[SteamVR]\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />

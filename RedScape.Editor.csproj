@@ -306,6 +306,10 @@
     <Compile Include="Assets\[VRTK]\Editor\VRTK_UpdatePrompt.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
+    <None Include="Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
+    <None Include="Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
+    <None Include="Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
     <None Include="Assets\[SteamVR]\InteractionSystem\Core\Shaders\SeeThru.shader" />
     <None Include="Assets\[SteamVR]\InteractionSystem\Core\Shaders\Silhouette.shader" />
     <None Include="Assets\[SteamVR]\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
