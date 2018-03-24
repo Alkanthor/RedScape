@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 9656a9dc94a7c6045bad4eab7ea1e936
-timeCreated: 1521855722
+timeCreated: 1521929261
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -27,10 +27,10 @@ ModelImporter:
     3300006: handle_down
     3300008: handle_up
     4300000: cabinet_high
-    4300002: door_up
-    4300004: handle_up
-    4300006: door_down
-    4300008: handle_down
+    4300002: door_down
+    4300004: handle_down
+    4300006: door_up
+    4300008: handle_up
   externalObjects: {}
   materials:
     importMaterials: 1

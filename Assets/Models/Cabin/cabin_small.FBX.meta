@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 85b1d4395700eb04f9e78351f3286eed
-timeCreated: 1521855722
+timeCreated: 1521929058
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -8,29 +8,29 @@ ModelImporter:
     100000: //RootNode
     100002: door_left
     100004: door_right
-    100006: hadle_left
+    100006: handle_left
     100008: handle_right
     400000: //RootNode
     400002: door_left
     400004: door_right
-    400006: hadle_left
+    400006: handle_left
     400008: handle_right
     2100000: No Name
     2300000: //RootNode
     2300002: door_left
     2300004: door_right
-    2300006: hadle_left
+    2300006: handle_left
     2300008: handle_right
     3300000: //RootNode
     3300002: door_left
     3300004: door_right
-    3300006: hadle_left
+    3300006: handle_left
     3300008: handle_right
     4300000: cabinet_small
     4300002: door_right
     4300004: handle_right
     4300006: door_left
-    4300008: hadle_left
+    4300008: handle_left
   externalObjects: {}
   materials:
     importMaterials: 1
