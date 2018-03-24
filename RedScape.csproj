@@ -639,6 +639,7 @@
     <Compile Include="Assets\[VRTK]\SDK\Ximmerse\SDK_XimmerseHeadset.cs" />
     <Compile Include="Assets\[VRTK]\SDK\Ximmerse\SDK_XimmerseSystem.cs" />
     <Compile Include="Assets\Scripts\AudioGeneratedCodePlayer.cs" />
+    <Compile Include="Assets\Scripts\CaptchaManager.cs" />
     <Compile Include="Assets\Scripts\Lamp.cs" />
     <Compile Include="Assets\Scripts\ScreenScript.cs" />
     <Compile Include="Assets\Scripts\TeleportMalfunctionScript.cs" />
