@@ -1,26 +1,16 @@
 fileFormatVersion: 2
-guid: 669e925fc26e27449bceed1a04e736ee
-timeCreated: 1521643661
+guid: bd8816648fa43b547808b326a129eb3a
+timeCreated: 1521855723
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: radio_power_button
-    100004: radio_slider
     400000: //RootNode
-    400002: radio_power_button
-    400004: radio_slider
     2100000: No Name
     2300000: //RootNode
-    2300002: radio_power_button
-    2300004: radio_slider
     3300000: //RootNode
-    3300002: radio_power_button
-    3300004: radio_slider
-    4300000: radio_base
-    4300002: radio_slider
-    4300004: radio_power_button
+    4300000: key
   externalObjects: {}
   materials:
     importMaterials: 1

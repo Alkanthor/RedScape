@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 0575dbc97d68b0a429b5401f402ca865
-timeCreated: 1521814961
+guid: b55f709f3b27dcb48af8f8a15b44d972
+timeCreated: 1521855723
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -10,7 +10,7 @@ ModelImporter:
     2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: radio_base
+    4300000: ID_carta
   externalObjects: {}
   materials:
     importMaterials: 1

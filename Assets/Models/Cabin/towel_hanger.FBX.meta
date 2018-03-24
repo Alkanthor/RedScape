@@ -1,36 +1,16 @@
 fileFormatVersion: 2
-guid: 8674a0b500e15924693b79b83ec5db7b
-timeCreated: 1520217595
+guid: 9fdabc216f9a77c4d92fb49dc42d4972
+timeCreated: 1521855722
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Capsule001
-    100004: Capsule002
-    100006: door
-    100008: handle
     400000: //RootNode
-    400002: Capsule001
-    400004: Capsule002
-    400006: door
-    400008: handle
     2100000: No Name
     2300000: //RootNode
-    2300002: Capsule001
-    2300004: Capsule002
-    2300006: door
-    2300008: handle
     3300000: //RootNode
-    3300002: Capsule001
-    3300004: Capsule002
-    3300006: door
-    3300008: handle
-    4300000: cabinet
-    4300002: door
-    4300004: Capsule001
-    4300006: Capsule002
-    4300008: handle
+    4300000: towel_hanger
   externalObjects: {}
   materials:
     importMaterials: 1

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 155b0b8e2ecf6f44381c24b264b5adfe
-timeCreated: 1520217595
+guid: 2de925b230637cd43b28cd84e8574df0
+timeCreated: 1521855722
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -10,7 +10,7 @@ ModelImporter:
     2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: chair
+    4300000: policka
   externalObjects: {}
   materials:
     importMaterials: 1
