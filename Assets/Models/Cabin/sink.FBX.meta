@@ -1,16 +1,21 @@
 fileFormatVersion: 2
-guid: 0ea9143d114ee2540a61e34154d10f5c
-timeCreated: 1521814803
+guid: 32b4e5e4d423a444d82e085562aa894a
+timeCreated: 1521855722
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: front_glass
+    100002: //RootNode
+    400000: front_glass
+    400002: //RootNode
     2100000: No Name
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: radio_batery
+    2300000: front_glass
+    2300002: //RootNode
+    3300000: front_glass
+    3300002: //RootNode
+    4300000: sink
+    4300002: front_glass
   externalObjects: {}
   materials:
     importMaterials: 1

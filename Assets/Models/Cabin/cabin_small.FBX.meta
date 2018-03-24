@@ -1,61 +1,36 @@
 fileFormatVersion: 2
-guid: d4fcdfde537ec1b499518d051dc34fb9
-timeCreated: 1520217595
+guid: 85b1d4395700eb04f9e78351f3286eed
+timeCreated: 1521855722
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Box018
-    100002: Box019
-    100004: Box020
-    100006: handle00
-    100008: handle01
-    100010: handle02
-    100012: //RootNode
-    100014: zasuvka00
-    100016: zasuvka01
-    100018: zasuvka02
-    400000: Box018
-    400002: Box019
-    400004: Box020
-    400006: handle00
-    400008: handle01
-    400010: handle02
-    400012: //RootNode
-    400014: zasuvka00
-    400016: zasuvka01
-    400018: zasuvka02
+    100000: //RootNode
+    100002: door_left
+    100004: door_right
+    100006: hadle_left
+    100008: handle_right
+    400000: //RootNode
+    400002: door_left
+    400004: door_right
+    400006: hadle_left
+    400008: handle_right
     2100000: No Name
-    2300000: Box018
-    2300002: Box019
-    2300004: Box020
-    2300006: handle00
-    2300008: handle01
-    2300010: handle02
-    2300012: //RootNode
-    2300014: zasuvka00
-    2300016: zasuvka01
-    2300018: zasuvka02
-    3300000: Box018
-    3300002: Box019
-    3300004: Box020
-    3300006: handle00
-    3300008: handle01
-    3300010: handle02
-    3300012: //RootNode
-    3300014: zasuvka00
-    3300016: zasuvka01
-    3300018: zasuvka02
-    4300000: table
-    4300002: zasuvka02
-    4300004: handle02
-    4300006: Box018
-    4300008: zasuvka01
-    4300010: handle01
-    4300012: Box019
-    4300014: zasuvka00
-    4300016: handle00
-    4300018: Box020
+    2300000: //RootNode
+    2300002: door_left
+    2300004: door_right
+    2300006: hadle_left
+    2300008: handle_right
+    3300000: //RootNode
+    3300002: door_left
+    3300004: door_right
+    3300006: hadle_left
+    3300008: handle_right
+    4300000: cabinet_small
+    4300002: door_right
+    4300004: handle_right
+    4300006: door_left
+    4300008: hadle_left
   externalObjects: {}
   materials:
     importMaterials: 1

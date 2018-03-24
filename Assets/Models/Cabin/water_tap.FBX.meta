@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 1de16d46d6e1bc043a90deb9116eb694
-timeCreated: 1521814803
+guid: d23dd6afcf3645d4c80e6af07d49143f
+timeCreated: 1521855723
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -10,7 +10,7 @@ ModelImporter:
     2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: radio_batery
+    4300000: water_tap
   externalObjects: {}
   materials:
     importMaterials: 1

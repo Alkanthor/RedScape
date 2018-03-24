@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 9c1058a0ce0aa124e8e4372a14c43b47
-timeCreated: 1521643661
+guid: c0d87cd95f8169f42a0076c5d094ff4d
+timeCreated: 1521855723
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -10,7 +10,7 @@ ModelImporter:
     2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: radio_batery
+    4300000: coat_hanger
   externalObjects: {}
   materials:
     importMaterials: 1
