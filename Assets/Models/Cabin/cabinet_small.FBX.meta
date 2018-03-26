@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 85b1d4395700eb04f9e78351f3286eed
-timeCreated: 1521929058
+guid: 8ab0fa166fba6954fa21ebce82cf8a41
+timeCreated: 1522059987
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -27,10 +27,10 @@ ModelImporter:
     3300006: handle_left
     3300008: handle_right
     4300000: cabinet_small
-    4300002: door_right
-    4300004: handle_right
-    4300006: door_left
-    4300008: handle_left
+    4300002: door_left
+    4300004: handle_left
+    4300006: door_right
+    4300008: handle_right
   externalObjects: {}
   materials:
     importMaterials: 1
