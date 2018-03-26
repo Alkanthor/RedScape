@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class UIKeyboardController : MonoBehaviour {
 
-    [SerializeField]
-    private Transform _player;
+
     [SerializeField]
     public float _appearDuration = 1f;
+    public string PlayerCollisionName;
 
     private CanvasGroup _canvasGroup;
     private bool _isAppearing;
     private InputField _input;
-    public string Name = "Body";
+
 	// Use this for initialization
 	void Start ()
     {
@@ -25,7 +25,7 @@ public class UIKeyboardController : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("keyboard trigger enter " + other.name + " " + other.tag);
-        if (other.name == Name && !_isAppearing)
+        if (other.name == PlayerCollisionName && !_isAppearing)
         {
             if (_canvasGroup.alpha != 1)
                 StartCoroutine(KeyboardFade(0, 1, _appearDuration));
@@ -36,7 +36,7 @@ public class UIKeyboardController : MonoBehaviour {
     private void OnTriggerExit(Collider other)
     {
         Debug.Log("keyboard trigger exit " + other.name + " " + other.tag);
-        if (other.name == Name && !_isAppearing)
+        if (other.name == PlayerCollisionName && !_isAppearing)
         {
             if (_canvasGroup.alpha != 0)
                 StartCoroutine(KeyboardFade(1, 0, _appearDuration));

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Battery : MonoBehaviour {
+public class TeleportHeadsetCollisionFadePolicy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
