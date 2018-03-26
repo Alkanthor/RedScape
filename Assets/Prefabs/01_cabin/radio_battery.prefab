@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 23755867768260664}
   - component: {fileID: 54363006380466792}
   - component: {fileID: 114157825503394298}
-  - component: {fileID: 114683084757395104}
   - component: {fileID: 114428508892120272}
   - component: {fileID: 65790735343567662}
+  - component: {fileID: 114791011810070388}
   - component: {fileID: 114572084730213560}
   m_Layer: 10
   m_Name: radio_battery
@@ -41,8 +41,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1922717005625278}
   m_LocalRotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6776768, y: 0.7059038, z: -1.7633865}
-  m_LocalScale: {x: 1.0000001, y: 1.0317324, z: 1.0000001}
+  m_LocalPosition: {x: 1.459, y: 0.805, z: 0}
+  m_LocalScale: {x: 1, y: 1.0317324, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 114683084757395104}
+  grabAttachMechanicScript: {fileID: 114791011810070388}
   secondaryGrabActionScript: {fileID: 114428508892120272}
   isUsable: 0
   holdButtonToUse: 1
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0d20878fcfa904e955a7c1e3467ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114683084757395104
+--- !u!114 &114791011810070388
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -175,12 +175,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1922717005625278}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a1ebaa51525b734287157cb3f53f958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precisionGrab: 0
+  precisionGrab: 1
   rightSnapHandle: {fileID: 0}
   leftSnapHandle: {fileID: 0}
   throwVelocityWithAttachDistance: 0
   throwMultiplier: 1
   onGrabCollisionDelay: 0
+  detachDistance: 1
+  velocityLimit: Infinity
+  angularVelocityLimit: Infinity

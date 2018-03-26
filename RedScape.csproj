@@ -651,8 +651,11 @@
     <Compile Include="Assets\Scripts\00_prison_cell_tutorial\OutsidePrisonCellDetector.cs" />
     <Compile Include="Assets\Scripts\00_prison_cell_tutorial\TeleportObjectHandler.cs" />
     <Compile Include="Assets\Scripts\01_cabin\LevelManagerCabin01.cs" />
+    <Compile Include="Assets\Scripts\01_cabin\RadioController.cs" />
     <Compile Include="Assets\Scripts\AudioGeneratedCodePlayer.cs" />
+    <Compile Include="Assets\Scripts\DoorAccessPanelController.cs" />
     <Compile Include="Assets\Scripts\Lamp.cs" />
+    <Compile Include="Assets\Scripts\LockerController.cs" />
     <Compile Include="Assets\Scripts\PolicyScripts\BatteryPolicy.cs" />
     <Compile Include="Assets\Scripts\PolicyScripts\TeleportHeadsetCollisionFadePolicy.cs" />
     <Compile Include="Assets\Scripts\PolicyScripts\TeleportHeightAdjustPolicy.cs" />

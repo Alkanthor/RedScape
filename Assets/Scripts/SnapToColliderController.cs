@@ -5,6 +5,7 @@ using VRTK;
 
 public class SnapToColliderController : MonoBehaviour {
 
+    public bool ObjectIsSnapped;
 
     [SerializeField]
     private VRTK_SnapDropZone _snapDropZone;
@@ -21,11 +22,13 @@ public class SnapToColliderController : MonoBehaviour {
 
         _snapDropZone.ObjectSnappedToDropZone += (sender, e) =>
         {
+            ObjectIsSnapped = true;
             EnableColliders(true);
         };
 
         _snapDropZone.ObjectUnsnappedFromDropZone += (sender, e) =>
         {
+            ObjectIsSnapped = false;
             EnableColliders(false);
         };
 

@@ -7,10 +7,10 @@ public class LevelManagerCabin01 : MonoBehaviour {
 
     public static LevelManagerCabin01 Instance;
 
+    //events
+    public UnityEvents.UnityEventBool OnSafeCodeCheck;
     //flags
     public bool CanOpenSafe { get; set; }
-
-
 
     public string SafeCode { get; set; }
 
@@ -31,17 +31,15 @@ public class LevelManagerCabin01 : MonoBehaviour {
 
     }
 
-    public void SetSafeCode(string code)
+    public void CheckSafeCode(string code)
     {
-        SafeCode = code;
+        var correct = false;
+        if(SafeCode == code)
+        {
+            correct = true;
+        }
+        Debug.Log(this.name + ": OnSafeCodeCheck " + correct);
+        OnSafeCodeCheck.Invoke(correct);
     }
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }

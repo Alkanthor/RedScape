@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 114433804556642580}
   - component: {fileID: 114302416819933900}
   - component: {fileID: 114823414600986748}
+  - component: {fileID: 114406458614401620}
   m_Layer: 0
   m_Name: handle
   m_TagString: Untagged
@@ -947,6 +948,21 @@ MonoBehaviour:
   detachDistance: 1
   velocityLimit: Infinity
   angularVelocityLimit: Infinity
+--- !u!114 &114406458614401620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1647235172511682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  emissionDarken: 50
+  customMaterial: {fileID: 2100000, guid: 0a61f1f1e3f944943915b51221d7828c, type: 2}
 --- !u!114 &114433804556642580
 MonoBehaviour:
   m_ObjectHideFlags: 1
