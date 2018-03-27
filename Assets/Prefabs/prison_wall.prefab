@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 65514942166177598}
   m_Layer: 0
   m_Name: prison_wall
-  m_TagString: Untagged
+  m_TagString: ExludeTeleportHeadsetCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,8 +133,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.17127228, y: 2.519902, z: 2.728797}
-  m_Center: {x: -4.089261, y: 1.4400493, z: -0.11211252}
+  m_Size: {x: 0.27530646, y: 2.519902, z: 2.728797}
+  m_Center: {x: -4.037244, y: 1.4400493, z: -0.11211252}
 --- !u!65 &65573965128220426
 BoxCollider:
   m_ObjectHideFlags: 1

@@ -9,6 +9,14 @@ TagManager:
   - TeleportIgnore
   - ExcludeTeleport
   - ExludeTeleportHeadsetCollision
+  - Cubes
+  - Spheres
+  - Leg
+  - Arm
+  - Saucers
+  - Torso
+  - OtherSaucers
+  - Batery
   layers:
   - Default
   - TransparentFX
@@ -18,10 +26,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Controllers
+  - SnapBase
+  - SnapTo
+  - Switches
   - 
   - 
   - 

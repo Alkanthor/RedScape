@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AudioGeneratedCodePlayer : MonoBehaviour
 {
+    [SerializeField]
+    public UnityEvents.UnityEventString SendGeneratedCode;
 
     public bool CanPlay;
     private bool _isPlaying;
@@ -30,21 +33,21 @@ public class AudioGeneratedCodePlayer : MonoBehaviour
             _code[i] = Random.Range(1, 9);
             CodeString += _code[i];
         }
+        SendGeneratedCode.Invoke(CodeString);
         Debug.Log("Generated code is " + CodeString);
     }
-    // Update is called once per frame
-    void Update()
+
+    public void CanPlayCode(bool canPlay)
     {
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            CanPlay = !CanPlay;       
-        }
+        CanPlay = canPlay;
         if (CanPlay && !_isPlaying)
         {
+            Debug.Log("Radio starts playing code");
             StartCoroutine(PlayCode());
         }
         if (!CanPlay)
         {
+            Debug.Log("Radio stops playing code");
             _isPlaying = false;
             StopCoroutine(PlayCode());
         }

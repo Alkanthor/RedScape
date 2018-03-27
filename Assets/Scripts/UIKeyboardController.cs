@@ -5,17 +5,28 @@ using UnityEngine.UI;
 
 public class UIKeyboardController : MonoBehaviour {
 
+
+    public UnityEvents.UnityEventString OnInputEntered;
+
+
     [SerializeField]
-    private Transform _player;
+    private float _appearDuration = 1f;
     [SerializeField]
-    public float _appearDuration = 1f;
+    private string _playerCollisionName = "[VRTK][AUTOGEN][BodyColliderContainer]";
+    [SerializeField]
+    private string _inputCorrectText;
+    [SerializeField]
+    private string _inputIncorrectText;
+    [SerializeField]
+    private float _correctTimeInterval = 2;
 
     private CanvasGroup _canvasGroup;
     private bool _isAppearing;
     private InputField _input;
-    public string Name = "Body";
-	// Use this for initialization
-	void Start ()
+
+
+    // Use this for initialization
+    void Start ()
     {
         _canvasGroup = GetComponent<CanvasGroup>();
         _canvasGroup.alpha = 0;
@@ -24,8 +35,8 @@ public class UIKeyboardController : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("keyboard trigger enter " + other.name + " " + other.tag);
-        if (other.name == Name && !_isAppearing)
+       // Debug.Log("keyboard trigger enter " + other.name + " " + other.tag);
+        if (other.name == _playerCollisionName && !_isAppearing)
         {
             if (_canvasGroup.alpha != 1)
                 StartCoroutine(KeyboardFade(0, 1, _appearDuration));
@@ -35,8 +46,8 @@ public class UIKeyboardController : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("keyboard trigger exit " + other.name + " " + other.tag);
-        if (other.name == Name && !_isAppearing)
+       // Debug.Log("keyboard trigger exit " + other.name + " " + other.tag);
+        if (other.name == _playerCollisionName && !_isAppearing)
         {
             if (_canvasGroup.alpha != 0)
                 StartCoroutine(KeyboardFade(1, 0, _appearDuration));
@@ -78,7 +89,28 @@ public class UIKeyboardController : MonoBehaviour {
     public void Enter()
     {
         Debug.Log("entered input is " + _input.text);
+        OnInputEntered.Invoke(_input.text);
     }
 
+    public void CorrectInputCheck(bool correct)
+    {
+        Debug.Log(this.name + ": correct input check");
+        StartCoroutine(CorrectInput(correct));
+    }
 
+    IEnumerator CorrectInput(bool correct)
+    {
+        _input.textComponent.alignment = TextAnchor.MiddleCenter;
+        if(correct)
+        {
+            _input.text = _inputCorrectText;
+        }
+        else
+        {
+            _input.text = _inputIncorrectText;
+        }
+        yield return new WaitForSeconds(_correctTimeInterval);
+        _input.textComponent.alignment = TextAnchor.MiddleLeft;
+        _input.text = "";
+    }
 }
