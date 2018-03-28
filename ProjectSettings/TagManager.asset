@@ -17,6 +17,7 @@ TagManager:
   - Torso
   - OtherSaucers
   - Batery
+  - DropZone
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - SnapBase
   - SnapTo
   - Switches
-  - 
+  - DropZone
   - 
   - 
   - 
