@@ -228,7 +228,6 @@ GameObject:
   - component: {fileID: 65669635679143914}
   - component: {fileID: 65277023974098576}
   - component: {fileID: 114410937386462406}
-  - component: {fileID: 114115210200659448}
   m_Layer: 0
   m_Name: numerical_safe
   m_TagString: Untagged
@@ -377,6 +376,7 @@ GameObject:
   - component: {fileID: 54185849226522134}
   - component: {fileID: 59083809002830164}
   - component: {fileID: 114129523345438916}
+  - component: {fileID: 114920191975577472}
   m_Layer: 0
   m_Name: doors
   m_TagString: Untagged
@@ -1218,20 +1218,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114115210200659448
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1425703031165090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c5ff2804ce3f5d49aeec4dd1250f0d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _doorMinLimitJoint: 0
-  _doorMaxLimitJoint: 110
-  _doorJoint: {fileID: 59083809002830164}
 --- !u!114 &114126139741326322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2530,6 +2516,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114920191975577472
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1559671684778170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5ff2804ce3f5d49aeec4dd1250f0d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _doorMinLimitJoint: 0
+  _doorMaxLimitJoint: 110
+  _doorJoint: {fileID: 59083809002830164}
 --- !u!114 &114922461353124332
 MonoBehaviour:
   m_ObjectHideFlags: 1

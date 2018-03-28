@@ -25,11 +25,11 @@ public class LockerController : MonoBehaviour {
             max = 0
         };
 
-	}
+    }
 
     public void CanOpenDoor(bool canOpen)
     {
-
+       
         //we already opened the safe
         if (_canOpenDoor == true) return;
 

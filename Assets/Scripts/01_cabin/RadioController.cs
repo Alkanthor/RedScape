@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using VRTK;
 public class RadioController : MonoBehaviour {
 
@@ -10,6 +11,12 @@ public class RadioController : MonoBehaviour {
     [SerializeField]
     private GameObject _powerButton;
     private VRTK_InteractableObject _powerButtonInteractable;
+
+    [SerializeField]
+    private GameObject _changeChannelButtonsParent;
+
+    private GameObject _activeChangeChannelButton;
+    private GameObject _hiddenChannelButton;
 
     private AudioGeneratedCodePlayer _radioCodePlayer;
 
@@ -26,13 +33,16 @@ public class RadioController : MonoBehaviour {
         set
         {
             _isRadioOn = value;
-            if(_isRadioOn)
+            if (_isRadioOn)
             {
-                _radioCodePlayer.CanPlayCode(true);
+                if (_hiddenChannelButton == _activeChangeChannelButton)
+                {
+                    this.GetComponentInChildren<AudioGeneratedCodePlayer>().CanPlayCode(true);
+                }
             }
             else
             {
-                _radioCodePlayer.CanPlayCode(false);
+                this.GetComponentInChildren<AudioGeneratedCodePlayer>().CanPlayCode(false);
             }
         }
     }
@@ -70,14 +80,66 @@ public class RadioController : MonoBehaviour {
         _radioCodePlayer = GetComponentInChildren<AudioGeneratedCodePlayer>();
         _powerButtonInteractable = _powerButton.GetComponent<VRTK_InteractableObject>();
         _powerButtonInteractable.InteractableObjectUsed += OnPowerButtonUsed;
+        var channelsButtons = _changeChannelButtonsParent.GetComponentsInChildren<Transform>();
+        _hiddenChannelButton = channelsButtons[Random.Range(0, 1000) % channelsButtons.Length].gameObject;
+        foreach (Transform child in channelsButtons)
+        {
+            if (child.name == _changeChannelButtonsParent.name) continue;
+            var changeChannelButtonInteractable = child.gameObject.GetComponent<VRTK_InteractableObject>();
+            changeChannelButtonInteractable.InteractableObjectUsed += OnChangeChannelButtonUsed;
+        }
 	}
+
+
+    private void OnChangeChannelButtonUsed(object sender, InteractableObjectEventArgs e)
+    {
+        var button = (sender as VRTK_InteractableObject).gameObject;
+        //is the same button
+        if (_activeChangeChannelButton == button)
+        {
+            button.transform.position += button.transform.up * 2 * _buttonPressStep;
+            _activeChangeChannelButton = null;
+        }
+        //is different button, we switch them
+        else
+        {
+
+            if (_activeChangeChannelButton != null)
+            {
+                _activeChangeChannelButton.transform.position += _activeChangeChannelButton.transform.up * 2 *_buttonPressStep;
+            }
+            button.transform.position -= button.transform.up * 2 * _buttonPressStep;
+            _activeChangeChannelButton = button;
+
+        }
+
+        if(_hiddenChannelButton == _activeChangeChannelButton)
+        {
+            if(IsRadioOn)
+            {
+                this.GetComponentInChildren<AudioGeneratedCodePlayer>().CanPlayCode(true);
+            }
+            else
+            {
+                this.GetComponentInChildren<AudioGeneratedCodePlayer>().CanPlayCode(false);
+            }
+
+        }
+        else
+        {
+            this.GetComponentInChildren<AudioGeneratedCodePlayer>().CanPlayCode(false);
+        }
+        Debug.Log("Player pressed change channel button " + _activeChangeChannelButton);
+
+    }
 
     private void OnPowerButtonUsed(object sender, InteractableObjectEventArgs e)
     {
-
+   
         IsPowerButtonPressed = !IsPowerButtonPressed;
         Debug.Log("Player pressed radio power button " + IsPowerButtonPressed);
 
     }
+
 
 }
