@@ -43,6 +43,7 @@ public class AudioGeneratedCodePlayer : MonoBehaviour
         if (CanPlay && !_isPlaying)
         {
             Debug.Log("Radio starts playing code");
+            _isPlaying = true;
             StartCoroutine(PlayCode());
         }
         if (!CanPlay)
@@ -55,22 +56,23 @@ public class AudioGeneratedCodePlayer : MonoBehaviour
 
     IEnumerator PlayCode()
     {
-
-        _isPlaying = true;
-        for (int codePosition = 0; codePosition < CodeLength; ++codePosition)
+        while(_isPlaying)
         {
-            for (int i = 0; i < _code[codePosition]; ++i)
+            Debug.Log("radio is playing code");
+            for (int codePosition = 0; codePosition < CodeLength; ++codePosition)
             {
-                Sound.Play();
-                // Wait for the audio to have finished
-                yield return new WaitForSeconds(Sound.clip.length);
+                for (int i = 0; i < _code[codePosition]; ++i)
+                {
+                    Sound.Play();
+                    // Wait for the audio to have finished
+                    yield return new WaitForSeconds(Sound.clip.length);
+                    if (!CanPlay) break;
+                }
                 if (!CanPlay) break;
+                yield return new WaitForSeconds(1 * AudioTimeout);
             }
-            if (!CanPlay) break;
-            yield return new WaitForSeconds(1 * AudioTimeout);
+            yield return new WaitForSeconds(2 * AudioTimeout);
         }
-        yield return new WaitForSeconds(2 * AudioTimeout);
-        _isPlaying = false;
 
     }
 

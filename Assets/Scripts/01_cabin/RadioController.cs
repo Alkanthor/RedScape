@@ -82,6 +82,7 @@ public class RadioController : MonoBehaviour {
         _powerButtonInteractable.InteractableObjectUsed += OnPowerButtonUsed;
         var channelsButtons = _changeChannelButtonsParent.GetComponentsInChildren<Transform>();
         _hiddenChannelButton = channelsButtons[Random.Range(0, 1000) % channelsButtons.Length].gameObject;
+        Debug.Log("hidden channel button " + _hiddenChannelButton.name);
         foreach (Transform child in channelsButtons)
         {
             if (child.name == _changeChannelButtonsParent.name) continue;
