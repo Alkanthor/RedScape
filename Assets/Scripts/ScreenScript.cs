@@ -29,7 +29,7 @@ public class ScreenScript : MonoBehaviour
         levelManager = GameObject.Find("LevelManager").GetComponent<LevelManagerPrisonCell00>();
 
         actualScreen = 1;
-        textures = Resources.LoadAll("Textures", typeof(Texture));
+        textures = Resources.LoadAll("GUI", typeof(Texture));
         screenCount = screenTreshhold;
 
         boardImage = GameObject.Find("InfoBoardImage").GetComponent<RawImage>();
