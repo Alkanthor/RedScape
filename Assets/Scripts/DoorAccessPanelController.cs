@@ -36,6 +36,7 @@ public class DoorAccessPanelController : MonoBehaviour {
 
     IEnumerator AccessingDoor()
     {
+
         yield return new WaitForSeconds(AccessingDoorTime);
         _doorUnlocked = true;
         Debug.Log("Door access granted...opening door");
