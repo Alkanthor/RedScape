@@ -18,6 +18,8 @@ public class ScreenScript : MonoBehaviour
 
     private Button backBtn;
 
+    private Button startBtn;
+
     private Object[] textures;
 
     private LevelManagerPrisonCell00 levelManager;
@@ -29,13 +31,15 @@ public class ScreenScript : MonoBehaviour
         levelManager = GameObject.Find("LevelManager").GetComponent<LevelManagerPrisonCell00>();
 
         actualScreen = 1;
-        textures = Resources.LoadAll("GUI", typeof(Texture));
+        textures = Resources.LoadAll("GUI/Prison_Board", typeof(Texture));
         screenCount = screenTreshhold;
 
         boardImage = GameObject.Find("InfoBoardImage").GetComponent<RawImage>();
         boardImage.texture = (Texture)textures[0];
         nextBtn = GameObject.Find("NextBtn").GetComponent<Button>();
         backBtn = GameObject.Find("BackBtn").GetComponent<Button>();
+        startBtn = GameObject.Find("StartGameBtn").GetComponent<Button>();
+
 
     }
 
@@ -69,6 +73,8 @@ public class ScreenScript : MonoBehaviour
     public void StartGame()
     {
         levelManager.StartGame();
+        startBtn.interactable = false;
+        startBtn.GetComponentInChildren<Text>().text = "GAME STARTED";
         screenCount = textures.Length;
         actualScreen = screenTreshhold + 1;
         boardImage.texture = (Texture)textures[actualScreen - 1];

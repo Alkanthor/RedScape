@@ -515,6 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc79dd63dd9b4d64dbf87c6cdbe48024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  screenTreshhold: 0
 --- !u!114 &114580071119774740
 MonoBehaviour:
   m_ObjectHideFlags: 1
