@@ -59,12 +59,14 @@ public class WhereIsMyBatteryController : MonoBehaviour {
 
     private GameObject CreateObjectInDropZone(GameObject prefab, GameObject dropZone, Quaternion rotation)
     {
+
         var keyColliders = dropZone.GetComponents<Collider>();
         var randomColliderIndex = Random.Range(0, 1000) % keyColliders.Length;
         var keyCenter = keyColliders[randomColliderIndex].bounds.center;
         var keyExtends = keyColliders[randomColliderIndex].bounds.extents;
         var randomPosInArea = new Vector3(Random.Range(keyCenter.x, keyCenter.x + keyExtends.x), Random.Range(keyCenter.y, keyCenter.y + keyExtends.y), Random.Range(keyCenter.z, keyCenter.z + keyExtends.z));
-        var keyRandomRotation = Quaternion.Euler(new Vector3(Random.Range(0, 360), 0, Random.Range(0, 360)));
+        var keyRandomRotation = Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0));
+        Debug.Log("battery generated");
         return GameObject.Instantiate(prefab, randomPosInArea, rotation);
     }
 	// Update is called once per frame
