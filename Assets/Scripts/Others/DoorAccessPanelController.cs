@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DoorAccessPanelController : MonoBehaviour {
 
     public GameObject _door;
+    public GameObject _doorText;
     public string IdCardName;
     public float AccessingDoorTime = 4;
     public float DoorOpenSpeed = 2;
@@ -62,6 +64,7 @@ public class DoorAccessPanelController : MonoBehaviour {
     {
         if(other.name == IdCardName)
         {
+            _doorText.GetComponent<Text>().text = "Scanning...";
             Debug.Log("Start Accessing door");
             IsAccessing = true;
         }
@@ -70,6 +73,7 @@ public class DoorAccessPanelController : MonoBehaviour {
     {
         if (other.name == IdCardName)
         {
+            _doorText.GetComponent<Text>().text = "Insert Card";
             Debug.Log("Stopped Accessing door");
             IsAccessing = false;
         }
