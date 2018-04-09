@@ -48,7 +48,7 @@ public class LevelManagerCabin01 : MonoBehaviour {
         _lockerWithBatteryDoor = door;
 
         //add openLock listener to correct locker
-        OnLockerDoorCheck.AddListener(_lockerWithBatteryDoor.GetComponent<LockerController>().CanOpenDoor);
+        OnLockerDoorCheck.AddListener(_lockerWithBatteryDoor.GetComponentInChildren<LockerController>().CanOpenDoor);
 
         var lockerSnapDropZone =_lockerWithBatteryDoor.GetComponentInChildren<VRTK_SnapDropZone>();
         lockerSnapDropZone.ObjectSnappedToDropZone += (sender, e) =>

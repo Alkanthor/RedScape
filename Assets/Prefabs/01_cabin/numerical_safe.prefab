@@ -352,8 +352,8 @@ GameObject:
   - component: {fileID: 114922461353124332}
   - component: {fileID: 225112341053008564}
   - component: {fileID: 114842026843018000}
-  - component: {fileID: 65080707280767274}
   - component: {fileID: 114381936276462408}
+  - component: {fileID: 65080707280767274}
   m_Layer: 0
   m_Name: InputNumericKeyboardCanvas
   m_TagString: Untagged
@@ -816,8 +816,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 199.24161, y: 791.05975, z: 184.99364}
-  m_Center: {x: 0, y: 0, z: 35.89}
+  m_Size: {x: 199.24162, y: 791.05975, z: 220.62776}
+  m_Center: {x: 4.204e-42, y: -7.728279e-21, z: 18.073025}
 --- !u!65 &65099712055454350
 BoxCollider:
   m_ObjectHideFlags: 1
