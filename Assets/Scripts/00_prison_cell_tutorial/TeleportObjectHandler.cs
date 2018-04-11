@@ -9,9 +9,13 @@ public class TeleportObjectHandler : MonoBehaviour {
 
     public GameObject _leftBall;
     public GameObject _rightBall;
+    public GameObject _teleportTooltipLeft;
+    public GameObject _teleportTooltipRight;
 
-	// Use this for initialization
-	void Start () {
+
+
+    // Use this for initialization
+    void Start () {
         _interactableObject = GetComponent<VRTK_InteractableObject>();
         _interactableObject.InteractableObjectGrabbed += TeleportGrabbed;
         gameObject.SetActive(false);
@@ -24,6 +28,8 @@ public class TeleportObjectHandler : MonoBehaviour {
     private void TeleportGrabbed(object sender, InteractableObjectEventArgs e)
     {
         Debug.Log("teleport grabbed");
+        _teleportTooltipLeft.SetActive(true);
+        _teleportTooltipRight.SetActive(true);
         LevelManagerPrisonCell00.Instance.GrabbedTeleport = true;
         Destroy(this.gameObject);
         _leftBall.SetActive(true);
