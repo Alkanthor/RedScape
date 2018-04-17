@@ -15,6 +15,7 @@ public class DoorAccessPanelController : MonoBehaviour {
     private bool _doorUnlocked;
     
     private bool _isAccessing;
+
     public bool IsAccessing
     {
         get

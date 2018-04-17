@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using VRTK;
 public class LockerController : MonoBehaviour {
 
@@ -9,6 +10,8 @@ public class LockerController : MonoBehaviour {
     private float _doorMinLimitJoint = 0;
     [SerializeField]
     private float _doorMaxLimitJoint = 110;
+
+    public GameObject _lockerText;
 
 
     private bool _canOpenDoor;
@@ -36,7 +39,8 @@ public class LockerController : MonoBehaviour {
         _canOpenDoor = canOpen;
         if(_canOpenDoor)
         {
-
+            _lockerText.GetComponentInChildren<Text>().text = "Open";
+            _lockerText.GetComponentInChildren<Text>().color = Color.green;
             _doorJoint.limits = new JointLimits()
             {
                 min = _doorMinLimitJoint,
@@ -45,6 +49,8 @@ public class LockerController : MonoBehaviour {
         }
         else
         {
+            _lockerText.GetComponentInChildren<Text>().text = "Locked";
+            _lockerText.GetComponentInChildren<Text>().color = Color.red;
             _doorJoint.limits = new JointLimits()
             {
                 min = 0,
