@@ -39,8 +39,8 @@ public class LockerController : MonoBehaviour {
         _canOpenDoor = canOpen;
         if(_canOpenDoor)
         {
-            _lockerText.GetComponent<Text>().text = "Open";
-            _lockerText.GetComponent<Text>().color = Color.green;
+            _lockerText.GetComponentInChildren<Text>().text = "Open";
+            _lockerText.GetComponentInChildren<Text>().color = Color.green;
             _doorJoint.limits = new JointLimits()
             {
                 min = _doorMinLimitJoint,
@@ -49,8 +49,8 @@ public class LockerController : MonoBehaviour {
         }
         else
         {
-            _lockerText.GetComponent<Text>().text = "Locked";
-            _lockerText.GetComponent<Text>().color = Color.red;
+            _lockerText.GetComponentInChildren<Text>().text = "Locked";
+            _lockerText.GetComponentInChildren<Text>().color = Color.red;
             _doorJoint.limits = new JointLimits()
             {
                 min = 0,
