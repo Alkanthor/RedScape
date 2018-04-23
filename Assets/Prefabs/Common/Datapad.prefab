@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 222865753081049868}
   - component: {fileID: 114869208670259806}
   m_Layer: 0
-  m_Name: text
+  m_Name: content_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 114077584821274062}
   - component: {fileID: 114043192267828942}
   - component: {fileID: 114346386799939556}
+  - component: {fileID: 114428920661338702}
   m_Layer: 0
   m_Name: Datapad
   m_TagString: Untagged
@@ -128,7 +129,7 @@ GameObject:
   - component: {fileID: 222489850285578296}
   - component: {fileID: 114176112373236800}
   m_Layer: 0
-  m_Name: subject_text
+  m_Name: date_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,13 +141,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1774919647768488}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: -0.015, z: 0.087}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4027240214733248}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &4027240214733248
 Transform:
   m_ObjectHideFlags: 1
@@ -154,7 +155,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1943462401868658}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.155781, y: 0.18996903, z: -0.15619183}
+  m_LocalPosition: {x: -0.798, y: 0.774, z: -1.294}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224530023283857356}
@@ -282,7 +283,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 798d897cf34f45d4cb4f780895016362, type: 3}
-    m_FontSize: 6
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -293,7 +294,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Author: PersonA
+  m_Text: 'Author: Chell Freeman
+
 
 '
 --- !u!114 &114162352902715462
@@ -333,7 +335,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 798d897cf34f45d4cb4f780895016362, type: 3}
-    m_FontSize: 6
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -344,7 +346,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Subject: Something
+  m_Text: 'Date: 7.3.2118
 
 '
 --- !u!114 &114346386799939556
@@ -398,6 +400,19 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 5
+--- !u!114 &114428920661338702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1943462401868658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fefa98d1a62725747b62305a5c932be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recordIndex: 1
+  DatapadTextFile: {fileID: 0}
 --- !u!114 &114869208670259806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -419,7 +434,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 798d897cf34f45d4cb4f780895016362, type: 3}
-    m_FontSize: 5
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -433,8 +448,8 @@ MonoBehaviour:
   m_Text: "Now this is odd. The teleporting device was found running again. Gaston
     claims, it\u2019s PersonB`s fault, but it was me, who supervised the testing and
     I\u2019m confident I turned it off. The anomaly it creates could be dangerous,
-    even though only small objects can pass through. Also, the portable teleported
-    is missing. Our superiors will be furious.\r"
+    even though only small objects can pass through. Also, the portable teleporter
+    is missing. Our superiors will be mad.\r"
 --- !u!114 &114946950243267800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -447,7 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.9607843}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -514,15 +529,15 @@ RectTransform:
   m_GameObject: {fileID: 1775704509382136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 224530023283857356}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0, y: -4.2}
-  m_SizeDelta: {x: 80, y: 7}
+  m_AnchoredPosition: {x: -0, y: -5}
+  m_SizeDelta: {x: 165, y: 17}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!224 &224530023283857356
 RectTransform:
@@ -531,8 +546,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1108065243508148}
   m_LocalRotation: {x: -0.00000008578551, y: -0.70710677, z: 0.7071069, w: 0.00000007915154}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0025}
-  m_LocalScale: {x: 0.0015, y: 0.0023, z: 0.01}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0092}
+  m_LocalScale: {x: 0.00075, y: 0.00125, z: 0.01}
   m_Children:
   - {fileID: 224703989379997918}
   - {fileID: 224446887637095918}
@@ -544,7 +559,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0073}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224660297768576472
 RectTransform:
@@ -554,15 +569,15 @@ RectTransform:
   m_GameObject: {fileID: 1978268448633958}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.000001, y: 1.0000005, z: 1.0000004}
+  m_LocalScale: {x: 1.000001, y: 0.6, z: 1.0000004}
   m_Children: []
   m_Father: {fileID: 224530023283857356}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000000017262755, y: -12.20001}
-  m_SizeDelta: {x: 80, y: 7}
+  m_AnchoredPosition: {x: -0.000000017262755, y: -17}
+  m_SizeDelta: {x: 165, y: 17}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!224 &224678005537405282
 RectTransform:
@@ -572,15 +587,15 @@ RectTransform:
   m_GameObject: {fileID: 1109213634530938}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.000001, y: 1.0000005, z: 1.0000004}
+  m_LocalScale: {x: 1.000001, y: 0.6, z: 1.0000004}
   m_Children: []
   m_Father: {fileID: 224530023283857356}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000000017262755, y: -20.20001}
-  m_SizeDelta: {x: 80, y: 75}
+  m_AnchoredPosition: {x: -0, y: -31}
+  m_SizeDelta: {x: 165, y: 245}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!224 &224703989379997918
 RectTransform:
@@ -595,8 +610,8 @@ RectTransform:
   m_Father: {fileID: 224530023283857356}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: -0.8}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -0.79999924}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
