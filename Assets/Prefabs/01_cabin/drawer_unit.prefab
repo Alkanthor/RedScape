@@ -96,11 +96,11 @@ GameObject:
   - component: {fileID: 4127333792700738}
   - component: {fileID: 33909548264107476}
   - component: {fileID: 23691588593443076}
-  - component: {fileID: 65933295011882234}
   - component: {fileID: 65791280771120384}
   - component: {fileID: 65806304524902150}
   - component: {fileID: 65465038419260526}
   - component: {fileID: 65471650577245300}
+  - component: {fileID: 65060301390389870}
   m_Layer: 0
   m_Name: drawer_unit
   m_TagString: Untagged
@@ -630,7 +630,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1228912429825496}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 1.063, y: 0.349, z: 0.496}
+  m_LocalPosition: {x: 0.037139595, y: 0.1868261, z: -0.5353596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4212766367061024}
@@ -1886,7 +1886,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300028, guid: d3b9ae2d06f567c46be1d92cfd7941d2, type: 3}
@@ -1910,7 +1910,7 @@ MeshCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1256984739101798}
-  m_Material: {fileID: 13400000, guid: ac7b1148de5324141be78dc6e4dadd2e, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1928,7 +1928,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300012, guid: d3b9ae2d06f567c46be1d92cfd7941d2, type: 3}
@@ -1942,7 +1942,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300020, guid: d3b9ae2d06f567c46be1d92cfd7941d2, type: 3}
@@ -1956,7 +1956,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300004, guid: d3b9ae2d06f567c46be1d92cfd7941d2, type: 3}
@@ -1984,6 +1984,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0059753954, y: 0.0963527, z: 0.015122543}
   m_Center: {x: 1.9967084e-10, y: 0.04817635, z: -0.007111658}
+--- !u!65 &65060301390389870
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1228912429825496}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3067183, y: 0.40077254, z: 0.030478299}
+  m_Center: {x: 0.00000071525574, y: 0.20356019, z: -0.208029}
 --- !u!65 &65139739808132380
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2200,18 +2212,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.05113089, y: 0.4572869, z: 0.2}
   m_Center: {x: 0.4709659, y: -0.028737158, z: 2.6976725e-15}
---- !u!65 &65933295011882234
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1228912429825496}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.3067183, y: 0.40077254, z: 0.0031931102}
-  m_Center: {x: 0.00000071525574, y: 0.20356019, z: -0.19270061}
 --- !u!65 &65946084815039224
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2546,7 +2546,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.075956486, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.55050516, y: 0.66060984, z: 0.58648527}
+  m_ConnectedAnchor: {x: -0.4753552, y: 0.4984359, z: -0.44487435}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: -1, z: 0}
   m_XMotion: 1
@@ -2559,7 +2559,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0.25
+    limit: 0.17
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -2640,7 +2640,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.075956486, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1.2613872, y: 0.7149218, z: 0.58663034}
+  m_ConnectedAnchor: {x: 0.23552689, y: 0.55274785, z: -0.44472927}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: -1, z: 0}
   m_XMotion: 1
@@ -2653,7 +2653,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0.25
+    limit: 0.17
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -2734,7 +2734,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.075956486, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.91413736, y: 0.6230712, z: 0.5866116}
+  m_ConnectedAnchor: {x: -0.111723036, y: 0.46089733, z: -0.444748}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: -1, z: 0}
   m_XMotion: 1
@@ -2747,7 +2747,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0.25
+    limit: 0.17
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -2828,7 +2828,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.075956486, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1.546184, y: 0.6111128, z: 0.586799}
+  m_ConnectedAnchor: {x: 0.5203235, y: 0.44893885, z: -0.4445606}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: -1, z: 0}
   m_XMotion: 1
@@ -2841,7 +2841,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0.25
+    limit: 0.17
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
