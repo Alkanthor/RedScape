@@ -1,26 +1,21 @@
 fileFormatVersion: 2
-guid: a849d96ff7c60af4c92fd5df45ca1d0f
-timeCreated: 1525904147
+guid: 7a3f6b5fd62788c4a95ee60b20c81751
+timeCreated: 1525905888
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: cabine_door_movable
-    100002: //RootNode
-    100004: glass
-    400000: cabine_door_movable
-    400002: //RootNode
-    400004: glass
+    100000: //RootNode
+    100002: glass_bigger
+    400000: //RootNode
+    400002: glass_bigger
     2100000: No Name
-    2300000: cabine_door_movable
-    2300002: //RootNode
-    2300004: glass
-    3300000: cabine_door_movable
-    3300002: //RootNode
-    3300004: glass
-    4300000: cabine_door_frame
-    4300002: cabine_door_movable
-    4300004: glass
+    2300000: //RootNode
+    2300002: glass_bigger
+    3300000: //RootNode
+    3300002: glass_bigger
+    4300000: fridge_door_bigger
+    4300002: glass_bigger
   externalObjects: {}
   materials:
     importMaterials: 1

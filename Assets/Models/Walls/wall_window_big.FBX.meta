@@ -1,51 +1,21 @@
 fileFormatVersion: 2
-guid: d13519ec4a87f93479f20cd49376baec
-timeCreated: 1524876098
+guid: 28880b21fcadef747b75d96adcba610b
+timeCreated: 1525903616
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: glass_window_big
-    100002: glass_window_small
-    100004: //RootNode
-    100006: wall_beds
-    100008: wall_door
-    100010: wall_plane
-    100012: wall_window_big
-    100014: wall_window_small
+    100002: //RootNode
     400000: glass_window_big
-    400002: glass_window_small
-    400004: //RootNode
-    400006: wall_beds
-    400008: wall_door
-    400010: wall_plane
-    400012: wall_window_big
-    400014: wall_window_small
+    400002: //RootNode
     2100000: No Name
     2300000: glass_window_big
-    2300002: glass_window_small
-    2300004: //RootNode
-    2300006: wall_beds
-    2300008: wall_door
-    2300010: wall_plane
-    2300012: wall_window_big
-    2300014: wall_window_small
+    2300002: //RootNode
     3300000: glass_window_big
-    3300002: glass_window_small
-    3300004: //RootNode
-    3300006: wall_beds
-    3300008: wall_door
-    3300010: wall_plane
-    3300012: wall_window_big
-    3300014: wall_window_small
-    4300000: wall-border
-    4300002: wall_window_small
-    4300004: glass_window_small
-    4300006: wall_window_big
-    4300008: glass_window_big
-    4300010: wall_plane
-    4300012: wall_door
-    4300014: wall_beds
+    3300002: //RootNode
+    4300000: wall_window_big
+    4300002: glass_window_big
   externalObjects: {}
   materials:
     importMaterials: 1

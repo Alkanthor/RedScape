@@ -1,36 +1,16 @@
 fileFormatVersion: 2
-guid: ca5c47dea26a82a43858f6a1bc86d79b
-timeCreated: 1524876097
+guid: 2a6c85e75f6f477409f89285ad614b94
+timeCreated: 1525904318
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: drawer_left
-    100002: drawer_right
-    100004: handle_left
-    100006: handle_right
-    100008: //RootNode
-    400000: drawer_left
-    400002: drawer_right
-    400004: handle_left
-    400006: handle_right
-    400008: //RootNode
+    100000: //RootNode
+    400000: //RootNode
     2100000: No Name
-    2300000: drawer_left
-    2300002: drawer_right
-    2300004: handle_left
-    2300006: handle_right
-    2300008: //RootNode
-    3300000: drawer_left
-    3300002: drawer_right
-    3300004: handle_left
-    3300006: handle_right
-    3300008: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: table_office
-    4300002: drawer_left
-    4300004: handle_left
-    4300006: drawer_right
-    4300008: handle_right
   externalObjects: {}
   materials:
     importMaterials: 1

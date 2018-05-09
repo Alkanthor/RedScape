@@ -1,26 +1,16 @@
 fileFormatVersion: 2
-guid: 37f70f3a80c9d8943bc4f1cccecbd3c0
-timeCreated: 1524876094
+guid: 54ca994aa6ed89642bc005639881d288
+timeCreated: 1525904019
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: cabine_door_movable
-    100002: //RootNode
-    100004: glass
-    400000: cabine_door_movable
-    400002: //RootNode
-    400004: glass
+    100000: //RootNode
+    400000: //RootNode
     2100000: No Name
-    2300000: cabine_door_movable
-    2300002: //RootNode
-    2300004: glass
-    3300000: cabine_door_movable
-    3300002: //RootNode
-    3300004: glass
-    4300000: cabine_door_frame
-    4300002: cabine_door_movable
-    4300004: glass
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: wall_door
   externalObjects: {}
   materials:
     importMaterials: 1

@@ -1,18 +1,16 @@
 fileFormatVersion: 2
-guid: 59943f84cb954b947b5655ca6640b25e
-timeCreated: 1524876095
+guid: c78220bb3cd6dff4581595cc26155bd9
+timeCreated: 1525903942
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: whole_model_group1
     400000: //RootNode
-    400002: whole_model_group1
     2100000: No Name
-    2300000: whole_model_group1
-    3300000: whole_model_group1
-    4300000: whole_model_group1
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: car_wheel_collider
   externalObjects: {}
   materials:
     importMaterials: 1

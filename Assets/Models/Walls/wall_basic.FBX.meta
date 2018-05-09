@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: c55c5c3f3124c49469709480c876e3ad
-timeCreated: 1524876097
+guid: 1151bb1535f72664dbeec582641779af
+timeCreated: 1525903616
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -10,7 +10,7 @@ ModelImporter:
     2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cylinder002
+    4300000: wall_plane
   externalObjects: {}
   materials:
     importMaterials: 1
