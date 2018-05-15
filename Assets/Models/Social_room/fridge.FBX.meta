@@ -1,36 +1,16 @@
 fileFormatVersion: 2
-guid: 599ce31ae35e3c341a411e83cac1b4f0
-timeCreated: 1524876095
+guid: b44e4c2ecb7fae34bafb8f72978cacc8
+timeCreated: 1526368241
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: door_bigger
-    100002: door_smaller
-    100004: //RootNode
-    100006: glass_bigger
-    100008: glass_smaller
-    400000: door_bigger
-    400002: door_smaller
-    400004: //RootNode
-    400006: glass_bigger
-    400008: glass_smaller
+    100000: //RootNode
+    400000: //RootNode
     2100000: No Name
-    2300000: door_bigger
-    2300002: door_smaller
-    2300004: //RootNode
-    2300006: glass_bigger
-    2300008: glass_smaller
-    3300000: door_bigger
-    3300002: door_smaller
-    3300004: //RootNode
-    3300006: glass_bigger
-    3300008: glass_smaller
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: fridge_base
-    4300002: door_bigger
-    4300004: glass_bigger
-    4300006: door_smaller
-    4300008: glass_smaller
   externalObjects: {}
   materials:
     importMaterials: 1

@@ -1,21 +1,16 @@
 fileFormatVersion: 2
-guid: 36ad1ad4ae903434184e31a14c789b01
-timeCreated: 1524876094
+guid: 56c158fbf2386094a8d8364c0fdba554
+timeCreated: 1526368239
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: collider_wheel
     400000: //RootNode
-    400002: collider_wheel
     2100000: No Name
     2300000: //RootNode
-    2300002: collider_wheel
     3300000: //RootNode
-    3300002: collider_wheel
     4300000: car_wheel
-    4300002: collider_wheel
   externalObjects: {}
   materials:
     importMaterials: 1
