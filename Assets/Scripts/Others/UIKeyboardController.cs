@@ -8,6 +8,8 @@ public class UIKeyboardController : MonoBehaviour {
 
     public UnityEvents.UnityEventString OnInputEntered;
 
+    public AudioSource Sound;
+
 
     [SerializeField]
     private float _appearDuration = 1f;
@@ -24,6 +26,9 @@ public class UIKeyboardController : MonoBehaviour {
     private bool _isAppearing;
     private InputField _input;
 
+    private AudioClip _beepOpen;
+    private AudioClip _beepClosed;
+
 
     // Use this for initialization
     void Start ()
@@ -31,7 +36,11 @@ public class UIKeyboardController : MonoBehaviour {
         _canvasGroup = GetComponent<CanvasGroup>();
         _canvasGroup.alpha = 0;
         _input = GetComponentInChildren<InputField>();
-	}
+
+        Sound = this.GetComponent<AudioSource>();
+        _beepOpen = (AudioClip)Resources.Load("Sounds/beepOpen", typeof(AudioClip));
+        _beepClosed = (AudioClip)Resources.Load("Sounds/beepClosed", typeof(AudioClip));
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -103,12 +112,15 @@ public class UIKeyboardController : MonoBehaviour {
         _input.textComponent.alignment = TextAnchor.MiddleCenter;
         if(correct)
         {
+            Sound.clip = _beepOpen;
             _input.text = _inputCorrectText;
         }
         else
         {
+            Sound.clip = _beepClosed;
             _input.text = _inputIncorrectText;
         }
+        Sound.Play();
         yield return new WaitForSeconds(_correctTimeInterval);
         _input.textComponent.alignment = TextAnchor.MiddleLeft;
         _input.text = "";
