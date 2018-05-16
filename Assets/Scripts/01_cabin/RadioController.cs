@@ -1,11 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 using VRTK;
+using Random = UnityEngine.Random;
+
 public class RadioController : MonoBehaviour {
 
     public bool IsBatteryConnected;
+    public AudioSource Sound;
+
+
     private SnapToColliderController _batterySnapTo;
 
     [SerializeField]
@@ -17,8 +24,12 @@ public class RadioController : MonoBehaviour {
 
     private GameObject _activeChangeChannelButton;
     private GameObject _hiddenChannelButton;
+    private GameObject _stationText;
+    private GameObject _onOffText;
 
     private AudioGeneratedCodePlayer _radioCodePlayer;
+    private AudioClip beep;
+    private AudioClip[] radioClips;
 
     [SerializeField]
     private float _buttonPressStep = 0.005f;
@@ -39,9 +50,16 @@ public class RadioController : MonoBehaviour {
                 {
                     this.GetComponentInChildren<AudioGeneratedCodePlayer>().CanPlayCode(true);
                 }
+                _onOffText.GetComponentInChildren<Text>().text = "On";
+                if (_activeChangeChannelButton != null)
+                    _stationText.GetComponentInChildren<Text>().text = "Station: " + _activeChangeChannelButton.ToString().Replace("radio_button_", "");
+                else
+                    _stationText.GetComponentInChildren<Text>().text = "";
             }
             else
             {
+                _onOffText.GetComponentInChildren<Text>().text = "Off";
+                _stationText.GetComponentInChildren<Text>().text = "";
                 this.GetComponentInChildren<AudioGeneratedCodePlayer>().CanPlayCode(false);
             }
         }
@@ -76,6 +94,14 @@ public class RadioController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        _stationText = GameObject.Find("stationText");
+        _stationText.GetComponentInChildren<Text>().text = "";
+        _onOffText = GameObject.Find("onOffText");
+        _onOffText.GetComponentInChildren<Text>().text = "Off";
+
+        beep = (AudioClip) Resources.Load("Sounds/Radio/beep-trimmed", typeof(AudioClip));
+        radioClips = Resources.LoadAll<AudioClip>("Sounds/Radio");
+
         _batterySnapTo = GetComponentInChildren<SnapToColliderController>();
         _radioCodePlayer = GetComponentInChildren<AudioGeneratedCodePlayer>();
         _powerButtonInteractable = _powerButton.GetComponent<VRTK_InteractableObject>();
@@ -116,6 +142,7 @@ public class RadioController : MonoBehaviour {
 
         if(_hiddenChannelButton == _activeChangeChannelButton)
         {
+            Sound.clip = beep;
             if(IsRadioOn)
             {
                 this.GetComponentInChildren<AudioGeneratedCodePlayer>().CanPlayCode(true);
@@ -128,10 +155,14 @@ public class RadioController : MonoBehaviour {
         }
         else
         {
+            Sound.Stop();
+            int radioIndex = Convert.ToInt32(_activeChangeChannelButton.ToString().Replace("radio_button_", ""));
+            Sound.clip = radioClips[radioIndex];
             this.GetComponentInChildren<AudioGeneratedCodePlayer>().CanPlayCode(false);
+            Sound.Play();
         }
+        _stationText.GetComponentInChildren<Text>().text = "Station: " + _activeChangeChannelButton.ToString().Replace("radio_button_","");
         Debug.Log("Player pressed change channel button " + _activeChangeChannelButton);
-
     }
 
     private void OnPowerButtonUsed(object sender, InteractableObjectEventArgs e)
@@ -139,7 +170,6 @@ public class RadioController : MonoBehaviour {
    
         IsPowerButtonPressed = !IsPowerButtonPressed;
         Debug.Log("Player pressed radio power button " + IsPowerButtonPressed);
-
     }
 
 
