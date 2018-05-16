@@ -28,8 +28,8 @@ public class RadioController : MonoBehaviour {
     private GameObject _onOffText;
 
     private AudioGeneratedCodePlayer _radioCodePlayer;
-    private AudioClip beep;
-    private AudioClip[] radioClips;
+    private AudioClip _beep;
+    private AudioClip[] _radioClips;
 
     [SerializeField]
     private float _buttonPressStep = 0.005f;
@@ -99,8 +99,8 @@ public class RadioController : MonoBehaviour {
         _onOffText = GameObject.Find("onOffText");
         _onOffText.GetComponentInChildren<Text>().text = "Off";
 
-        beep = (AudioClip) Resources.Load("Sounds/Radio/beep-trimmed", typeof(AudioClip));
-        radioClips = Resources.LoadAll<AudioClip>("Sounds/Radio");
+        _beep = (AudioClip) Resources.Load("Sounds/Radio/beep-trimmed", typeof(AudioClip));
+        _radioClips = Resources.LoadAll<AudioClip>("Sounds/Radio");
 
         _batterySnapTo = GetComponentInChildren<SnapToColliderController>();
         _radioCodePlayer = GetComponentInChildren<AudioGeneratedCodePlayer>();
@@ -142,7 +142,7 @@ public class RadioController : MonoBehaviour {
 
         if(_hiddenChannelButton == _activeChangeChannelButton)
         {
-            Sound.clip = beep;
+            Sound.clip = _beep;
             if(IsRadioOn)
             {
                 this.GetComponentInChildren<AudioGeneratedCodePlayer>().CanPlayCode(true);
@@ -157,7 +157,7 @@ public class RadioController : MonoBehaviour {
         {
             Sound.Stop();
             int radioIndex = Convert.ToInt32(_activeChangeChannelButton.ToString().Replace("radio_button_", ""));
-            Sound.clip = radioClips[radioIndex];
+            Sound.clip = _radioClips[radioIndex];
             this.GetComponentInChildren<AudioGeneratedCodePlayer>().CanPlayCode(false);
             Sound.Play();
         }
