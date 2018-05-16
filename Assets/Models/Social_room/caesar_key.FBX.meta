@@ -1,21 +1,22 @@
 fileFormatVersion: 2
-guid: 7a3f6b5fd62788c4a95ee60b20c81751
-timeCreated: 1525905888
+guid: e0a96b5966e22ef4b83c8e79e97c40a5
+timeCreated: 1526368242
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: glass_bigger
+    100002: DISC
     400000: //RootNode
-    400002: glass_bigger
+    400002: DISC
     2100000: No Name
+    2100002: 'Material #3'
     2300000: //RootNode
-    2300002: glass_bigger
+    2300002: DISC
     3300000: //RootNode
-    3300002: glass_bigger
-    4300000: fridge_door_bigger
-    4300002: glass_bigger
+    3300002: DISC
+    4300000: Caesar_key
+    4300002: DISC
   externalObjects: {}
   materials:
     importMaterials: 1

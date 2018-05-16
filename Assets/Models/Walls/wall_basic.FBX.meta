@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Models/Walls/wall_basic.FBX.meta
 guid: 1151bb1535f72664dbeec582641779af
 timeCreated: 1525903616
+=======
+guid: 41b022c94dab47c4f8cacf100c77286d
+timeCreated: 1526367440
+>>>>>>> remotes/origin/master:Assets/Models/Walls/wall_basic.FBX.meta
 licenseType: Free
 ModelImporter:
   serializedVersion: 22

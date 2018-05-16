@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Models/Social_room/table_office_drawer.FBX.meta
 guid: 159b006d7b7a9be4a81990d96f8b9c27
 timeCreated: 1525904318
+=======
+guid: 6fe201851c2c9a046bf6224672a881fb
+timeCreated: 1526368240
+>>>>>>> remotes/origin/master:Assets/Models/Social_room/door_mars.FBX.meta
 licenseType: Free
 ModelImporter:
   serializedVersion: 22

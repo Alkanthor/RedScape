@@ -9,119 +9,207 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
+<<<<<<< HEAD
   m_RootGameObject: {fileID: 1388672145108206}
   m_IsPrefabParent: 1
 --- !u!1 &1208798942580966
+=======
+  m_RootGameObject: {fileID: 1321823173958420}
+  m_IsPrefabParent: 1
+--- !u!1 &1168796757715704
+>>>>>>> remotes/origin/master
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 4770047489844932}
   - component: {fileID: 33824695145310762}
   - component: {fileID: 23020703696232372}
   m_Layer: 0
   m_Name: window_shutter_end
+=======
+  - component: {fileID: 4482356084043158}
+  - component: {fileID: 33759588170882806}
+  - component: {fileID: 23734059467075106}
+  - component: {fileID: 65516446478043056}
+  m_Layer: 0
+  m_Name: window_shutter_basic03
+>>>>>>> remotes/origin/master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1388672145108206
+=======
+--- !u!1 &1169127119876510
+>>>>>>> remotes/origin/master
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 4636981580755374}
   - component: {fileID: 65382508818791488}
   m_Layer: 0
   m_Name: window_shutter
+=======
+  - component: {fileID: 4137768092843860}
+  - component: {fileID: 33524661644484594}
+  - component: {fileID: 23704186680860666}
+  - component: {fileID: 65148883014128344}
+  m_Layer: 0
+  m_Name: window_shutter_basic05
+>>>>>>> remotes/origin/master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1429382448883406
+=======
+--- !u!1 &1321823173958420
+>>>>>>> remotes/origin/master
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 4815914373858682}
   - component: {fileID: 33495809983344340}
   - component: {fileID: 23233658124860572}
   m_Layer: 0
   m_Name: window_shutter_basic02
+=======
+  - component: {fileID: 4184564947919498}
+  m_Layer: 0
+  m_Name: window_shutter
+>>>>>>> remotes/origin/master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1439896098505200
+=======
+--- !u!1 &1324506882384702
+>>>>>>> remotes/origin/master
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 4336972834854410}
   - component: {fileID: 33664852930283524}
   - component: {fileID: 23080076702479408}
   m_Layer: 0
   m_Name: window_shutter_basic05
+=======
+  - component: {fileID: 4187395821368290}
+  - component: {fileID: 33107954146833498}
+  - component: {fileID: 23852657194842808}
+  - component: {fileID: 65488047755617308}
+  m_Layer: 0
+  m_Name: window_shutter_basic01
+>>>>>>> remotes/origin/master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1474763548351824
+=======
+--- !u!1 &1504146716291120
+>>>>>>> remotes/origin/master
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 4812004803978824}
   - component: {fileID: 33926666830056322}
   - component: {fileID: 23292076821285982}
   m_Layer: 0
   m_Name: window_shutter_basic01
+=======
+  - component: {fileID: 4026306892875080}
+  - component: {fileID: 33582039341589598}
+  - component: {fileID: 23282187896796548}
+  - component: {fileID: 65154587496994282}
+  m_Layer: 0
+  m_Name: window_shutter_basic02
+>>>>>>> remotes/origin/master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1584222084605002
+=======
+--- !u!1 &1761349661627554
+>>>>>>> remotes/origin/master
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 4129343259207860}
   - component: {fileID: 33002286917557456}
   - component: {fileID: 23531081830434968}
   m_Layer: 0
   m_Name: window_shutter_basic03
+=======
+  - component: {fileID: 4916067769622098}
+  - component: {fileID: 33640822236822960}
+  - component: {fileID: 23082397006155726}
+  - component: {fileID: 65224630877551760}
+  m_Layer: 0
+  m_Name: window_shutter_end
+>>>>>>> remotes/origin/master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1944613190424630
+=======
+--- !u!1 &1966152033448000
+>>>>>>> remotes/origin/master
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 4292314146557428}
   - component: {fileID: 33888006101664796}
   - component: {fileID: 23832580362281682}
+=======
+  - component: {fileID: 4798434105608916}
+  - component: {fileID: 33798052000231544}
+  - component: {fileID: 23523817554008958}
+  - component: {fileID: 65831846713649518}
+>>>>>>> remotes/origin/master
   m_Layer: 0
   m_Name: window_shutter_basic04
   m_TagString: Untagged
@@ -129,11 +217,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &4129343259207860
+=======
+--- !u!4 &4026306892875080
+>>>>>>> remotes/origin/master
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1584222084605002}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.001068716, y: 0.922671, z: -0.002656641}
@@ -143,10 +236,22 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4292314146557428
+=======
+  m_GameObject: {fileID: 1504146716291120}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.001069293, y: 1.2192702, z: -0.0026557255}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4184564947919498}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4137768092843860
+>>>>>>> remotes/origin/master
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1944613190424630}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.0010688019, y: 0.62390095, z: -0.0026564694}
@@ -156,10 +261,22 @@ Transform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4336972834854410
+=======
+  m_GameObject: {fileID: 1169127119876510}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.0010688114, y: 0.32610682, z: -0.0026564503}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4184564947919498}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4184564947919498
+>>>>>>> remotes/origin/master
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1439896098505200}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.0010688114, y: 0.32610682, z: -0.0026564503}
@@ -169,10 +286,28 @@ Transform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4636981580755374
+=======
+  m_GameObject: {fileID: 1321823173958420}
+  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.00025440214, y: -0, z: 8.03}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4187395821368290}
+  - {fileID: 4026306892875080}
+  - {fileID: 4482356084043158}
+  - {fileID: 4798434105608916}
+  - {fileID: 4137768092843860}
+  - {fileID: 4916067769622098}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4187395821368290
+>>>>>>> remotes/origin/master
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1388672145108206}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: 1.2451172, y: 2.6509142, z: -1.3572664}
@@ -188,10 +323,22 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4770047489844932
+=======
+  m_GameObject: {fileID: 1324506882384702}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.0010689211, y: 1.5292996, z: -0.002655878}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4184564947919498}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4482356084043158
+>>>>>>> remotes/origin/master
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1208798942580966}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.0010687828, y: 0.03089729, z: -0.0026563357}
@@ -201,10 +348,22 @@ Transform:
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4812004803978824
+=======
+  m_GameObject: {fileID: 1168796757715704}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.001068716, y: 0.922671, z: -0.002656641}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4184564947919498}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4798434105608916
+>>>>>>> remotes/origin/master
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1474763548351824}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.0010689211, y: 1.5292996, z: -0.002655878}
@@ -214,10 +373,22 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4815914373858682
+=======
+  m_GameObject: {fileID: 1966152033448000}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.0010688019, y: 0.62390095, z: -0.0026564694}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4184564947919498}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4916067769622098
+>>>>>>> remotes/origin/master
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1429382448883406}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.001069293, y: 1.2192702, z: -0.0026557255}
@@ -227,11 +398,26 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23020703696232372
+=======
+  m_GameObject: {fileID: 1761349661627554}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.0010687828, y: 0.03089729, z: -0.0026563357}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4184564947919498}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23082397006155726
+>>>>>>> remotes/origin/master
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1208798942580966}
+=======
+  m_GameObject: {fileID: 1761349661627554}
+>>>>>>> remotes/origin/master
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -260,12 +446,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
 --- !u!23 &23080076702479408
+=======
+--- !u!23 &23282187896796548
+>>>>>>> remotes/origin/master
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1439896098505200}
+=======
+  m_GameObject: {fileID: 1504146716291120}
+>>>>>>> remotes/origin/master
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -294,12 +488,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
 --- !u!23 &23233658124860572
+=======
+--- !u!23 &23523817554008958
+>>>>>>> remotes/origin/master
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1429382448883406}
+=======
+  m_GameObject: {fileID: 1966152033448000}
+>>>>>>> remotes/origin/master
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -328,12 +530,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
 --- !u!23 &23292076821285982
+=======
+--- !u!23 &23704186680860666
+>>>>>>> remotes/origin/master
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1474763548351824}
+=======
+  m_GameObject: {fileID: 1169127119876510}
+>>>>>>> remotes/origin/master
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -362,12 +572,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
 --- !u!23 &23531081830434968
+=======
+--- !u!23 &23734059467075106
+>>>>>>> remotes/origin/master
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1584222084605002}
+=======
+  m_GameObject: {fileID: 1168796757715704}
+>>>>>>> remotes/origin/master
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -396,12 +614,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
 --- !u!23 &23832580362281682
+=======
+--- !u!23 &23852657194842808
+>>>>>>> remotes/origin/master
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1944613190424630}
+=======
+  m_GameObject: {fileID: 1324506882384702}
+>>>>>>> remotes/origin/master
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -430,57 +656,166 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
 --- !u!33 &33002286917557456
+=======
+--- !u!33 &33107954146833498
+>>>>>>> remotes/origin/master
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1584222084605002}
   m_Mesh: {fileID: 4300004, guid: 5f3c92092bbc35c4c8ab4569d049f8cc, type: 3}
 --- !u!33 &33495809983344340
+=======
+  m_GameObject: {fileID: 1324506882384702}
+  m_Mesh: {fileID: 4300000, guid: 5f3c92092bbc35c4c8ab4569d049f8cc, type: 3}
+--- !u!33 &33524661644484594
+>>>>>>> remotes/origin/master
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1429382448883406}
   m_Mesh: {fileID: 4300002, guid: 5f3c92092bbc35c4c8ab4569d049f8cc, type: 3}
 --- !u!33 &33664852930283524
+=======
+  m_GameObject: {fileID: 1169127119876510}
+  m_Mesh: {fileID: 4300008, guid: 5f3c92092bbc35c4c8ab4569d049f8cc, type: 3}
+--- !u!33 &33582039341589598
+>>>>>>> remotes/origin/master
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1439896098505200}
   m_Mesh: {fileID: 4300008, guid: 5f3c92092bbc35c4c8ab4569d049f8cc, type: 3}
 --- !u!33 &33824695145310762
+=======
+  m_GameObject: {fileID: 1504146716291120}
+  m_Mesh: {fileID: 4300002, guid: 5f3c92092bbc35c4c8ab4569d049f8cc, type: 3}
+--- !u!33 &33640822236822960
+>>>>>>> remotes/origin/master
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1208798942580966}
   m_Mesh: {fileID: 4300010, guid: 5f3c92092bbc35c4c8ab4569d049f8cc, type: 3}
 --- !u!33 &33888006101664796
+=======
+  m_GameObject: {fileID: 1761349661627554}
+  m_Mesh: {fileID: 4300010, guid: 5f3c92092bbc35c4c8ab4569d049f8cc, type: 3}
+--- !u!33 &33759588170882806
+>>>>>>> remotes/origin/master
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1944613190424630}
   m_Mesh: {fileID: 4300006, guid: 5f3c92092bbc35c4c8ab4569d049f8cc, type: 3}
 --- !u!33 &33926666830056322
+=======
+  m_GameObject: {fileID: 1168796757715704}
+  m_Mesh: {fileID: 4300004, guid: 5f3c92092bbc35c4c8ab4569d049f8cc, type: 3}
+--- !u!33 &33798052000231544
+>>>>>>> remotes/origin/master
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1474763548351824}
   m_Mesh: {fileID: 4300000, guid: 5f3c92092bbc35c4c8ab4569d049f8cc, type: 3}
 --- !u!65 &65382508818791488
+=======
+  m_GameObject: {fileID: 1966152033448000}
+  m_Mesh: {fileID: 4300006, guid: 5f3c92092bbc35c4c8ab4569d049f8cc, type: 3}
+--- !u!65 &65148883014128344
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1388672145108206}
+  m_GameObject: {fileID: 1169127119876510}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
+  m_Size: {x: 2.439282, y: 0.04987889, z: 0.32706627}
+  m_Center: {x: -0.0010690093, y: -0.0020843116, z: 0.08965896}
+--- !u!65 &65154587496994282
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1504146716291120}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.439282, y: 0.04987889, z: 0.32706627}
+  m_Center: {x: -0.0010690093, y: -0.0020843116, z: 0.08965914}
+--- !u!65 &65224630877551760
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761349661627554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.439282, y: 0.04937854, z: 0.29791677}
+  m_Center: {x: -0.0010690093, y: -0.0023467164, z: 0.104233764}
+--- !u!65 &65488047755617308
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1324506882384702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.439282, y: 0.04987889, z: 0.32706627}
+  m_Center: {x: -0.0010690093, y: -0.0020843116, z: 0.08965902}
+--- !u!65 &65516446478043056
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168796757715704}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.439282, y: 0.04987889, z: 0.32706627}
+  m_Center: {x: -0.0010690093, y: -0.002083358, z: 0.08965902}
+--- !u!65 &65831846713649518
+>>>>>>> remotes/origin/master
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 1388672145108206}
+=======
+  m_GameObject: {fileID: 1966152033448000}
+>>>>>>> remotes/origin/master
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+<<<<<<< HEAD
   m_Size: {x: 1, y: 1.7882609, z: 0.07359123}
   m_Center: {x: 0, y: 0.8979666, z: 0.0040632114}
+=======
+  m_Size: {x: 2.439282, y: 0.04987889, z: 0.32706627}
+  m_Center: {x: -0.0010690093, y: -0.0020843116, z: 0.08965908}
+>>>>>>> remotes/origin/master

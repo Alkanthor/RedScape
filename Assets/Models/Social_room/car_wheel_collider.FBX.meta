@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Models/Social_room/car_wheel_collider.FBX.meta
 guid: c78220bb3cd6dff4581595cc26155bd9
 timeCreated: 1525903942
+=======
+guid: 601c5568e9690ae4fac6c1834874cf5f
+timeCreated: 1526368240
+>>>>>>> remotes/origin/master:Assets/Models/Social_room/car_wheel_collider.FBX.meta
 licenseType: Free
 ModelImporter:
   serializedVersion: 22

@@ -9,18 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
+<<<<<<< HEAD
   m_RootGameObject: {fileID: 1735083105078040}
   m_IsPrefabParent: 1
 --- !u!1 &1017764522702938
+=======
+  m_RootGameObject: {fileID: 1579351828087490}
+  m_IsPrefabParent: 1
+--- !u!1 &1248355182780596
+>>>>>>> remotes/origin/master
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 4491703735040778}
   - component: {fileID: 33646264339438244}
   - component: {fileID: 23706850080225486}
+=======
+  - component: {fileID: 4299392990057704}
+  - component: {fileID: 33409396554598854}
+  - component: {fileID: 23160525958018126}
+>>>>>>> remotes/origin/master
   m_Layer: 0
   m_Name: powerbutton
   m_TagString: Untagged
@@ -28,19 +40,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &1735083105078040
+=======
+--- !u!1 &1579351828087490
+>>>>>>> remotes/origin/master
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 4671111067220338}
   - component: {fileID: 33327296700224044}
   - component: {fileID: 23044503744205784}
   - component: {fileID: 65177933421830824}
   - component: {fileID: 65080175389199760}
   - component: {fileID: 65435055508259870}
+=======
+  - component: {fileID: 4162897697898444}
+  - component: {fileID: 33496184708640988}
+  - component: {fileID: 23801436633016338}
+  - component: {fileID: 65111926249391190}
+>>>>>>> remotes/origin/master
   m_Layer: 0
   m_Name: computer
   m_TagString: Untagged
@@ -48,11 +71,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &4491703735040778
+=======
+--- !u!4 &4162897697898444
+>>>>>>> remotes/origin/master
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1017764522702938}
   m_LocalRotation: {x: 0.00000004371138, y: -0.000000043711395, z: -0.000000043711385,
     w: 1}
@@ -63,10 +91,23 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4671111067220338
+=======
+  m_GameObject: {fileID: 1579351828087490}
+  m_LocalRotation: {x: 0.000000015454312, y: 0.7071068, z: -0.000000015454312, w: 0.7071068}
+  m_LocalPosition: {x: -1.049, y: 0, z: -0.001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4299392990057704}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4299392990057704
+>>>>>>> remotes/origin/master
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1735083105078040}
   m_LocalRotation: {x: 0.000000015454312, y: 0.7071068, z: -0.000000015454312, w: 0.7071068}
   m_LocalPosition: {x: 2.439898, y: 0.000095246614, z: -4.2218475}
@@ -77,11 +118,27 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23044503744205784
+=======
+  m_GameObject: {fileID: 1248355182780596}
+  m_LocalRotation: {x: 0.00000004371138, y: -0.000000043711395, z: -0.000000043711385,
+    w: 1}
+  m_LocalPosition: {x: 0.003480215, y: 0.073379114, z: 0.07967858}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4162897697898444}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23160525958018126
+>>>>>>> remotes/origin/master
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1735083105078040}
+=======
+  m_GameObject: {fileID: 1248355182780596}
+>>>>>>> remotes/origin/master
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -110,12 +167,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
 --- !u!23 &23706850080225486
+=======
+--- !u!23 &23801436633016338
+>>>>>>> remotes/origin/master
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1017764522702938}
+=======
+  m_GameObject: {fileID: 1579351828087490}
+>>>>>>> remotes/origin/master
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -144,6 +209,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
 --- !u!33 &33327296700224044
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -152,10 +218,14 @@ MeshFilter:
   m_GameObject: {fileID: 1735083105078040}
   m_Mesh: {fileID: 4300000, guid: a020ab68d258f1c42a0ac194f09d6110, type: 3}
 --- !u!33 &33646264339438244
+=======
+--- !u!33 &33409396554598854
+>>>>>>> remotes/origin/master
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1017764522702938}
   m_Mesh: {fileID: 4300002, guid: a020ab68d258f1c42a0ac194f09d6110, type: 3}
 --- !u!65 &65080175389199760
@@ -183,14 +253,35 @@ BoxCollider:
   m_Size: {x: 0.14138275, y: 0.18431741, z: 0.19007821}
   m_Center: {x: 0.0000065863132, y: 0.10324767, z: 0.00036272407}
 --- !u!65 &65435055508259870
+=======
+  m_GameObject: {fileID: 1248355182780596}
+  m_Mesh: {fileID: 4300002, guid: a020ab68d258f1c42a0ac194f09d6110, type: 3}
+--- !u!33 &33496184708640988
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1579351828087490}
+  m_Mesh: {fileID: 4300000, guid: a020ab68d258f1c42a0ac194f09d6110, type: 3}
+--- !u!65 &65111926249391190
+>>>>>>> remotes/origin/master
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1735083105078040}
+=======
+  m_GameObject: {fileID: 1579351828087490}
+>>>>>>> remotes/origin/master
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
+<<<<<<< HEAD
   m_Size: {x: 0.092544995, y: 0.012826045, z: 0.014113169}
   m_Center: {x: -0.00017985515, y: 0.0063177743, z: 0.06746802}
+=======
+  m_Size: {x: 0.14138275, y: 0.19550163, z: 0.19007821}
+  m_Center: {x: 0.0000065825893, y: 0.097655565, z: 0.00036272415}
+>>>>>>> remotes/origin/master
