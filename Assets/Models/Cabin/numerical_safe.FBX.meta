@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 381d9b8cb5fa24b43855478e6287ba10
-timeCreated: 1521643661
+timeCreated: 1526556457
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -18,7 +18,7 @@ ModelImporter:
     3300000: doors
     3300002: handle
     3300004: //RootNode
-    4300000: skrinka
+    4300000: numerica_ safe
     4300002: doors
     4300004: handle
   externalObjects: {}
