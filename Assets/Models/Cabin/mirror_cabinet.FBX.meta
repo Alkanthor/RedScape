@@ -1,26 +1,26 @@
 fileFormatVersion: 2
 guid: b83b9965e27efee4cab5d421e2a28f39
-timeCreated: 1521855723
+timeCreated: 1526576752
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     100002: mirror_door
-    100004: mirror_hadle
+    100004: mirror_handle
     400000: //RootNode
     400002: mirror_door
-    400004: mirror_hadle
+    400004: mirror_handle
     2100000: No Name
     2300000: //RootNode
     2300002: mirror_door
-    2300004: mirror_hadle
+    2300004: mirror_handle
     3300000: //RootNode
     3300002: mirror_door
-    3300004: mirror_hadle
+    3300004: mirror_handle
     4300000: mirror_cabinet
     4300002: mirror_door
-    4300004: mirror_hadle
+    4300004: mirror_handle
   externalObjects: {}
   materials:
     importMaterials: 1
