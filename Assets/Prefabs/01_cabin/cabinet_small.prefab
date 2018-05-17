@@ -698,7 +698,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1974013409714752}
   m_LocalRotation: {x: 0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1.341, y: 0, z: 0.36}
+  m_LocalPosition: {x: 0.75588274, y: 0.19, z: 3.5881534}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4459593604256974}
@@ -808,7 +808,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e8c740a02cc7701468dca21c923c507c, type: 2}
+  - {fileID: 2100000, guid: 8420717d0116da04cbbef2953397459f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -842,7 +842,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b409ee1273c34154b9e1ca711260da3b, type: 2}
+  - {fileID: 2100000, guid: 8420717d0116da04cbbef2953397459f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -876,7 +876,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8ab0fa166fba6954fa21ebce82cf8a41, type: 3}
+  - {fileID: 2100000, guid: 8420717d0116da04cbbef2953397459f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1012,7 +1012,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b409ee1273c34154b9e1ca711260da3b, type: 2}
+  - {fileID: 2100000, guid: 8420717d0116da04cbbef2953397459f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1046,7 +1046,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e8c740a02cc7701468dca21c923c507c, type: 2}
+  - {fileID: 2100000, guid: 8420717d0116da04cbbef2953397459f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1072,7 +1072,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1750559866116368}
-  m_Mesh: {fileID: 4300002, guid: 8ab0fa166fba6954fa21ebce82cf8a41, type: 3}
+  m_Mesh: {fileID: 4300002, guid: e0dbdde56fff0fd409b4ab415ec75849, type: 3}
 --- !u!33 &33215245550879170
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1086,21 +1086,21 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1974013409714752}
-  m_Mesh: {fileID: 4300000, guid: 8ab0fa166fba6954fa21ebce82cf8a41, type: 3}
+  m_Mesh: {fileID: 4300000, guid: e0dbdde56fff0fd409b4ab415ec75849, type: 3}
 --- !u!33 &33377746064395576
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1817440349168696}
-  m_Mesh: {fileID: 4300006, guid: 8ab0fa166fba6954fa21ebce82cf8a41, type: 3}
+  m_Mesh: {fileID: 4300006, guid: e0dbdde56fff0fd409b4ab415ec75849, type: 3}
 --- !u!33 &33396111496138376
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1950990133153188}
-  m_Mesh: {fileID: 4300008, guid: 8ab0fa166fba6954fa21ebce82cf8a41, type: 3}
+  m_Mesh: {fileID: 4300008, guid: e0dbdde56fff0fd409b4ab415ec75849, type: 3}
 --- !u!33 &33627613386452686
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1128,7 +1128,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1120929259285570}
-  m_Mesh: {fileID: 4300004, guid: 8ab0fa166fba6954fa21ebce82cf8a41, type: 3}
+  m_Mesh: {fileID: 4300004, guid: e0dbdde56fff0fd409b4ab415ec75849, type: 3}
 --- !u!54 &54060243215029662
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -1229,7 +1229,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.94197434, y: 0.34646264, z: -0.045811057}
+  m_ConnectedAnchor: {x: 1.1549084, y: 0.53646266, z: 3.1823423}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1263,7 +1263,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.9419747, y: 0.34646264, z: 0.7686776}
+  m_ConnectedAnchor: {x: 1.154908, y: 0.53646266, z: 3.996831}
   m_UseSpring: 0
   m_Spring:
     spring: 0
