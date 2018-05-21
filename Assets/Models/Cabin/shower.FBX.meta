@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: dad55500c573c99478a4b31ff993de26
-timeCreated: 1522937210
+timeCreated: 1526924330
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -9,9 +9,9 @@ ModelImporter:
     100002: glass_door
     100004: glass_small
     100006: handle
-    100008: hinge_glass_door001
-    100010: hinge_glass_door002
-    100012: hinge_glass_door003
+    100008: hinge_glass_door
+    100010: hinge_glass_door001
+    100012: hinge_glass_door002
     100014: hinge_static
     100016: hinge_static001
     100018: hinge_static002
@@ -20,21 +20,22 @@ ModelImporter:
     400002: glass_door
     400004: glass_small
     400006: handle
-    400008: hinge_glass_door001
-    400010: hinge_glass_door002
-    400012: hinge_glass_door003
+    400008: hinge_glass_door
+    400010: hinge_glass_door001
+    400012: hinge_glass_door002
     400014: hinge_static
     400016: hinge_static001
     400018: hinge_static002
     400020: //RootNode
-    2100000: No Name
+    2100000: base
+    2100002: glass
     2300000: glass_big
     2300002: glass_door
     2300004: glass_small
     2300006: handle
-    2300008: hinge_glass_door001
-    2300010: hinge_glass_door002
-    2300012: hinge_glass_door003
+    2300008: hinge_glass_door
+    2300010: hinge_glass_door001
+    2300012: hinge_glass_door002
     2300014: hinge_static
     2300016: hinge_static001
     2300018: hinge_static002
@@ -43,24 +44,24 @@ ModelImporter:
     3300002: glass_door
     3300004: glass_small
     3300006: handle
-    3300008: hinge_glass_door001
-    3300010: hinge_glass_door002
-    3300012: hinge_glass_door003
+    3300008: hinge_glass_door
+    3300010: hinge_glass_door001
+    3300012: hinge_glass_door002
     3300014: hinge_static
     3300016: hinge_static001
     3300018: hinge_static002
     3300020: //RootNode
     4300000: shower
-    4300002: hinge_static002
-    4300004: hinge_static001
-    4300006: hinge_static
-    4300008: glass_small
-    4300010: glass_big
-    4300012: glass_door
-    4300014: handle
-    4300016: hinge_glass_door003
-    4300018: hinge_glass_door002
-    4300020: hinge_glass_door001
+    4300002: hinge_static
+    4300004: glass_big
+    4300006: glass_small
+    4300008: glass_door
+    4300010: handle
+    4300012: hinge_glass_door002
+    4300014: hinge_glass_door001
+    4300016: hinge_glass_door
+    4300018: hinge_static001
+    4300020: hinge_static002
   externalObjects: {}
   materials:
     importMaterials: 1
