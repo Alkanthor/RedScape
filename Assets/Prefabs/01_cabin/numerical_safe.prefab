@@ -354,7 +354,6 @@ GameObject:
   - component: {fileID: 114842026843018000}
   - component: {fileID: 114381936276462408}
   - component: {fileID: 65080707280767274}
-  - component: {fileID: 82142146538533942}
   m_Layer: 0
   m_Name: InputNumericKeyboardCanvas
   m_TagString: Untagged
@@ -584,7 +583,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1425703031165090}
   m_LocalRotation: {x: 0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.99, y: 0.19, z: 1.89}
+  m_LocalPosition: {x: 0.833, y: 0.009, z: 1.056}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4622840761157936}
@@ -782,7 +781,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.1822048, y: 0.6180217, z: -0.19709356}
+  m_ConnectedAnchor: {x: 0.6507952, y: 0.24802174, z: 0.85890645}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -2518,10 +2517,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5ff2804ce3f5d49aeec4dd1250f0d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sound: {fileID: 0}
+  OpenSound: {fileID: 8300000, guid: acd6e1b17bf4f5b4086324ee26daa2c7, type: 3}
+  LockSound: {fileID: 8300000, guid: 77acbb77fafd5f940b07093da95c0404, type: 3}
   _doorMinLimitJoint: 0
   _doorMaxLimitJoint: 110
-  _lockerText: {fileID: 0}
   _doorJoint: {fileID: 59083809002830164}
 --- !u!114 &114922461353124332
 MonoBehaviour:

@@ -7,7 +7,7 @@ public class WhereIsMyBatteryController : MonoBehaviour {
 
 
     public UnityEvents.UnityEventGameObject2 OnKeyDoorCombination;
-    public UnityEvents.UnityEventBool OnLockerDoorCheck;
+    public UnityEvents.UnityEventGameObjectBool OnLockerDoorCheck;
     [SerializeField]
     private GameObject _batteryPrefab;
     [SerializeField]
@@ -25,7 +25,7 @@ public class WhereIsMyBatteryController : MonoBehaviour {
     void Start () {
 
         if (OnKeyDoorCombination == null) OnKeyDoorCombination = new UnityEvents.UnityEventGameObject2();
-        if (OnLockerDoorCheck == null) OnLockerDoorCheck = new UnityEvents.UnityEventBool();
+        if (OnLockerDoorCheck == null) OnLockerDoorCheck = new UnityEvents.UnityEventGameObjectBool();
         CreateKey();
         CreateBattery();
         //send key-door combination
@@ -51,7 +51,7 @@ public class WhereIsMyBatteryController : MonoBehaviour {
                 OnLockerDoorCheck.AddListener(_lockerDoors[i].GetComponentInChildren<LockerController>().CanOpenDoor);
                 lockerSnapDropZone.ObjectSnappedToDropZone += (sender, e) =>
                 {
-                    OnLockerDoorCheck.Invoke(false);
+                    OnLockerDoorCheck.Invoke(sender as GameObject, false);
                 };
             }
         }

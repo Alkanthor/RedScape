@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 223021014205483146}
   - component: {fileID: 114511289683072998}
   - component: {fileID: 114052610892139730}
+  - component: {fileID: 114878766798174338}
   m_Layer: 0
   m_Name: lock_canvas
   m_TagString: Untagged
@@ -245,6 +246,7 @@ GameObject:
   - component: {fileID: 223078438538409692}
   - component: {fileID: 114673657746544142}
   - component: {fileID: 114525048655405846}
+  - component: {fileID: 114776488271244452}
   m_Layer: 0
   m_Name: lock_canvas
   m_TagString: Untagged
@@ -431,6 +433,7 @@ GameObject:
   - component: {fileID: 65101180179572254}
   - component: {fileID: 65827414916072310}
   - component: {fileID: 114416310102136272}
+  - component: {fileID: 114638616512845650}
   m_Layer: 0
   m_Name: cabinet_small
   m_TagString: Untagged
@@ -701,7 +704,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1974013409714752}
   m_LocalRotation: {x: 0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.75588274, y: 0.19, z: 3.5881534}
+  m_LocalPosition: {x: -1.341, y: 0, z: 0.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4459593604256974}
@@ -1232,7 +1235,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1.1549084, y: 0.53646266, z: 3.1823423}
+  m_ConnectedAnchor: {x: -0.94197434, y: 0.34646264, z: -0.045811057}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1266,7 +1269,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1.154908, y: 0.53646266, z: 3.996831}
+  m_ConnectedAnchor: {x: -0.9419747, y: 0.34646264, z: 0.7686776}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1993,11 +1996,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5ff2804ce3f5d49aeec4dd1250f0d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sound: {fileID: 0}
+  OnIsDoorOpen:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114776488271244452}
+        m_MethodName: OnIsDoorOpen
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEvents.UnityEventBool, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OpenSound: {fileID: 8300000, guid: 7f1cd74935856904c9d969906d77f9e1, type: 3}
+  LockSound: {fileID: 8300000, guid: 77acbb77fafd5f940b07093da95c0404, type: 3}
   _doorMinLimitJoint: 0
   _doorMaxLimitJoint: 110
-  _lockerText: {fileID: 1594941093386258}
   _doorJoint: {fileID: 59688944335457420}
+--- !u!114 &114638616512845650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1974013409714752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098d6cdd7aa62da448f254815f17a668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114670628198873498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2093,6 +2123,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114776488271244452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1594941093386258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281d62007061c764b967d453b7224815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OpenText: Open
+  OpenColor: {r: 0.051092118, g: 0.99264705, b: 0.1744684, a: 0}
+  LockText: Locked
+  LockColor: {r: 0.97794116, g: 0.14381489, b: 0.14381489, a: 0}
 --- !u!114 &114783594958669764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2124,11 +2169,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5ff2804ce3f5d49aeec4dd1250f0d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sound: {fileID: 0}
+  OnIsDoorOpen:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114878766798174338}
+        m_MethodName: OnIsDoorOpen
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEvents.UnityEventBool, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OpenSound: {fileID: 8300000, guid: 7f1cd74935856904c9d969906d77f9e1, type: 3}
+  LockSound: {fileID: 8300000, guid: 77acbb77fafd5f940b07093da95c0404, type: 3}
   _doorMinLimitJoint: -110
   _doorMaxLimitJoint: 0
-  _lockerText: {fileID: 1191764775344136}
   _doorJoint: {fileID: 59771282482953246}
+--- !u!114 &114878766798174338
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1191764775344136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281d62007061c764b967d453b7224815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OpenText: Open
+  OpenColor: {r: 0.051092118, g: 0.99264705, b: 0.1744684, a: 0}
+  LockText: Locked
+  LockColor: {r: 0.97794116, g: 0.14381489, b: 0.14381489, a: 0}
 --- !u!114 &114947365335547300
 MonoBehaviour:
   m_ObjectHideFlags: 1

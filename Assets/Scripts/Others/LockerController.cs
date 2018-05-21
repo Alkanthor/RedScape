@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using VRTK;
 public class LockerController : MonoBehaviour
 {
+
+    public UnityEvents.UnityEventBool OnIsDoorOpen;
+
     private AudioSource _sound;
     public AudioClip OpenSound;
     public AudioClip LockSound;
@@ -14,9 +17,6 @@ public class LockerController : MonoBehaviour
     [SerializeField]
     private float _doorMaxLimitJoint = 110;
 
-    public GameObject _lockerText;
-
-
     private bool _canOpenDoor;
 
     [SerializeField]
@@ -25,6 +25,7 @@ public class LockerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        if (OnIsDoorOpen == null) OnIsDoorOpen = new UnityEvents.UnityEventBool();
         _sound = this.GetComponent<AudioSource>();
         
         _canOpenDoor = false;
@@ -36,39 +37,39 @@ public class LockerController : MonoBehaviour
 
     }
 
-    public void CanOpenDoor(bool canOpen)
+    public void CanOpenDoor(GameObject door, bool canOpen)
     {
-
-        //we already opened the safe
-       // if (_canOpenDoor == true) return;
-
-        _canOpenDoor = canOpen;
-        if (_canOpenDoor)
+        if(door.name == this.gameObject.name)
         {
-            _sound.clip = OpenSound;
-            _sound.Play();
-            //_lockerText.GetComponentInChildren<Text>().text = "Open";
-           // _lockerText.GetComponentInChildren<Text>().color = Color.green;
-            _doorJoint.limits = new JointLimits()
-            {
-                min = _doorMinLimitJoint,
-                max = _doorMaxLimitJoint,
-            };
-        }
-        else
-        {
-            _sound.clip = LockSound;
-            _sound.Play();
-           // _lockerText.GetComponentInChildren<Text>().text = "Locked";
-           // _lockerText.GetComponentInChildren<Text>().color = Color.red;
-            _doorJoint.limits = new JointLimits()
-            {
-                min = 0,
-                max = 0
-            };
-        }
+            //we already opened the safe
+            if (_canOpenDoor == true) return;
 
-        Debug.Log(this.name + "joint limits: min " + _doorJoint.limits.min + ", max " + _doorJoint.limits.max);
+            _canOpenDoor = canOpen;
+            if (_canOpenDoor)
+            {
+                _sound.clip = OpenSound;
+                _sound.Play();
+                _doorJoint.limits = new JointLimits()
+                {
+                    min = _doorMinLimitJoint,
+                    max = _doorMaxLimitJoint,
+                };
+            }
+            else
+            {
+                _sound.clip = LockSound;
+                _sound.Play();
+                _doorJoint.limits = new JointLimits()
+                {
+                    min = 0,
+                    max = 0
+                };
+            }
+
+            OnIsDoorOpen.Invoke(canOpen);
+            Debug.Log(this.name + "joint limits: min " + _doorJoint.limits.min + ", max " + _doorJoint.limits.max);
+        }
+        
     }
 
 

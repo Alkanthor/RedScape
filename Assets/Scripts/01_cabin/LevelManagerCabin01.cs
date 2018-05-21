@@ -9,7 +9,7 @@ public class LevelManagerCabin01 : MonoBehaviour {
 
     //events
     public UnityEvents.UnityEventBool OnSafeCodeCheck;
-    public UnityEvents.UnityEventBool OnLockerDoorCheck;
+    public UnityEvents.UnityEventGameObjectBool OnLockerDoorCheck;
     //flags
     public bool CanOpenSafe { get; set; }
     public string SafeCode { get; set; }
@@ -40,7 +40,7 @@ public class LevelManagerCabin01 : MonoBehaviour {
     {
         //check if it is initialized
         if (OnSafeCodeCheck == null) OnSafeCodeCheck = new UnityEvents.UnityEventBool();
-        if (OnLockerDoorCheck == null) OnLockerDoorCheck = new UnityEvents.UnityEventBool();
+        if (OnLockerDoorCheck == null) OnLockerDoorCheck = new UnityEvents.UnityEventGameObjectBool();
     }
     public void SetKeyDoorCombination(GameObject key, GameObject door)
     {
@@ -55,11 +55,11 @@ public class LevelManagerCabin01 : MonoBehaviour {
         {
             if(e.snappedObject == _keyToLocker)
             {
-                OnLockerDoorCheck.Invoke(true);
+                OnLockerDoorCheck.Invoke(door, true);
             }
             else
             {
-                OnLockerDoorCheck.Invoke(false);
+                OnLockerDoorCheck.Invoke(door, false);
             }
         };
         
