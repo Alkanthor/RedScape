@@ -25,11 +25,13 @@ public class UIKeyboardController : MonoBehaviour {
     private CanvasGroup _canvasGroup;
     private bool _isAppearing;
     private InputField _input;
+    private bool _canWrite;
 
 
     // Use this for initialization
     void Start ()
     {
+        _canWrite = true;
         _canvasGroup = GetComponent<CanvasGroup>();
         _canvasGroup.alpha = 0;
         _input = GetComponentInChildren<InputField>();
@@ -81,7 +83,11 @@ public class UIKeyboardController : MonoBehaviour {
 
     public void ClickKey(string character)
     {
-        _input.text += character;
+        if(_canWrite)
+        {
+            _input.text += character;
+        }
+
     }
 
     public void Clear()
@@ -95,7 +101,7 @@ public class UIKeyboardController : MonoBehaviour {
         OnInputEntered.Invoke(_input.text);
     }
 
-    public void CorrectInputCheck(bool correct)
+    public void CorrectInputCheck(GameObject door, bool correct)
     {
         Debug.Log(this.name + ": correct input check");
         StartCoroutine(CorrectInput(correct));
@@ -103,6 +109,7 @@ public class UIKeyboardController : MonoBehaviour {
 
     IEnumerator CorrectInput(bool correct)
     {
+        _canWrite = false;
         _input.textComponent.alignment = TextAnchor.MiddleCenter;
         if(correct)
         {
@@ -115,5 +122,6 @@ public class UIKeyboardController : MonoBehaviour {
         yield return new WaitForSeconds(_correctTimeInterval);
         _input.textComponent.alignment = TextAnchor.MiddleLeft;
         _input.text = "";
+        _canWrite = true;
     }
 }

@@ -20,17 +20,22 @@ public class LockerCanvasController : MonoBehaviour {
     {
         _lockerText = GetComponentInChildren<Text>();
     }
-    public void OnIsDoorOpen(bool open)
+    public void OnIsDoorOpen(GameObject door, bool open)
     {
-        if(open)
+       var parentDoor = gameObject.GetComponentInParent<LockerController>().gameObject;
+        if(door == parentDoor)
         {
-            _lockerText.text = OpenText;
-            _lockerText.color = OpenColor;
+            if (open)
+            {
+                _lockerText.text = OpenText;
+                _lockerText.color = OpenColor;
+            }
+            else
+            {
+                _lockerText.text = LockText;
+                _lockerText.color = LockColor;
+            }
         }
-        else
-        {
-            _lockerText.text = LockText;
-            _lockerText.color = LockColor;
-        }
+        
     }
 }

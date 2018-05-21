@@ -51,22 +51,29 @@ public class WhereIsMyBatteryController : MonoBehaviour {
                 OnLockerDoorCheck.AddListener(_lockerDoors[i].GetComponentInChildren<LockerController>().CanOpenDoor);
                 lockerSnapDropZone.ObjectSnappedToDropZone += (sender, e) =>
                 {
-                    OnLockerDoorCheck.Invoke(sender as GameObject, false);
+                    var snapZone = sender as VRTK_SnapDropZone;
+                    var door = snapZone.gameObject.GetComponentInParent<LockerController>().gameObject;
+                    OnLockerDoorCheck.Invoke(door, false);
                 };
             }
         }
-            Debug.Log("door to key: " + _doorWithBattery.name);
+        Debug.Log("door to key: " + _doorWithBattery.name);
         GameObject dropZone = null;
-        foreach(Transform child in _doorWithBattery.GetComponentsInChildren<Transform>())
+        foreach (Transform child in _doorWithBattery.GetComponentsInChildren<Transform>())
         {
             if(child.tag == _dropZoneTag)
             {
                 dropZone = child.gameObject;
+                break;
             }
         }
         if(dropZone != null)
         {
             _battery = CreateObjectInDropZone(_batteryPrefab, dropZone, false);
+        }
+        else
+        {
+            Debug.LogWarning("Battery dropZone is null!!!!!!!!!!!!!!!!!!!!!!!");
         }
 
     }

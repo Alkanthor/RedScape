@@ -8,7 +8,7 @@ public class LevelManagerCabin01 : MonoBehaviour {
     public static LevelManagerCabin01 Instance;
 
     //events
-    public UnityEvents.UnityEventBool OnSafeCodeCheck;
+    public UnityEvents.UnityEventGameObjectBool OnSafeCodeCheck;
     public UnityEvents.UnityEventGameObjectBool OnLockerDoorCheck;
     //flags
     public bool CanOpenSafe { get; set; }
@@ -18,6 +18,7 @@ public class LevelManagerCabin01 : MonoBehaviour {
     private GameObject _keyToLocker;
     private GameObject _lockerWithBatteryDoor;
 
+    public GameObject SafeDoor;
 
     void Awake()
     {
@@ -39,7 +40,7 @@ public class LevelManagerCabin01 : MonoBehaviour {
     private void Start()
     {
         //check if it is initialized
-        if (OnSafeCodeCheck == null) OnSafeCodeCheck = new UnityEvents.UnityEventBool();
+        if (OnSafeCodeCheck == null) OnSafeCodeCheck = new UnityEvents.UnityEventGameObjectBool();
         if (OnLockerDoorCheck == null) OnLockerDoorCheck = new UnityEvents.UnityEventGameObjectBool();
     }
     public void SetKeyDoorCombination(GameObject key, GameObject door)
@@ -72,7 +73,8 @@ public class LevelManagerCabin01 : MonoBehaviour {
             correct = true;
         }
         Debug.Log(this.name + ": OnSafeCodeCheck " + correct);
-        OnSafeCodeCheck.Invoke(correct);
+        //here there is no need to check for correct door
+        OnSafeCodeCheck.Invoke(SafeDoor, correct);
     }
 
 }

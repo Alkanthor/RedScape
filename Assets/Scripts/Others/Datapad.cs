@@ -20,6 +20,7 @@ public class Datapad : MonoBehaviour {
     void Start() {
         DatapadTextFile = Resources.Load<TextAsset>("datapads");
 
+        
         string line = File.ReadAllLines(Application.dataPath + "/Resources/datapads.txt", Encoding.GetEncoding("iso-8859-1"))[recordIndex-1]; // 0-based
         line = line.Replace("\u0092", "'");
 
@@ -33,7 +34,7 @@ public class Datapad : MonoBehaviour {
         contentText.GetComponent<Text>().text = parts[3];
 
 
-        Debug.Log(line);
+        //Debug.Log(line);
 
     }
 }

@@ -581,7 +581,7 @@ Transform:
   m_Children:
   - {fileID: 4572544690786362}
   m_Father: {fileID: 4585515077027642}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4443032668160468
 Transform:
@@ -606,8 +606,8 @@ Transform:
   m_LocalPosition: {x: -0.22, y: 0.342, z: -0.389}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4794501050453322}
   - {fileID: 4625707046973916}
+  - {fileID: 4794501050453322}
   m_Father: {fileID: 4683290353336882}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -650,8 +650,8 @@ Transform:
   m_LocalPosition: {x: 0.244, y: 0.359, z: -0.399}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4417654655733028}
   - {fileID: 4779263932728216}
+  - {fileID: 4417654655733028}
   m_Father: {fileID: 4683290353336882}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -666,7 +666,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4459593604256974}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4644875816708278
 Transform:
@@ -723,7 +723,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4585515077027642}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4794501050453322
 Transform:
@@ -737,7 +737,7 @@ Transform:
   m_Children:
   - {fileID: 4664983377821730}
   m_Father: {fileID: 4459593604256974}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4811256682613418
 Transform:
@@ -2010,10 +2010,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEvents.UnityEventBool, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  OpenSound: {fileID: 8300000, guid: 7f1cd74935856904c9d969906d77f9e1, type: 3}
-  LockSound: {fileID: 8300000, guid: 77acbb77fafd5f940b07093da95c0404, type: 3}
+    m_TypeName: UnityEvents.UnityEventGameObjectBool, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OpenSound: {fileID: 8300000, guid: aed20737fef818046af1899f679762cb, type: 3}
+  LockSound: {fileID: 8300000, guid: 6e10b2d172b95a644a04df34c28af5ca, type: 3}
   _doorMinLimitJoint: 0
   _doorMaxLimitJoint: 110
   _doorJoint: {fileID: 59688944335457420}
@@ -2183,10 +2183,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEvents.UnityEventBool, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  OpenSound: {fileID: 8300000, guid: 7f1cd74935856904c9d969906d77f9e1, type: 3}
-  LockSound: {fileID: 8300000, guid: 77acbb77fafd5f940b07093da95c0404, type: 3}
+    m_TypeName: UnityEvents.UnityEventGameObjectBool, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OpenSound: {fileID: 8300000, guid: aed20737fef818046af1899f679762cb, type: 3}
+  LockSound: {fileID: 8300000, guid: 6e10b2d172b95a644a04df34c28af5ca, type: 3}
   _doorMinLimitJoint: -110
   _doorMaxLimitJoint: 0
   _doorJoint: {fileID: 59771282482953246}

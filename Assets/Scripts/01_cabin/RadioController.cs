@@ -37,6 +37,9 @@ public class RadioController : MonoBehaviour {
     private float _buttonPressStep = 0.005f;
     private bool _isPowerButtonPressed;
     private bool _isRadioOn;
+    private bool _changeButtonTimeNotYet;
+    private bool _canChangeButton;
+
     public bool IsRadioOn
     {
         get
@@ -120,8 +123,14 @@ public class RadioController : MonoBehaviour {
         _powerButtonInteractable = _powerButton.GetComponent<VRTK_InteractableObject>();
         _powerButtonInteractable.InteractableObjectUsed += OnPowerButtonUsed;
         _channelsButtons = _changeChannelButtonsParent.GetComponentsInChildren<Transform>();
-        _hiddenChannelButtonIndex = Random.Range(0, 1000) % _channelsButtons.Length;
-        _hiddenChannelButton = _channelsButtons[_hiddenChannelButtonIndex].gameObject;
+
+        do
+        {
+            _hiddenChannelButtonIndex = Random.Range(0, 1000) % _channelsButtons.Length;
+            _hiddenChannelButton = _channelsButtons[_hiddenChannelButtonIndex].gameObject;
+        }
+        while (_hiddenChannelButton == _changeChannelButtonsParent);
+
         Debug.Log("hidden channel button " + _hiddenChannelButton.name);
         foreach (Transform child in _channelsButtons)
         {
@@ -145,64 +154,75 @@ public class RadioController : MonoBehaviour {
         }
         return index;
     }
+    IEnumerator WaitASecond()
+    {
+        _canChangeButton = false;
+        yield return new WaitForSeconds(3);
+        _canChangeButton = true;
+    }
     private void OnChangeChannelButtonUsed(object sender, InteractableObjectEventArgs e)
     {
-        var button = (sender as VRTK_InteractableObject).gameObject;
-        //is the same button
-        if (_activeChangeChannelButton == button)
-        {
-            button.transform.position += button.transform.up * 2 * _buttonPressStep;
-            _activeChangeChannelButton = null;
-        }
-        //is different button, we switch them
-        else
-        {
 
-            if (_activeChangeChannelButton != null)
+        if(_canChangeButton)
+        {
+            var button = (sender as VRTK_InteractableObject).gameObject;
+            //is the same button
+            if (_activeChangeChannelButton == button)
             {
-                _activeChangeChannelButton.transform.position += _activeChangeChannelButton.transform.up * 2 *_buttonPressStep;
+                button.transform.position += button.transform.up * 2 * _buttonPressStep;
+                _activeChangeChannelButton = null;
             }
-            button.transform.position -= button.transform.up * 2 * _buttonPressStep;
-            _activeChangeChannelButton = button;
-
-        }
-
-        if(IsRadioOn)
-        {
-            var radioIndex = GetRadioButtonIndex(_activeChangeChannelButton);
-            if (_hiddenChannelButton == _activeChangeChannelButton)
-            {
-                Sound.clip = _beep;
-                Sound.loop = false;
-                this.GetComponentInChildren<AudioGeneratedCodePlayer>().CanPlayCode(true);
-            }
+            //is different button, we switch them
             else
             {
-                this.GetComponentInChildren<AudioGeneratedCodePlayer>().CanPlayCode(false);
-                Sound.Stop();
-               
-                if(radioIndex < 0)
+
+                if (_activeChangeChannelButton != null)
                 {
-                    Debug.LogError("no button was found");
+                    _activeChangeChannelButton.transform.position += _activeChangeChannelButton.transform.up * 2 * _buttonPressStep;
+                }
+                button.transform.position -= button.transform.up * 2 * _buttonPressStep;
+                _activeChangeChannelButton = button;
+
+            }
+
+            if (IsRadioOn)
+            {
+                var radioIndex = GetRadioButtonIndex(_activeChangeChannelButton);
+                if (_hiddenChannelButton == _activeChangeChannelButton)
+                {
+                    Sound.clip = _beep;
+                    Sound.loop = false;
+                    this.GetComponentInChildren<AudioGeneratedCodePlayer>().CanPlayCode(true);
                 }
                 else
                 {
-                    Sound.loop = true;
-                    Sound.clip = _radioClips[radioIndex];
+                    this.GetComponentInChildren<AudioGeneratedCodePlayer>().CanPlayCode(false);
+                    Sound.Stop();
+
+                    if (radioIndex < 0)
+                    {
+                        Debug.LogError("no button was found");
+                    }
+                    else
+                    {
+                        Sound.loop = true;
+                        Sound.clip = _radioClips[radioIndex];
+                    }
+
+
+                    Sound.Play();
                 }
-
-
-                Sound.Play();
+                _stationText.GetComponentInChildren<Text>().text = "Station: 0" + radioIndex;
             }
-            _stationText.GetComponentInChildren<Text>().text = "Station: " + string.Format("{00}", radioIndex);
+            else
+            {
+                Sound.Stop();
+                this.GetComponentInChildren<AudioGeneratedCodePlayer>().CanPlayCode(false);
+            }
+
         }
-        else
-        {
-            Sound.Stop();
-            this.GetComponentInChildren<AudioGeneratedCodePlayer>().CanPlayCode(false);
-        }
-        
-        
+        StartCoroutine(WaitASecond());
+
         Debug.Log("Player pressed change channel button " + _activeChangeChannelButton);
     }
 

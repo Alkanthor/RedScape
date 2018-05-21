@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 54533451241775520}
   - component: {fileID: 114037961495111206}
   - component: {fileID: 114240021232566376}
+  - component: {fileID: 114006634636148856}
   m_Layer: 10
   m_Name: key_locker
   m_TagString: Untagged
@@ -157,6 +158,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.024503144, y: 0.004760729, z: 0.034077667}
   m_Center: {x: -0.000000023283064, y: -0.0024289726, z: 0.018137608}
+--- !u!114 &114006634636148856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331807037690964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  emissionDarken: 50
+  customMaterial: {fileID: 2100000, guid: 0a61f1f1e3f944943915b51221d7828c, type: 2}
 --- !u!114 &114037961495111206
 MonoBehaviour:
   m_ObjectHideFlags: 1

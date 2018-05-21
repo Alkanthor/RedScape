@@ -6,7 +6,7 @@ using VRTK;
 public class LockerController : MonoBehaviour
 {
 
-    public UnityEvents.UnityEventBool OnIsDoorOpen;
+    public UnityEvents.UnityEventGameObjectBool OnIsDoorOpen;
 
     private AudioSource _sound;
     public AudioClip OpenSound;
@@ -25,7 +25,7 @@ public class LockerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        if (OnIsDoorOpen == null) OnIsDoorOpen = new UnityEvents.UnityEventBool();
+        if (OnIsDoorOpen == null) OnIsDoorOpen = new UnityEvents.UnityEventGameObjectBool();
         _sound = this.GetComponent<AudioSource>();
         
         _canOpenDoor = false;
@@ -66,7 +66,7 @@ public class LockerController : MonoBehaviour
                 };
             }
 
-            OnIsDoorOpen.Invoke(canOpen);
+            OnIsDoorOpen.Invoke(door, canOpen);
             Debug.Log(this.name + "joint limits: min " + _doorJoint.limits.min + ", max " + _doorJoint.limits.max);
         }
         
