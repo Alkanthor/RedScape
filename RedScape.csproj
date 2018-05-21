@@ -658,6 +658,7 @@
     <Compile Include="Assets\Scripts\01_cabin\RadioController.cs" />
     <Compile Include="Assets\Scripts\01_cabin\WhereIsMyBatteryController.cs" />
     <Compile Include="Assets\Scripts\Others\AudioGeneratedCodePlayer.cs" />
+    <Compile Include="Assets\Scripts\Others\Datapad.cs" />
     <Compile Include="Assets\Scripts\Others\DoorAccessPanelController.cs" />
     <Compile Include="Assets\Scripts\Others\Lamp.cs" />
     <Compile Include="Assets\Scripts\Others\LockerController.cs" />
@@ -675,6 +676,7 @@
     <Compile Include="Assets\Scripts\xx_calibrating_room\TeleportHeadsetCollision.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Resources\datapads.txt" />
     <None Include="Assets\[SteamVR]\InteractionSystem\Core\Shaders\SeeThru.shader" />
     <None Include="Assets\[SteamVR]\InteractionSystem\Core\Shaders\Silhouette.shader" />
     <None Include="Assets\[SteamVR]\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
