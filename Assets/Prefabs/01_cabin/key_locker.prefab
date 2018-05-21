@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 54533451241775520}
   - component: {fileID: 114037961495111206}
   - component: {fileID: 114240021232566376}
+  - component: {fileID: 114006634636148856}
   m_Layer: 10
   m_Name: key_locker
   m_TagString: Untagged
@@ -70,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1331807037690964}
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -3.4566083, y: 1.7745966, z: -2.270664}
+  m_LocalPosition: {x: -1.1992733, y: 1.3831242, z: -1.2988782}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4250097483281670}
@@ -91,7 +92,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b409ee1273c34154b9e1ca711260da3b, type: 2}
+  - {fileID: 2100000, guid: 5bf0cdcbd93259f49984a5b2c2846d2f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -157,6 +158,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.024503144, y: 0.004760729, z: 0.034077667}
   m_Center: {x: -0.000000023283064, y: -0.0024289726, z: 0.018137608}
+--- !u!114 &114006634636148856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331807037690964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  emissionDarken: 50
+  customMaterial: {fileID: 2100000, guid: 0a61f1f1e3f944943915b51221d7828c, type: 2}
 --- !u!114 &114037961495111206
 MonoBehaviour:
   m_ObjectHideFlags: 1

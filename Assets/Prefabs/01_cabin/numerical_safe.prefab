@@ -376,6 +376,7 @@ GameObject:
   - component: {fileID: 114129523345438916}
   - component: {fileID: 114920191975577472}
   - component: {fileID: 65331518856769776}
+  - component: {fileID: 82892161437033960}
   m_Layer: 0
   m_Name: doors
   m_TagString: Untagged
@@ -583,7 +584,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1425703031165090}
   m_LocalRotation: {x: 0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.99, y: 0.19, z: 1.89}
+  m_LocalPosition: {x: 0.833, y: 0.009, z: 1.056}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4622840761157936}
@@ -781,7 +782,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.1822048, y: 0.6180217, z: -0.19709356}
+  m_ConnectedAnchor: {x: 0.6507952, y: 0.24802174, z: 0.85890645}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -927,6 +928,86 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.43530807, y: 0.027803957, z: 0.46849453}
   m_Center: {x: 0.02042365, y: 0.013901979, z: -0.021256477}
+--- !u!82 &82892161437033960
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1559671684778170}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114001091106999802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1486,6 +1567,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEvents.UnityEventString, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  Sound: {fileID: 0}
   _appearDuration: 0.7
   _playerCollisionName: '[VRTK][AUTOGEN][BodyColliderContainer]'
   _inputCorrectText: '*CORRECT*'
@@ -2327,7 +2409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickOnPointerCollision: 0
-  autoActivateWithinDistance: 0
+  autoActivateWithinDistance: 0.025
 --- !u!114 &114844989961674724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2516,9 +2598,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5ff2804ce3f5d49aeec4dd1250f0d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnIsDoorOpen:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEvents.UnityEventBool, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OpenSound: {fileID: 8300000, guid: 1230dd9294f07a943be403e374e74891, type: 3}
+  LockSound: {fileID: 8300000, guid: 7f2e4ab2b43becf47b80f77cfa69bb35, type: 3}
   _doorMinLimitJoint: 0
   _doorMaxLimitJoint: 110
-  _lockerText: {fileID: 0}
   _doorJoint: {fileID: 59083809002830164}
 --- !u!114 &114922461353124332
 MonoBehaviour:

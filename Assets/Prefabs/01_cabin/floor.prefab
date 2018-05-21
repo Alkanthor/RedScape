@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4594955109132646}
   - component: {fileID: 33923140444061462}
   - component: {fileID: 23399464148828722}
-  - component: {fileID: 114086152460997678}
   m_Layer: 0
   m_Name: floor
   m_TagString: Untagged
@@ -38,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4781759515385686}
   - component: {fileID: 65390198432208234}
+  - component: {fileID: 114366479862800982}
   m_Layer: 13
   m_Name: collider_for_others
   m_TagString: Untagged
@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4325679073764702}
   - component: {fileID: 65739861456302612}
+  - component: {fileID: 114971492345305340}
   m_Layer: 0
   m_Name: collider_for_player
   m_TagString: Untagged
@@ -116,7 +117,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 767517f698b2e7f4babf1461f4bf9b7d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -167,12 +168,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 18.47005, y: 0.91751343, z: 10.410818}
   m_Center: {x: 2.0489564, y: -0.73700863, z: -0.025160909}
---- !u!114 &114086152460997678
+--- !u!114 &114366479862800982
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1539419370461204}
+  m_GameObject: {fileID: 1679323128542416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef105c4cb03b4d4ab1e95d355d5b8ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114971492345305340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1699005795050178}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aef105c4cb03b4d4ab1e95d355d5b8ca, type: 3}

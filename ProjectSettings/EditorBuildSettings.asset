@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/xx_calibration_room.unity
     guid: 326a3173ac3fd734f9b6ff5c9bfa36e6
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/00_prison_cell_tutorial.unity
     guid: f1edaeaed22f42342a350996b0075262
   - enabled: 1
