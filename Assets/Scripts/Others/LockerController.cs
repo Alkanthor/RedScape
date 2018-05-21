@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using VRTK;
-public class LockerController : MonoBehaviour {
-
+public class LockerController : MonoBehaviour
+{
+    private AudioSource _sound;
+    public AudioClip OpenSound;
+    public AudioClip LockSound;
 
     [SerializeField]
     private float _doorMinLimitJoint = 0;
@@ -19,8 +22,11 @@ public class LockerController : MonoBehaviour {
     [SerializeField]
     private HingeJoint _doorJoint;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
+        _sound = this.GetComponent<AudioSource>();
+        
         _canOpenDoor = false;
         _doorJoint.limits = new JointLimits()
         {
@@ -32,15 +38,17 @@ public class LockerController : MonoBehaviour {
 
     public void CanOpenDoor(bool canOpen)
     {
-       
+
         //we already opened the safe
-        if (_canOpenDoor == true) return;
+       // if (_canOpenDoor == true) return;
 
         _canOpenDoor = canOpen;
-        if(_canOpenDoor)
+        if (_canOpenDoor)
         {
-            _lockerText.GetComponentInChildren<Text>().text = "Open";
-            _lockerText.GetComponentInChildren<Text>().color = Color.green;
+            _sound.clip = OpenSound;
+            _sound.Play();
+            //_lockerText.GetComponentInChildren<Text>().text = "Open";
+           // _lockerText.GetComponentInChildren<Text>().color = Color.green;
             _doorJoint.limits = new JointLimits()
             {
                 min = _doorMinLimitJoint,
@@ -49,8 +57,10 @@ public class LockerController : MonoBehaviour {
         }
         else
         {
-            _lockerText.GetComponentInChildren<Text>().text = "Locked";
-            _lockerText.GetComponentInChildren<Text>().color = Color.red;
+            _sound.clip = LockSound;
+            _sound.Play();
+           // _lockerText.GetComponentInChildren<Text>().text = "Locked";
+           // _lockerText.GetComponentInChildren<Text>().color = Color.red;
             _doorJoint.limits = new JointLimits()
             {
                 min = 0,

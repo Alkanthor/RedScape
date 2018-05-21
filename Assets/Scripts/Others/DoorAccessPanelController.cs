@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class DoorAccessPanelController : MonoBehaviour {
 
+    public AudioSource Sound;
     public GameObject _door;
     public GameObject _doorText;
     public string IdCardName;
@@ -42,6 +43,7 @@ public class DoorAccessPanelController : MonoBehaviour {
 
         yield return new WaitForSeconds(AccessingDoorTime);
         _doorUnlocked = true;
+        Sound.Play();
         Debug.Log("Door access granted...opening door");
         yield return new WaitForSeconds(1);
         var doorTo = _door.transform.position + _door.transform.up * DoorOpenLimit;
@@ -81,8 +83,9 @@ public class DoorAccessPanelController : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-		
-	}
+        Sound = this.GetComponent<AudioSource>();
+        Sound.clip = (AudioClip)Resources.Load("Sounds/Radio/doorOpen", typeof(AudioClip));
+    }
 	
 	// Update is called once per frame
 	void Update () {

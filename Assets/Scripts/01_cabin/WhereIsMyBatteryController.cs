@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VRTK;
 
 public class WhereIsMyBatteryController : MonoBehaviour {
 
 
     public UnityEvents.UnityEventGameObject2 OnKeyDoorCombination;
+    public UnityEvents.UnityEventBool OnLockerDoorCheck;
     [SerializeField]
     private GameObject _batteryPrefab;
     [SerializeField]
@@ -23,6 +25,7 @@ public class WhereIsMyBatteryController : MonoBehaviour {
     void Start () {
 
         if (OnKeyDoorCombination == null) OnKeyDoorCombination = new UnityEvents.UnityEventGameObject2();
+        if (OnLockerDoorCheck == null) OnLockerDoorCheck = new UnityEvents.UnityEventBool();
         CreateKey();
         CreateBattery();
         //send key-door combination
@@ -31,16 +34,28 @@ public class WhereIsMyBatteryController : MonoBehaviour {
 	
     private void CreateKey()
     {
-        var keyRandomRotation = Quaternion.Euler(new Vector3(Random.Range(0, 360), 0, Random.Range(0, 360)));
-        _key = CreateObjectInDropZone(_keyPrefab, _keyDropArea, keyRandomRotation);
+        _key = CreateObjectInDropZone(_keyPrefab, _keyDropArea);
 
     }
 
     private void CreateBattery()
     {
+        
         var randomDoorIndex = Random.Range(0, 1000) % _lockerDoors.Length;
         _doorWithBattery = _lockerDoors[randomDoorIndex];
-        Debug.Log("door to key: " + _doorWithBattery.name);
+        for (int i = 0; i< _lockerDoors.Length; ++i)
+        {
+            if(_doorWithBattery != _lockerDoors[i])
+            {
+                var lockerSnapDropZone = _lockerDoors[i].GetComponentInChildren<VRTK_SnapDropZone>();
+                OnLockerDoorCheck.AddListener(_lockerDoors[i].GetComponentInChildren<LockerController>().CanOpenDoor);
+                lockerSnapDropZone.ObjectSnappedToDropZone += (sender, e) =>
+                {
+                    OnLockerDoorCheck.Invoke(false);
+                };
+            }
+        }
+            Debug.Log("door to key: " + _doorWithBattery.name);
         GameObject dropZone = null;
         foreach(Transform child in _doorWithBattery.GetComponentsInChildren<Transform>())
         {
@@ -51,23 +66,32 @@ public class WhereIsMyBatteryController : MonoBehaviour {
         }
         if(dropZone != null)
         {
-            var batteryRotation = Quaternion.Euler(new Vector3(Random.Range(0, 360), 0, Random.Range(0, 360)));
-            _battery = CreateObjectInDropZone(_batteryPrefab, dropZone, batteryRotation);
+            _battery = CreateObjectInDropZone(_batteryPrefab, dropZone, false);
         }
 
     }
 
-    private GameObject CreateObjectInDropZone(GameObject prefab, GameObject dropZone, Quaternion rotation)
+    private GameObject CreateObjectInDropZone(GameObject prefab, GameObject dropZone, bool rotate = true)
     {
 
-        var keyColliders = dropZone.GetComponents<Collider>();
-        var randomColliderIndex = Random.Range(0, 1000) % keyColliders.Length;
-        var keyCenter = keyColliders[randomColliderIndex].bounds.center;
-        var keyExtends = keyColliders[randomColliderIndex].bounds.extents;
-        var randomPosInArea = new Vector3(Random.Range(keyCenter.x, keyCenter.x + keyExtends.x), Random.Range(keyCenter.y, keyCenter.y + keyExtends.y), Random.Range(keyCenter.z, keyCenter.z + keyExtends.z));
-        var keyRandomRotation = Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0));
-        Debug.Log("battery generated");
-        return GameObject.Instantiate(prefab, randomPosInArea, rotation);
+        var objectColliders = dropZone.GetComponents<Collider>();
+        var randomColliderIndex = Random.Range(0, 1000) % objectColliders.Length;
+        var objectCenter = objectColliders[randomColliderIndex].bounds.center;
+        var objectExtends = objectColliders[randomColliderIndex].bounds.extents;
+        var randomPosInArea = new Vector3(Random.Range(objectCenter.x, objectCenter.x + objectExtends.x), Random.Range(objectCenter.y, objectCenter.y + objectExtends.y), Random.Range(objectCenter.z, objectCenter.z + objectExtends.z));
+
+        var objectRandomRotation = prefab.transform.rotation;
+        if(rotate)
+        {
+            objectRandomRotation = Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0));
+        }
+        var objectSpawn = GameObject.Instantiate(prefab, randomPosInArea, objectRandomRotation);
+        if(objectSpawn == null)
+        {
+            Debug.LogWarning("object is NULL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        }
+        Debug.Log("object generated " + objectSpawn);
+        return objectSpawn;
     }
 	// Update is called once per frame
 	void Update () {
