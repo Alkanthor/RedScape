@@ -1,21 +1,16 @@
 fileFormatVersion: 2
 guid: c4ed541a08469f849abe8409b8e5d485
-timeCreated: 1526367440
+timeCreated: 1526885334
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: glass_window_big
-    100002: //RootNode
-    400000: glass_window_big
-    400002: //RootNode
+    100000: //RootNode
+    400000: //RootNode
     2100000: No Name
-    2300000: glass_window_big
-    2300002: //RootNode
-    3300000: glass_window_big
-    3300002: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: wall_window_big
-    4300002: glass_window_big
   externalObjects: {}
   materials:
     importMaterials: 1

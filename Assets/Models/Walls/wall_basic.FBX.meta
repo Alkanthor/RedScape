@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 41b022c94dab47c4f8cacf100c77286d
-timeCreated: 1526367440
+timeCreated: 1526885334
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -10,7 +10,7 @@ ModelImporter:
     2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: wall_plane
+    4300000: wall_basic
   externalObjects: {}
   materials:
     importMaterials: 1
