@@ -120,6 +120,8 @@ namespace VRTK.Highlighters
             }
         }
 
+        Texture dummyTexture;
+
         protected virtual void ChangeToHighlightColor(Color color, float duration = 0f)
         {
             Renderer[] renderers = GetComponentsInChildren<Renderer>(true);
@@ -149,7 +151,7 @@ namespace VRTK.Highlighters
 
                     if (resetMainTexture && material.HasProperty("_MainTex"))
                     {
-                        renderer.material.SetTexture("_MainTex", new Texture());
+                        renderer.material.SetTexture("_MainTex", dummyTexture);
                     }
 
                     if (material.HasProperty("_Color"))
