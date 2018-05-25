@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 65005125221449488}
   - component: {fileID: 65547714022905380}
   - component: {fileID: 114537607607165290}
+  - component: {fileID: 65428592875549376}
   m_Layer: 0
   m_Name: cabin_bed
   m_TagString: Untagged
@@ -39,9 +40,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1800934292698064}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 1.748, y: 0.71091026, z: 0.19599998}
-  m_LocalScale: {x: 1.0000005, y: 1, z: 1.0000005}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 1.735, y: 1.5409102, z: -0.26200002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -112,6 +113,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0427175, y: 0.068174124, z: 0.83693403}
   m_Center: {x: 0.0015002481, y: 0.016355693, z: -0.018466493}
+--- !u!65 &65428592875549376
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1800934292698064}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0427175, y: 0.08662033, z: 0.048841592}
+  m_Center: {x: 0.0015002482, y: 0.025578797, z: 0.37557983}
 --- !u!65 &65504345902513460
 BoxCollider:
   m_ObjectHideFlags: 1
