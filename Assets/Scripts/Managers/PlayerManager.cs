@@ -48,8 +48,14 @@ public class PlayerManager : MonoBehaviour {
 
     private void OnLoadedSetupChanged(VRTK_SDKManager sender, VRTK_SDKManager.LoadedSetupChangeEventArgs e)
     {
-        _playerCamera = GameObject.FindGameObjectWithTag(UnityStrings.TAG_MAIN_CAMERA).gameObject;
-        _playerArea = SDKSetupObject.GetComponentInChildren<VRTK_SDKSetup>().gameObject;
+    
+
+        _playerCamera = GameObject.FindGameObjectWithTag(UnityStrings.TAG_MAIN_CAMERA);
+        var sdkSetup = SDKSetupObject.GetComponentInChildren<VRTK_SDKSetup>();
+        if (sdkSetup != null)
+        {
+            _playerArea = SDKSetupObject.GetComponentInChildren<VRTK_SDKSetup>().gameObject;
+        }
         MainGameManager.Instance.PlayerManagerInitialized = true;
 
     }
