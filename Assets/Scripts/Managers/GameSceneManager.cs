@@ -11,11 +11,13 @@ public class GameSceneManager : MonoBehaviour {
     private List<string> _sceneNames;
 
     [SerializeField]
-    private int _startSceneIndex;
+    public int _startSceneIndex;
 
     private int _sceneIndex = -1;
     private int _previousLoadedSceneIndex = -1;
+    private bool _loadingScene = false;
 
+    private bool _shouldLoadLevel = false;
     void Awake()
     {
         //Check if instance already exists
@@ -36,15 +38,16 @@ public class GameSceneManager : MonoBehaviour {
 
     private void Start()
     {
+        
         SceneManager.sceneLoaded += OnSceneLoaded;
-       
         _sceneIndex = _startSceneIndex;
-        LoadScene(_sceneIndex);
+        MainGameManager.Instance.SceneManagerInitialized = true;
     }
-
 
     private void Update()
     {
+
+        //for debug 
         if(Input.GetKeyDown(KeyCode.B))
         {
             LoadPreviousScene();
@@ -57,18 +60,42 @@ public class GameSceneManager : MonoBehaviour {
 
     private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
     {
+        SceneManager.SetActiveScene(arg0);
         UnloadScene(_previousLoadedSceneIndex);
-    }
-    
-    public void LoadScene(int index)
-    {
-        if(index < _sceneNames.Count && index >= 0)
+        _loadingScene = false;
+        if(_shouldLoadLevel)
         {
-            if (_previousLoadedSceneIndex >= 0) _previousLoadedSceneIndex = _sceneIndex;
-            _sceneIndex = index;
-            SceneManager.LoadSceneAsync(_sceneNames[_sceneIndex], LoadSceneMode.Additive);
-
+            //TODO: load level 
         }
+        Debug.Log("Scene " + _sceneNames[_sceneIndex] + " loaded succesfully.");
+    }
+
+
+    public void InitScene()
+    {
+        if (!_loadingScene)
+        {
+            if (_startSceneIndex < _sceneNames.Count && _startSceneIndex >= 0)
+            {
+                LoadScene(_startSceneIndex);
+            }
+        }
+    }
+    public void LoadScene(int index, bool loading = false)
+    {
+        if(!_loadingScene)
+        {
+            if (index < _sceneNames.Count && index >= 0)
+            {
+                _loadingScene = true;
+                _previousLoadedSceneIndex = _sceneIndex;
+                _sceneIndex = index;
+                _shouldLoadLevel = loading;
+                SceneManager.LoadSceneAsync(_sceneNames[_sceneIndex], LoadSceneMode.Additive);
+
+            }
+        }
+
     }
 
     public void UnloadScene(int index)
@@ -80,26 +107,22 @@ public class GameSceneManager : MonoBehaviour {
         }
     }
 
-    public void LoadNextScene()
+    public void LoadNextScene(bool loading = false)
     {
-        if(_sceneIndex + 1 < _sceneNames.Count)
-        {
-            _previousLoadedSceneIndex = _sceneIndex;
-            _sceneIndex++;
-            SceneManager.LoadSceneAsync(_sceneNames[_sceneIndex], LoadSceneMode.Additive);
-        }
+        LoadScene(_sceneIndex + 1, loading);
 
     }
 
-    public void LoadPreviousScene()
+    public void LoadPreviousScene(bool loading = false)
     {
-        if (_sceneIndex - 1 >= 0)
-        {
-            _previousLoadedSceneIndex = _sceneIndex;
-            _sceneIndex--;
-            SceneManager.LoadSceneAsync(_sceneNames[_sceneIndex], LoadSceneMode.Additive);
-        }
+        LoadScene(_sceneIndex - 1, loading);
     }
 
+
+    public void SaveScene()
+    {
+        PlayerPrefs.SetInt(UnityStrings.PREF_LOAD_GAME, _sceneIndex);
+        //TODO: save level
+    }
 
 }
