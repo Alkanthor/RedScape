@@ -1,16 +1,19 @@
 fileFormatVersion: 2
 guid: 3416b8726204208458bc58a392422a08
-timeCreated: 1526368239
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: power_button
     400000: //RootNode
-    2100000: No Name
+    400002: power_button
+    2100000: 'Material #2'
     2300000: //RootNode
+    2300002: power_button
     3300000: //RootNode
+    3300002: power_button
     4300000: car
+    4300002: power_button
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -30,6 +33,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

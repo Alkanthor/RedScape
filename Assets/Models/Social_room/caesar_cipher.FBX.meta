@@ -1,37 +1,14 @@
 fileFormatVersion: 2
 guid: eed4983895039234f815ed738fd67066
-timeCreated: 1526368243
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: magnet001
-    100004: magnet002
-    100006: magnet003
-    100008: magnet004
     400000: //RootNode
-    400002: magnet001
-    400004: magnet002
-    400006: magnet003
-    400008: magnet004
     2100000: 'Material #2'
-    2100002: No Name
     2300000: //RootNode
-    2300002: magnet001
-    2300004: magnet002
-    2300006: magnet003
-    2300008: magnet004
     3300000: //RootNode
-    3300002: magnet001
-    3300004: magnet002
-    3300006: magnet003
-    3300008: magnet004
     4300000: Caesar_cipher
-    4300002: magnet001
-    4300004: magnet002
-    4300006: magnet003
-    4300008: magnet004
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -51,6 +28,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

@@ -1,22 +1,14 @@
 fileFormatVersion: 2
 guid: e0a96b5966e22ef4b83c8e79e97c40a5
-timeCreated: 1526368242
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: DISC
     400000: //RootNode
-    400002: DISC
-    2100000: No Name
-    2100002: 'Material #3'
+    2100000: 'Material #3'
     2300000: //RootNode
-    2300002: DISC
     3300000: //RootNode
-    3300002: DISC
     4300000: Caesar_key
-    4300002: DISC
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -36,6 +28,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
