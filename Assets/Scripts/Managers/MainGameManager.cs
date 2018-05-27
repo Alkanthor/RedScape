@@ -7,6 +7,8 @@ public class MainGameManager : MonoBehaviour {
     public static MainGameManager Instance;
 
     public bool IsSaveAllowed;
+    public bool AdjustPlayerPositionAtStart;
+
 
     private bool _playerManagerInitialized;
     public bool PlayerManagerInitialized
@@ -48,21 +50,21 @@ public class MainGameManager : MonoBehaviour {
         var loadGameLevel = PlayerPrefs.GetInt(UnityStrings.PREF_LOAD_GAME, -1);
         if(loadGameLevel < 0)
         {
-            InitGame();
+            InitGame(AdjustPlayerPositionAtStart);
         }
         else
         {
-            LoadGame(loadGameLevel);
+            LoadGame(loadGameLevel, AdjustPlayerPositionAtStart);
         }
     }
 
-    private void InitGame()
+    private void InitGame(bool adjustPlayerPosition = false)
     {
-        GameSceneManager.Instance.InitScene();
+        GameSceneManager.Instance.InitScene(adjustPlayerPosition);
     }
-    private void LoadGame(int level)
+    private void LoadGame(int level, bool adjustPlayerPosition = false)
     {
-        GameSceneManager.Instance.LoadScene(level);
+        GameSceneManager.Instance.LoadScene(level, adjustPlayerPosition);
     }
 
     private void SaveGame()

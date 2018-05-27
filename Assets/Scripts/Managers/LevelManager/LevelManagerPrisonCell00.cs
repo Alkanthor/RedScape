@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -25,7 +27,9 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
             
             if(!_grabbedTeleport && value)
             {
-                EnableTeleport(true, true);
+                PlayerManager.Instance.LeftControllerType = UnityEnums.ControllerType.NORMAL;
+                PlayerManager.Instance.RightControllerType = UnityEnums.ControllerType.NORMAL;
+
             }
             _grabbedTeleport = value;
         }
@@ -44,7 +48,8 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
             if(_isOutside)
             {
                 Debug.Log("Is Outside Of Cell");
-                EnableTeleport(false, true);
+                PlayerManager.Instance.LeftControllerType = UnityEnums.ControllerType.DISABLED_TELEPORT;
+                PlayerManager.Instance.RightControllerType = UnityEnums.ControllerType.DISABLED_TELEPORT;
             }
 
 
@@ -63,7 +68,7 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
             if(IsOutside && UsedTeleportTwice)
             {
                 Debug.Log("TODO: END LEVEL...CHANGE SCENE");
-                SceneManager.LoadScene(2, LoadSceneMode.Single);
+                GameSceneManager.Instance.LoadNextScene(true);
             }
 
         }
@@ -74,14 +79,7 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
     public UnityEvent TeleportAppearEvent;
 
 
-    [SerializeField]
-    private VRTK_Pointer LeftControllerPointer;
-    [SerializeField]
-    private VRTK_Pointer RightControllerPointer;
-    [SerializeField]
-    private VRTK_BasePointerRenderer LeftControllerPointerRenderer;
-    [SerializeField]
-    private VRTK_BasePointerRenderer RightControllerPointerRenderer;
+
 
     //Awake is always called before any Start functions
     void Awake()
@@ -109,9 +107,8 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
         IsOutside = false;
         UsedTeleportTwice = false;
 
-        EnableTeleport(false, false);
-        LeftControllerPointer.ActivationButtonReleased += OnTeleportUsed;
-        RightControllerPointer.ActivationButtonReleased += OnTeleportUsed;
+        PlayerManager.Instance.LeftControllerType = UnityEnums.ControllerType.NO_TELEPORT;
+        PlayerManager.Instance.RightControllerType = UnityEnums.ControllerType.NO_TELEPORT;
     }
 	
 	// Update is called once per frame
@@ -119,28 +116,11 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
 
 	}
 
-    private void OnTeleportUsed(object sender, ControllerInteractionEventArgs e)
-    {
-        Debug.Log("Player used teleport");
-        if(IsOutside)
-        {
-            
-            UsedTeleportTwice = true;
 
-        }
-    }
-
-    void EnableTeleport(bool enableTeleport, bool enableTeleportRenderer)
+    private async Task WaitForTeleportAppear()
     {
-        LeftControllerPointer.enableTeleport = enableTeleport;
-        RightControllerPointer.enableTeleport = enableTeleport;
-        LeftControllerPointerRenderer.enabled = enableTeleportRenderer;
-        RightControllerPointerRenderer.enabled = enableTeleportRenderer;
-    }
-    IEnumerator WaitForTeleportAppear()
-    {
-        int waitTime = Random.Range(3, 6);
-        yield return new WaitForSeconds(waitTime);
+        int waitTime = UnityEngine.Random.Range(3, 6);
+        await Task.Delay(TimeSpan.FromSeconds(waitTime));
         TeleportAppearEvent.Invoke();
         TeleportAppear = true;
     }
@@ -148,6 +128,6 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
     {
         Debug.Log("game started");
         GameStarted = true;
-        StartCoroutine(WaitForTeleportAppear());
+        Task.Run(async () => await WaitForTeleportAppear());
     }
 }
