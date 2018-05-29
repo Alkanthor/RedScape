@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1284,7 +1284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsSaveAllowed: 0
-  AdjustPlayerPositionAtStart: 0
+  AdjustPlayerPositionAtStart: 1
 --- !u!4 &227029393
 Transform:
   m_ObjectHideFlags: 0
@@ -5768,7 +5768,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4800702892443756, guid: 165526c1fd3b29f41974af4b75c257ca, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.0428
+      value: -9.598201
       objectReference: {fileID: 0}
     - target: {fileID: 4800702892443756, guid: 165526c1fd3b29f41974af4b75c257ca, type: 2}
       propertyPath: m_LocalRotation.x
@@ -7394,7 +7394,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4800702892443756, guid: 165526c1fd3b29f41974af4b75c257ca, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.0428
+      value: -9.598201
       objectReference: {fileID: 0}
     - target: {fileID: 4800702892443756, guid: 165526c1fd3b29f41974af4b75c257ca, type: 2}
       propertyPath: m_LocalRotation.x
@@ -9196,6 +9196,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c8fed00c7c6246b4fcb6075ef58e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTriggerPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTriggerReleased:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTriggerAxisChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTouchpadPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTouchpadReleased:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTouchpadAxisChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTouchpadTouchStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTouchpadTouchEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnButtonOnePressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnButtonTwoPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   SDKSetupObject: {fileID: 1550492796}
   _leftControllerScripts: {fileID: 703187374}
   _rightControllerScripts: {fileID: 259652871}
@@ -9398,7 +9448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2110888890
 Transform:
   m_ObjectHideFlags: 0
@@ -9418,7 +9468,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2110888889}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3dbed512b1e703947868c27c236be969, type: 3}
   m_Name: 
@@ -9450,10 +9500,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  LeftControllerPointer: {fileID: 0}
-  RightControllerPointer: {fileID: 0}
-  LeftControllerPointerRenderer: {fileID: 0}
-  RightControllerPointerRenderer: {fileID: 0}
 --- !u!1 &2113494475
 GameObject:
   m_ObjectHideFlags: 0

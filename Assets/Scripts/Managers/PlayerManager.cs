@@ -108,8 +108,8 @@ public class PlayerManager : MonoBehaviour {
         _rightControllerPointer = _rightControllerScripts.GetComponent<VRTK_Pointer>();
         _leftControllerPointerRenderer = _leftControllerScripts.GetComponent<VRTK_BasePointerRenderer>();
         _rightControllerPointerRenderer = _rightControllerScripts.GetComponent<VRTK_BasePointerRenderer>();
-        _leftControllerEvents = _leftControllerEvents.GetComponent<VRTK_ControllerEvents>();
-        _rightControllerEvents = _rightControllerEvents.GetComponent<VRTK_ControllerEvents>();
+        _leftControllerEvents = _leftControllerScripts.GetComponent<VRTK_ControllerEvents>();
+        _rightControllerEvents = _rightControllerScripts.GetComponent<VRTK_ControllerEvents>();
 
         //TODO: subscribe to events
         manager.LoadedSetupChanged += OnLoadedSetupChanged;
