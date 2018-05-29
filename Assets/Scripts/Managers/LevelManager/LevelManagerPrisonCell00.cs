@@ -11,9 +11,35 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
 
     public static LevelManagerPrisonCell00 Instance;
 
-    public bool GameStarted { get; set; }
-    public bool TeleportAppear { get; set; }
+    private bool _gameStarted;
+    public bool GameStarted
+    {
+        get { return _gameStarted; }
+        set
+        {
 
+            if (value == true && !_gameStarted)
+            {
+                StartGame();
+            }
+            _gameStarted = value;
+        }
+    }
+    private bool _teleportAppear;
+    public bool TeleportAppear
+    {
+        get
+        {
+            return _teleportAppear;
+        }
+        set
+        {
+
+            _teleportAppear = value;
+           
+        }
+    }
+    public GameObject Teleport;
 
     private bool _grabbedTeleport;
     public bool GrabbedTeleport
@@ -75,12 +101,6 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
     }
     private int _usedTeleportOutside = 0;
 
-    [Header("Control Level Events")]
-    public UnityEvent TeleportAppearEvent;
-
-
-
-
     //Awake is always called before any Start functions
     void Awake()
     {
@@ -113,21 +133,24 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        //set teleport in main thread
+        if(TeleportAppear && Teleport != null)
+        {
+            Teleport.SetActive(true);
+        }
 	}
 
 
     private async Task WaitForTeleportAppear()
     {
-        int waitTime = UnityEngine.Random.Range(3, 6);
+        var random = new System.Random();
+        int waitTime = random.Next(3, 6);
         await Task.Delay(TimeSpan.FromSeconds(waitTime));
-        TeleportAppearEvent.Invoke();
         TeleportAppear = true;
     }
     public void StartGame()
     {
         Debug.Log("game started");
-        GameStarted = true;
         Task.Run(async () => await WaitForTeleportAppear());
     }
 }

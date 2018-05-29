@@ -126,6 +126,7 @@ public class PlayerManager : MonoBehaviour {
         if (sdkSetup != null)
         {
             _playerArea = SDKSetupObject.GetComponentInChildren<VRTK_SDKSetup>().gameObject;
+
             MainGameManager.Instance.PlayerManagerInitialized = true;
         }
 
