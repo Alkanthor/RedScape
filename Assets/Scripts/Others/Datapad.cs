@@ -21,7 +21,7 @@ public class Datapad : MonoBehaviour {
         DatapadTextFile = Resources.Load<TextAsset>("datapads");
 
         
-        string line = File.ReadAllLines(Application.dataPath + "/Resources/datapads.txt", Encoding.GetEncoding("iso-8859-1"))[recordIndex-1]; // 0-based
+        string line = File.ReadAllLines(Application.dataPath + "/Resources/Text/datapads.txt", Encoding.GetEncoding("iso-8859-1"))[recordIndex-1]; // 0-based
         line = line.Replace("\u0092", "'");
 
         authorText = gameObject.transform.Find("Canvas/author_text").gameObject;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
 
-public class WhereIsMyBatteryController : MonoBehaviour {
+public class WhereIsMyBatteryManager : MonoBehaviour {
 
 
     public UnityEvents.UnityEventGameObject2 OnKeyDoorCombination;
