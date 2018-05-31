@@ -891,7 +891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: -1
   modelOverride: 
-  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 3}
+  shader: {fileID: 0}
   verbose: 0
   createComponents: 1
   updateDynamically: 1
@@ -1658,23 +1658,22 @@ MonoBehaviour:
     maxAllowedPerFrameDistanceDifference: 0.003
     smoothsRotation: 0
     maxAllowedPerFrameAngleDifference: 1.5
-  validCollisionColor: {r: 0.74509805, g: 0.9411765, b: 1, a: 1}
-  invalidCollisionColor: {r: 1, g: 0.3529412, b: 0.27058825, a: 1}
+  validCollisionColor: {r: 0, g: 1, b: 0, a: 1}
+  invalidCollisionColor: {r: 1, g: 0, b: 0, a: 1}
   tracerVisibility: 0
   cursorVisibility: 0
   maximumLength: {x: 10, y: Infinity}
-  tracerDensity: 40
+  tracerDensity: 10
   cursorRadius: 0.5
   heightLimitAngle: 100
-  curveOffset: 0.5
-  rescaleTracer: 1
+  curveOffset: 1
+  rescaleTracer: 0
   cursorMatchTargetRotation: 0
   collisionCheckFrequency: 0
-  customTracer: {fileID: 152786, guid: 78ca952d2c8152c44a89f9b406f7e137, type: 2}
-  customCursor: {fileID: 115170, guid: dedfb5ee6b3a49745b85a120679a1bfd, type: 2}
-  validLocationObject: {fileID: 146986, guid: a7c0ca5b1925f554795cd723c81e7a44, type: 2}
-  invalidLocationObject: {fileID: 1000013693201420, guid: f28a6b8ad0f52a749a85d21efa826c4e,
-    type: 2}
+  customTracer: {fileID: 0}
+  customCursor: {fileID: 0}
+  validLocationObject: {fileID: 0}
+  invalidLocationObject: {fileID: 0}
 --- !u!114 &259652876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1686,7 +1685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71b26f999cbdac8478b6c2a046256169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationButton: 2
+  activationButton: 10
   activationMode: 0
   selectionButton: 3
   clickMethod: 0
@@ -1775,7 +1774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableTeleport: 1
   targetListPolicy: {fileID: 0}
-  pointerRenderer: {fileID: 259652875}
+  pointerRenderer: {fileID: 0}
   activationButton: 10
   holdButtonToActivate: 1
   activateOnEnable: 0
@@ -2276,7 +2275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: -1
   modelOverride: 
-  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 3}
+  shader: {fileID: 0}
   verbose: 0
   createComponents: 1
   updateDynamically: 1
@@ -2841,6 +2840,73 @@ Transform:
   m_PrefabParentObject: {fileID: 4720489848563254, guid: 2b72195db1031054eaaf14a5d82ef255,
     type: 2}
   m_PrefabInternal: {fileID: 524272775}
+--- !u!1001 &480730869
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1456637054}
+    m_Modifications:
+    - target: {fileID: 4399475772387510, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399475772387510, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399475772387510, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.743
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399475772387510, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399475772387510, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399475772387510, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399475772387510, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399475772387510, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739650587428904, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+      propertyPath: m_Name
+      value: anomaly_a
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &480730870 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4399475772387510, guid: d72de1da2d664a245bf7ceb7d656774f,
+    type: 2}
+  m_PrefabInternal: {fileID: 480730869}
+--- !u!1 &480730871 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1739650587428904, guid: d72de1da2d664a245bf7ceb7d656774f,
+    type: 2}
+  m_PrefabInternal: {fileID: 480730869}
+--- !u!114 &480730872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 480730871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ce8804224ff1c44ba6105b0a5fc073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &504054334
 Prefab:
   m_ObjectHideFlags: 0
@@ -3327,7 +3393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d37c2cf88f7c59f4c8cf5d3812568143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: -1
+  index: 0
   origin: {fileID: 0}
 --- !u!1001 &564757357
 Prefab:
@@ -3773,7 +3839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5040c2eaa9ff147b80ded004191c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectToFollow: {fileID: 367044099}
+  gameObjectToFollow: {fileID: 0}
   gameObjectToChange: {fileID: 0}
   followsPosition: 1
   smoothsPosition: 0
@@ -4022,23 +4088,22 @@ MonoBehaviour:
     maxAllowedPerFrameDistanceDifference: 0.003
     smoothsRotation: 0
     maxAllowedPerFrameAngleDifference: 1.5
-  validCollisionColor: {r: 0.74509805, g: 0.9411765, b: 1, a: 1}
-  invalidCollisionColor: {r: 1, g: 0.3529412, b: 0.27058825, a: 1}
+  validCollisionColor: {r: 0, g: 1, b: 0, a: 1}
+  invalidCollisionColor: {r: 1, g: 0, b: 0, a: 1}
   tracerVisibility: 0
   cursorVisibility: 0
   maximumLength: {x: 10, y: Infinity}
-  tracerDensity: 40
+  tracerDensity: 10
   cursorRadius: 0.5
   heightLimitAngle: 100
-  curveOffset: 0.5
-  rescaleTracer: 1
+  curveOffset: 1
+  rescaleTracer: 0
   cursorMatchTargetRotation: 0
   collisionCheckFrequency: 0
-  customTracer: {fileID: 152786, guid: 78ca952d2c8152c44a89f9b406f7e137, type: 2}
-  customCursor: {fileID: 115170, guid: dedfb5ee6b3a49745b85a120679a1bfd, type: 2}
-  validLocationObject: {fileID: 146986, guid: a7c0ca5b1925f554795cd723c81e7a44, type: 2}
-  invalidLocationObject: {fileID: 1000013693201420, guid: f28a6b8ad0f52a749a85d21efa826c4e,
-    type: 2}
+  customTracer: {fileID: 0}
+  customCursor: {fileID: 0}
+  validLocationObject: {fileID: 0}
+  invalidLocationObject: {fileID: 0}
 --- !u!114 &703187378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4050,7 +4115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71b26f999cbdac8478b6c2a046256169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationButton: 2
+  activationButton: 10
   activationMode: 0
   selectionButton: 3
   clickMethod: 0
@@ -4139,7 +4204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableTeleport: 1
   targetListPolicy: {fileID: 0}
-  pointerRenderer: {fileID: 703187377}
+  pointerRenderer: {fileID: 0}
   activationButton: 10
   holdButtonToActivate: 1
   activateOnEnable: 0
@@ -5710,12 +5775,12 @@ MonoBehaviour:
   resetHandsAtSwitch: 1
   lockMouseToView: 1
   mouseMovementInput: 0
-  handMoveMultiplier: 0.2
-  handRotationMultiplier: 30
+  handMoveMultiplier: 0.002
+  handRotationMultiplier: 0.5
   playerMoveMultiplier: 5
   playerRotationMultiplier: 0.5
   playerSprintMultiplier: 2
-  mouseMovementKey: 325
+  mouseMovementKey: 324
   toggleControlHints: 282
   changeHands: 9
   handsOnOff: 308
@@ -5939,7 +6004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeda6d41317f444b900e374895f14e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoPopulateObjectReferences: 0
+  autoPopulateObjectReferences: 1
   actualBoundaries: {fileID: 1036988459}
   actualHeadset: {fileID: 55808221}
   actualLeftController: {fileID: 1164295750}
@@ -5997,32 +6062,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeda6d41317f444b900e374895f14e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoPopulateObjectReferences: 0
-  actualBoundaries: {fileID: 2060445207}
-  actualHeadset: {fileID: 1170707472}
-  actualLeftController: {fileID: 548149668}
-  actualRightController: {fileID: 1504866710}
-  modelAliasLeftController: {fileID: 100781850}
-  modelAliasRightController: {fileID: 343922833}
+  autoPopulateObjectReferences: 1
+  actualBoundaries: {fileID: 0}
+  actualHeadset: {fileID: 0}
+  actualLeftController: {fileID: 0}
+  actualRightController: {fileID: 0}
+  modelAliasLeftController: {fileID: 0}
+  modelAliasRightController: {fileID: 0}
   cachedSystemSDKInfo:
     baseTypeName: VRTK.SDK_BaseSystem
     fallbackTypeName: VRTK.SDK_FallbackSystem
-    typeName: VRTK.SDK_SteamVRSystem
+    typeName: VRTK.SDK_FallbackSystem
     descriptionIndex: 0
   cachedBoundariesSDKInfo:
     baseTypeName: VRTK.SDK_BaseBoundaries
     fallbackTypeName: VRTK.SDK_FallbackBoundaries
-    typeName: VRTK.SDK_SteamVRBoundaries
+    typeName: VRTK.SDK_FallbackBoundaries
     descriptionIndex: 0
   cachedHeadsetSDKInfo:
     baseTypeName: VRTK.SDK_BaseHeadset
     fallbackTypeName: VRTK.SDK_FallbackHeadset
-    typeName: VRTK.SDK_SteamVRHeadset
+    typeName: VRTK.SDK_FallbackHeadset
     descriptionIndex: 0
   cachedControllerSDKInfo:
     baseTypeName: VRTK.SDK_BaseController
     fallbackTypeName: VRTK.SDK_FallbackController
-    typeName: VRTK.SDK_SteamVRController
+    typeName: VRTK.SDK_FallbackController
     descriptionIndex: 0
 --- !u!114 &1107519343
 MonoBehaviour:
@@ -6046,22 +6111,22 @@ MonoBehaviour:
   cachedSystemSDKInfo:
     baseTypeName: VRTK.SDK_BaseSystem
     fallbackTypeName: VRTK.SDK_FallbackSystem
-    typeName: VRTK.SDK_XimmerseSystem
+    typeName: VRTK.SDK_FallbackSystem
     descriptionIndex: 0
   cachedBoundariesSDKInfo:
     baseTypeName: VRTK.SDK_BaseBoundaries
     fallbackTypeName: VRTK.SDK_FallbackBoundaries
-    typeName: VRTK.SDK_XimmerseBoundaries
+    typeName: VRTK.SDK_FallbackBoundaries
     descriptionIndex: 0
   cachedHeadsetSDKInfo:
     baseTypeName: VRTK.SDK_BaseHeadset
     fallbackTypeName: VRTK.SDK_FallbackHeadset
-    typeName: VRTK.SDK_XimmerseHeadset
+    typeName: VRTK.SDK_FallbackHeadset
     descriptionIndex: 0
   cachedControllerSDKInfo:
     baseTypeName: VRTK.SDK_BaseController
     fallbackTypeName: VRTK.SDK_FallbackController
-    typeName: VRTK.SDK_XimmerseController
+    typeName: VRTK.SDK_FallbackController
     descriptionIndex: 0
 --- !u!114 &1107519344
 MonoBehaviour:
@@ -6085,22 +6150,22 @@ MonoBehaviour:
   cachedSystemSDKInfo:
     baseTypeName: VRTK.SDK_BaseSystem
     fallbackTypeName: VRTK.SDK_FallbackSystem
-    typeName: VRTK.SDK_OculusSystem
+    typeName: VRTK.SDK_FallbackSystem
     descriptionIndex: 0
   cachedBoundariesSDKInfo:
     baseTypeName: VRTK.SDK_BaseBoundaries
     fallbackTypeName: VRTK.SDK_FallbackBoundaries
-    typeName: VRTK.SDK_OculusBoundaries
+    typeName: VRTK.SDK_FallbackBoundaries
     descriptionIndex: 0
   cachedHeadsetSDKInfo:
     baseTypeName: VRTK.SDK_BaseHeadset
     fallbackTypeName: VRTK.SDK_FallbackHeadset
-    typeName: VRTK.SDK_OculusHeadset
+    typeName: VRTK.SDK_FallbackHeadset
     descriptionIndex: 0
   cachedControllerSDKInfo:
     baseTypeName: VRTK.SDK_BaseController
     fallbackTypeName: VRTK.SDK_FallbackController
-    typeName: VRTK.SDK_OculusController
+    typeName: VRTK.SDK_FallbackController
     descriptionIndex: 0
 --- !u!114 &1107519345
 MonoBehaviour:
@@ -6124,22 +6189,22 @@ MonoBehaviour:
   cachedSystemSDKInfo:
     baseTypeName: VRTK.SDK_BaseSystem
     fallbackTypeName: VRTK.SDK_FallbackSystem
-    typeName: VRTK.SDK_DaydreamSystem
+    typeName: VRTK.SDK_FallbackSystem
     descriptionIndex: 0
   cachedBoundariesSDKInfo:
     baseTypeName: VRTK.SDK_BaseBoundaries
     fallbackTypeName: VRTK.SDK_FallbackBoundaries
-    typeName: VRTK.SDK_DaydreamBoundaries
+    typeName: VRTK.SDK_FallbackBoundaries
     descriptionIndex: 0
   cachedHeadsetSDKInfo:
     baseTypeName: VRTK.SDK_BaseHeadset
     fallbackTypeName: VRTK.SDK_FallbackHeadset
-    typeName: VRTK.SDK_DaydreamHeadset
+    typeName: VRTK.SDK_FallbackHeadset
     descriptionIndex: 0
   cachedControllerSDKInfo:
     baseTypeName: VRTK.SDK_BaseController
     fallbackTypeName: VRTK.SDK_FallbackController
-    typeName: VRTK.SDK_DaydreamController
+    typeName: VRTK.SDK_FallbackController
     descriptionIndex: 0
 --- !u!1001 &1111862789
 Prefab:
@@ -6499,8 +6564,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bca9ccf900ccc84c887d783321d27e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _head: {fileID: 758051573}
-  _ears: {fileID: 10072868}
+  _head: {fileID: 0}
+  _ears: {fileID: 0}
   wireframe: 0
 --- !u!92 &1170707475
 Behaviour:
@@ -7143,10 +7208,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed2aa1a29b92ca4f84a26a5f6e9218b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  operation: 1
-  checkType: 2
+  operation: 0
+  checkType: 1
   identifiers:
-  - TeleportHeightAdjustPolicy
+  - 
 --- !u!114 &1293663179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7162,7 +7227,7 @@ MonoBehaviour:
   blinkTransitionSpeed: 0.6
   distanceBlinkDelay: 0
   headsetPositionCompensation: 1
-  targetListPolicy: {fileID: 1293663178}
+  targetListPolicy: {fileID: 0}
   navMeshLimitDistance: 0
   snapToNearestFloor: 1
   customRaycast: {fileID: 0}
@@ -7216,10 +7281,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed2aa1a29b92ca4f84a26a5f6e9218b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  operation: 1
-  checkType: 2
+  operation: 0
+  checkType: 1
   identifiers:
-  - TeleportHeadsetCollisionFadePolicy
+  - 
 --- !u!114 &1293663182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7234,8 +7299,8 @@ MonoBehaviour:
   timeTillFade: 0
   blinkTransitionSpeed: 0.1
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
-  headsetCollision: {fileID: 1293663184}
-  headsetFade: {fileID: 1293663183}
+  headsetCollision: {fileID: 0}
+  headsetFade: {fileID: 0}
 --- !u!114 &1293663183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7260,7 +7325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreTriggerColliders: 0
   colliderRadius: 0.1
-  targetListPolicy: {fileID: 1293663181}
+  targetListPolicy: {fileID: 0}
   headsetColliding: 0
   collidingWith: {fileID: 0}
 --- !u!114 &1293663185
@@ -7276,8 +7341,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionDetector: 0
   ignoreTriggerColliders: 0
-  rewindDelay: 0.4
-  pushbackDistance: 0.1
+  rewindDelay: 0.5
+  pushbackDistance: 0.5
   crouchThreshold: 0.5
   crouchRewindThreshold: 0.1
   targetListPolicy: {fileID: 0}
@@ -7748,6 +7813,57 @@ Transform:
   m_Father: {fileID: 718931044}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1348873022
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1456637054}
+    m_Modifications:
+    - target: {fileID: 4399475772387510, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399475772387510, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399475772387510, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.445
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399475772387510, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399475772387510, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399475772387510, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399475772387510, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399475772387510, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739650587428904, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+      propertyPath: m_Name
+      value: anomaly_b
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d72de1da2d664a245bf7ceb7d656774f, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1348873023 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4399475772387510, guid: d72de1da2d664a245bf7ceb7d656774f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1348873022}
 --- !u!1 &1367104453
 GameObject:
   m_ObjectHideFlags: 0
@@ -8013,6 +8129,36 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6b995f2124b8814aa26be27323612ed, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1456637053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1456637054}
+  m_Layer: 0
+  m_Name: anomaly_pair
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1456637054
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1456637053}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 480730870}
+  - {fileID: 1348873023}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1461166234
 GameObject:
   m_ObjectHideFlags: 0
@@ -8209,7 +8355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d37c2cf88f7c59f4c8cf5d3812568143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: -1
+  index: 0
   origin: {fileID: 0}
 --- !u!1 &1510842005
 GameObject:
@@ -9145,19 +9291,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   persistOnLoad: 0
   autoManageScriptDefines: 1
-  activeScriptingDefineSymbolsWithoutSDKClasses:
-  - symbol: VRTK_DEFINE_SDK_OCULUS_AVATAR
-    buildTargetGroupName: Standalone
-  scriptAliasLeftController: {fileID: 703187374}
-  scriptAliasRightController: {fileID: 259652871}
+  activeScriptingDefineSymbolsWithoutSDKClasses: []
+  scriptAliasLeftController: {fileID: 0}
+  scriptAliasRightController: {fileID: 0}
   autoManageVRSettings: 1
   autoLoadSetup: 1
-  setups:
-  - {fileID: 1107519345}
-  - {fileID: 1107519344}
-  - {fileID: 1107519343}
-  - {fileID: 1107519342}
-  - {fileID: 1107519340}
+  setups: []
 --- !u!4 &1550492798
 Transform:
   m_ObjectHideFlags: 0
@@ -11436,18 +11575,10 @@ MonoBehaviour:
   borderThickness: 0.15
   wireframeHeight: 2
   drawWireframeWhenSelectedOnly: 0
-  drawInGame: 0
+  drawInGame: 1
   size: 0
   color: {r: 0, g: 1, b: 1, a: 1}
-  vertices:
-  - {x: 1.5, y: 0.01, z: 1.125}
-  - {x: 1.5, y: 0.01, z: -1.125}
-  - {x: -1.5, y: 0.01, z: -1.125}
-  - {x: -1.5, y: 0.01, z: 1.125}
-  - {x: 1.65, y: 0.01, z: 1.275}
-  - {x: 1.65, y: 0.01, z: -1.275}
-  - {x: -1.65, y: 0.01, z: -1.275}
-  - {x: -1.65, y: 0.01, z: 1.275}
+  vertices: []
 --- !u!33 &2060445210
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11504,8 +11635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b47c2980b93bc48844a54641dab5b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: {fileID: 548149668}
-  right: {fileID: 1504866710}
+  left: {fileID: 0}
+  right: {fileID: 0}
   objects: []
   assignAllBeforeIdentified: 0
 --- !u!1 &2089242353
