@@ -76,7 +76,7 @@ public class GameSceneManager : MonoBehaviour {
             var initPoint = GameObject.FindGameObjectWithTag(UnityStrings.TAG_INIT_POINT);
             if(initPoint == null)
             {
-                Debug.Log("Init point could not be found...player positiion not adjusted");
+                Debug.Log("Init point could not be found...player position not adjusted");
             }
             else
             {

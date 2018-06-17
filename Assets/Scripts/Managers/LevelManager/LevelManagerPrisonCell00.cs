@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -100,7 +98,7 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
         }
     }
     private int _usedTeleportOutside = 0;
-
+    private Coroutine teleportAppearCoroutine;
     //Awake is always called before any Start functions
     void Awake()
     {
@@ -141,16 +139,15 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
 	}
 
 
-    private async Task WaitForTeleportAppear()
+    private IEnumerator WaitForTeleportAppear()
     {
-        var random = new System.Random();
-        int waitTime = random.Next(3, 6);
-        await Task.Delay(TimeSpan.FromSeconds(waitTime));
+        int waitTime = Random.Range(3, 6);
+        yield return new WaitForSeconds(waitTime);
         TeleportAppear = true;
     }
     public void StartGame()
     {
         Debug.Log("game started");
-        Task.Run(async () => await WaitForTeleportAppear());
+        teleportAppearCoroutine = StartCoroutine(WaitForTeleportAppear());
     }
 }

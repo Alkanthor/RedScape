@@ -11,18 +11,25 @@ public class PlayerManager : MonoBehaviour {
 
     public static PlayerManager Instance;
 
-    
+    [HideInInspector]
     public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnTriggerPressed;
+    [HideInInspector]
     public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnTriggerReleased;
+    [HideInInspector]
     public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnTriggerAxisChanged;
-
+    [HideInInspector]
     public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnTouchpadPressed;
+    [HideInInspector]
     public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnTouchpadReleased;
+    [HideInInspector]
     public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnTouchpadAxisChanged;
+    [HideInInspector]
     public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnTouchpadTouchStart;
+    [HideInInspector]
     public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnTouchpadTouchEnd;
-
+    [HideInInspector]
     public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnButtonOnePressed;
+    [HideInInspector]
     public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnButtonTwoPressed;
 
     [SerializeField]
@@ -149,7 +156,7 @@ public class PlayerManager : MonoBehaviour {
                     EnableTeleport(_leftControllerPointer, _leftControllerPointerRenderer, true, true);              
                     break;
                 case UnityEnums.ControllerType.CAR_CONTROLLER:
-                    EnableTeleport(_leftControllerPointer, _leftControllerPointerRenderer, false, false);
+                    EnableTeleport(_leftControllerPointer, _leftControllerPointerRenderer, false, false);            
                     break;
                 case UnityEnums.ControllerType.NOT_INITIALIZED:
                     break;
