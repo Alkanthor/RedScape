@@ -21,6 +21,7 @@ TagManager:
   - shield
   - Fire
   - explosion
+  - Teleportable
   - InitPoint
   - CarController
   layers:

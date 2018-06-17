@@ -19,5 +19,10 @@ namespace UnityEvents
     [System.Serializable]
     public class UnityEventGameObjectArray : UnityEvent<GameObject[]> { }
     [System.Serializable]
+    public class UnityGameObjectCollision : UnityEvent<GameObject, Collision> { }
+    [System.Serializable]
+    public class UnityGameObjectCollider : UnityEvent<GameObject, Collider> { }
+    [System.Serializable]
     public class UnityEventObjectControllerInteractionEventArgs : UnityEvent<object, ControllerInteractionEventArgs> { }
+
 }

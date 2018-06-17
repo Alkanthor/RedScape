@@ -19,6 +19,7 @@ public class GameSceneManager : MonoBehaviour {
 
     private bool _shouldLoadLevel = false;
 
+
     private bool _adjustPlayerPosition = false;
 
     void Awake()
@@ -98,6 +99,7 @@ public class GameSceneManager : MonoBehaviour {
         {
             if (index < _sceneNames.Count && index >= 0)
             {
+
                 _adjustPlayerPosition = adjustPlayerPosition;
                 _loadingScene = true;
                 _previousLoadedSceneIndex = _sceneIndex;

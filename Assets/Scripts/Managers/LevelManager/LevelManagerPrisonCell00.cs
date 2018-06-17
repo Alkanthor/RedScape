@@ -51,9 +51,9 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
             
             if(!_grabbedTeleport && value)
             {
+
                 PlayerManager.Instance.LeftControllerType = UnityEnums.ControllerType.NORMAL;
                 PlayerManager.Instance.RightControllerType = UnityEnums.ControllerType.NORMAL;
-
             }
             _grabbedTeleport = value;
         }
@@ -98,7 +98,9 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
         }
     }
     private int _usedTeleportOutside = 0;
+
     private Coroutine teleportAppearCoroutine;
+  
     //Awake is always called before any Start functions
     void Awake()
     {
@@ -127,6 +129,7 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
 
         PlayerManager.Instance.LeftControllerType = UnityEnums.ControllerType.NO_TELEPORT;
         PlayerManager.Instance.RightControllerType = UnityEnums.ControllerType.NO_TELEPORT;
+
     }
 	
 	// Update is called once per frame

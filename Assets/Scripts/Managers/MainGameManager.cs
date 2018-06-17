@@ -9,7 +9,6 @@ public class MainGameManager : MonoBehaviour {
     public bool IsSaveAllowed;
     public bool AdjustPlayerPositionAtStart;
 
-
     private bool _playerManagerInitialized;
     public bool PlayerManagerInitialized
     {

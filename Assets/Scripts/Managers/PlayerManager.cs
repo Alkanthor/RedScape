@@ -6,7 +6,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using VRTK;
 
-
 public class PlayerManager : MonoBehaviour {
 
     public static PlayerManager Instance;
@@ -123,7 +122,6 @@ public class PlayerManager : MonoBehaviour {
         
 	}
 
-
     private void OnLoadedSetupChanged(VRTK_SDKManager sender, VRTK_SDKManager.LoadedSetupChangeEventArgs e)
     {
     
@@ -190,6 +188,7 @@ public class PlayerManager : MonoBehaviour {
         controllerRenderer.enabled = enableTeleportRenderer;
 
     }
+
     public void AdjustPlayerPosition(Vector3 position)
     {
         _playerArea.transform.position = position - _playerCamera.transform.position;
