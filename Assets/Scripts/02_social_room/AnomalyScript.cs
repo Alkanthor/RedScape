@@ -1,57 +1,81 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class AnomalyScript : MonoBehaviour
 {
+    public Transform[] Anomalies;
+    public float AnomalyTeleportDelay = 4;
+    public AudioSource teleportSound;
 
-    public float AnomalyTeleportDelay = 4.0f;
+    private Dictionary<GameObject, int> currentAnomalyIndexes;
+    private ParentCollision parentCollisitionEvents;
 
-    private Transform otherAnomaly;
-    private Collider other;
-    private AudioSource sound;
+   private Dictionary<GameObject, Coroutine> anomalyCoroutines;
 
-    // Use this for initialization
-    void Start()
+    private HashSet<GameObject> objectsInAnomaly;
+
+    private void Start()
     {
-        sound = GetComponent<AudioSource>();
-        if (name == "anomaly_a")
-            otherAnomaly = transform.parent.Find("anomaly_b");
-        else
-            otherAnomaly = transform.parent.Find("anomaly_a");
+        currentAnomalyIndexes = new Dictionary<GameObject, int>();
+        anomalyCoroutines = new Dictionary<GameObject, Coroutine>();
+        objectsInAnomaly = new HashSet<GameObject>();
+
+        parentCollisitionEvents = this.GetComponent<ParentCollision>();
+        parentCollisitionEvents.OnChildTriggerEnter.AddListener(OnChildTriggerEnter);
+        parentCollisitionEvents.OnChildTriggerExit.AddListener(OnChildTriggerExit);
     }
 
-    // Update is called once per frame
-    void Update()
+    private int GetAnomalyIndex(GameObject anomaly)
     {
-
-    }
-
-    void OnTriggerEnter(Collider otherObject)
-    {
-        if (otherObject.gameObject.tag == "Teleportable")
+        for(int i = 0; i < Anomalies.Length; ++i)
         {
-            other = otherObject;
-            StartCoroutine(WaitAndTeleport());
+            if (Anomalies[i].name == anomaly.name)
+                return i;
+        }
+        return -1;
+    }
+    private void OnChildTriggerEnter(GameObject child, Collider other)
+    {
+        if(other.tag == UnityStrings.TAG_TELEPORTABLE)
+        {
+            objectsInAnomaly.Add(other.gameObject);
+            var currentIndex = GetAnomalyIndex(child);
+            if(currentIndex >= 0)
+            {
+                currentAnomalyIndexes.Add(other.gameObject, currentIndex);
+                Debug.Log("object " + other.name + " will be teleported");
+                anomalyCoroutines.Add(other.gameObject, StartCoroutine(TeleportObjectToNextAnomaly(other.gameObject)));
+            }
+
         }
     }
 
-    private IEnumerator WaitAndTeleport()
+    private IEnumerator TeleportObjectToNextAnomaly(GameObject objectToTeleport)
     {
-        yield return new WaitForSeconds(5);
-        if (other != null)
+        yield return new WaitForSeconds(AnomalyTeleportDelay);
+        var nextAnomalyIndex = currentAnomalyIndexes[objectToTeleport] + 1;
+        if (nextAnomalyIndex >= Anomalies.Length)
+            nextAnomalyIndex = 0;
+        Debug.Log("teleporting object " + objectToTeleport.name + " from " + Anomalies[currentAnomalyIndexes[objectToTeleport]].name + " to " + Anomalies[nextAnomalyIndex].name);
+        objectToTeleport.transform.position = Anomalies[nextAnomalyIndex].position;
+        teleportSound.Play();
+
+    }
+
+    private void OnChildTriggerExit(GameObject child, Collider other)
+    {
+        if(objectsInAnomaly.Contains(other.gameObject))
         {
-            other.transform.position = new Vector3(otherAnomaly.transform.position.x, other.transform.position.y, otherAnomaly.transform.position.z);
-            sound.Play();
+            StopCoroutine(anomalyCoroutines[other.gameObject]);
+            anomalyCoroutines.Remove(other.gameObject);
+            objectsInAnomaly.Remove(other.gameObject);
+            currentAnomalyIndexes.Remove(other.gameObject);
         }
     }
 
-    void OnTriggerExit(Collider otherObject)
-    {
-        if (otherObject.gameObject.tag == "Teleportable")
-        {
-            StopCoroutine(WaitAndTeleport());
-            other = null;
-        }
-    }
 }

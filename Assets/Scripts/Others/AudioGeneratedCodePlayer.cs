@@ -18,6 +18,8 @@ public class AudioGeneratedCodePlayer : MonoBehaviour
     public int CodeLength = 4;
 
     public float AudioTimeout = 1;
+
+    private Coroutine playCoroutine;
     // Use this for initialization
     void Start()
     {
@@ -44,13 +46,13 @@ public class AudioGeneratedCodePlayer : MonoBehaviour
         {
             Debug.Log("Radio starts playing code");
             _isPlaying = true;
-            StartCoroutine(PlayCode());
+            playCoroutine = StartCoroutine(PlayCode());
         }
         if (!CanPlay)
         {
             Debug.Log("Radio stops playing code");
             _isPlaying = false;
-            StopCoroutine(PlayCode());
+            StopCoroutine(playCoroutine);
         }
     }
 

@@ -9,4 +9,5 @@ public static class UnityStrings {
     public static string PREF_LOAD_GAME = "LoadGameLevel";
     //tags
     public static string TAG_MAIN_CAMERA = "MainCamera";
+    public static string TAG_TELEPORTABLE = "Teleportable";
 }
