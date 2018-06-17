@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 8156d5f004c2b4f45b7c2140404c66ce
+guid: 7f4c96fe0a3e32a44bcc936c3f8c7271
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: 'Material #2'
+    2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: car_complete
+    4300000: wall_corner
   externalObjects: {}
   materials:
     importMaterials: 1

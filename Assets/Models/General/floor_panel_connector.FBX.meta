@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 8156d5f004c2b4f45b7c2140404c66ce
+guid: fbda5ae83eb9d834eb392ccb1a1fe4fd
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: 'Material #2'
+    2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: car_complete
+    4300000: floor_panel_connector
   externalObjects: {}
   materials:
     importMaterials: 1

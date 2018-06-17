@@ -1,16 +1,29 @@
 fileFormatVersion: 2
 guid: dd5d757dd75331d41bae314b25ddf89b
-timeCreated: 1526368242
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: antenna
+    100002: //RootNode
+    100004: sphere
+    100006: trigger
+    400000: antenna
+    400002: //RootNode
+    400004: sphere
+    400006: trigger
     2100000: No Name
-    2300000: //RootNode
-    3300000: //RootNode
+    2300000: antenna
+    2300002: //RootNode
+    2300004: sphere
+    2300006: trigger
+    3300000: antenna
+    3300002: //RootNode
+    3300004: sphere
+    3300006: trigger
     4300000: car_remote_controller
+    4300002: trigger
+    4300004: antenna
+    4300006: sphere
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -30,6 +43,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
