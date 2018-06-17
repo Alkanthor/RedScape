@@ -9,35 +9,35 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1539419370461204}
+  m_RootGameObject: {fileID: 1046169105446006}
   m_IsPrefabParent: 1
---- !u!1 &1539419370461204
+--- !u!1 &1046169105446006
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4594955109132646}
-  - component: {fileID: 33923140444061462}
-  - component: {fileID: 23399464148828722}
+  - component: {fileID: 4127540482652834}
+  - component: {fileID: 33337629818318124}
+  - component: {fileID: 23460548253853848}
   m_Layer: 0
-  m_Name: cabin_floor
+  m_Name: kitchen_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1679323128542416
+--- !u!1 &1654950275659628
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4781759515385686}
-  - component: {fileID: 65390198432208234}
-  - component: {fileID: 114366479862800982}
+  - component: {fileID: 4090279858809534}
+  - component: {fileID: 65167777295671776}
+  - component: {fileID: 114420253674939938}
   m_Layer: 13
   m_Name: collider_for_others
   m_TagString: Untagged
@@ -45,16 +45,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1699005795050178
+--- !u!1 &1882878469903108
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4325679073764702}
-  - component: {fileID: 65739861456302612}
-  - component: {fileID: 114971492345305340}
+  - component: {fileID: 4984735524404468}
+  - component: {fileID: 65324120098757256}
+  - component: {fileID: 114030191653709768}
   m_Layer: 0
   m_Name: collider_for_player
   m_TagString: Untagged
@@ -62,53 +62,53 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4325679073764702
+--- !u!4 &4090279858809534
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1699005795050178}
+  m_GameObject: {fileID: 1654950275659628}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4594955109132646}
-  m_RootOrder: 0
+  m_Father: {fileID: 4127540482652834}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4594955109132646
+--- !u!4 &4127540482652834
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1539419370461204}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.8832}
+  m_GameObject: {fileID: 1046169105446006}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5.8368006}
   m_LocalScale: {x: 0.28, y: 0.28, z: 0.867239}
   m_Children:
-  - {fileID: 4325679073764702}
-  - {fileID: 4781759515385686}
+  - {fileID: 4984735524404468}
+  - {fileID: 4090279858809534}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4781759515385686
+--- !u!4 &4984735524404468
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1679323128542416}
+  m_GameObject: {fileID: 1882878469903108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4594955109132646}
-  m_RootOrder: 1
+  m_Father: {fileID: 4127540482652834}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23399464148828722
+--- !u!23 &23460548253853848
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1539419370461204}
+  m_GameObject: {fileID: 1046169105446006}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -138,54 +138,54 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33923140444061462
+--- !u!33 &33337629818318124
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1539419370461204}
+  m_GameObject: {fileID: 1046169105446006}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65390198432208234
+--- !u!65 &65167777295671776
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1679323128542416}
+  m_GameObject: {fileID: 1654950275659628}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10.409268, y: 0.503512, z: 10.093106}
   m_Center: {x: -0.21402751, y: -0.24824397, z: -0.018186295}
---- !u!65 &65739861456302612
+--- !u!65 &65324120098757256
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1699005795050178}
+  m_GameObject: {fileID: 1882878469903108}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10.775152, y: 0.91751343, z: 10.344045}
   m_Center: {x: -0.35757253, y: -0.73700863, z: 0.00822496}
---- !u!114 &114366479862800982
+--- !u!114 &114030191653709768
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1679323128542416}
+  m_GameObject: {fileID: 1882878469903108}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aef105c4cb03b4d4ab1e95d355d5b8ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114971492345305340
+--- !u!114 &114420253674939938
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1699005795050178}
+  m_GameObject: {fileID: 1654950275659628}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aef105c4cb03b4d4ab1e95d355d5b8ca, type: 3}
