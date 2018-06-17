@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class OutsidePrisonCellDetector : MonoBehaviour {
 
+
+    public string PlayerColliderName;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,8 +20,13 @@ public class OutsidePrisonCellDetector : MonoBehaviour {
     //todo check for right other
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Player is outside of prison cell beacuse of" + other.name);
-        LevelManagerPrisonCell00.Instance.IsOutside = true;
+
+        if(PlayerColliderName == other.name)
+        {
+            Debug.Log("Player is outside of prison cell beacuse of" + other.name);
+            LevelManagerPrisonCell00.Instance.IsOutside = true;
+        }
+
     }
 
     

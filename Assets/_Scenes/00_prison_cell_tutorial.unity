@@ -2795,7 +2795,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114413758148803352, guid: 41c02e9245c980f47af2f81797dd1e6b, type: 2}
+    - {fileID: 114911825381326138, guid: 41c02e9245c980f47af2f81797dd1e6b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 41c02e9245c980f47af2f81797dd1e6b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &491442464
@@ -2935,7 +2937,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 517975804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08, y: 1, z: -10.04}
+  m_LocalPosition: {x: -0.08, y: 1, z: -10.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3496,7 +3498,7 @@ GameObject:
   - component: {fileID: 598990069}
   - component: {fileID: 598990068}
   - component: {fileID: 598990067}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: IsOutsidePrisonCellTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3514,6 +3516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a11a135ae309444d8dcfd1ef93e04d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerColliderName: '[VRTK][AUTOGEN][BodyColliderContainer]'
 --- !u!65 &598990068
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3524,8 +3527,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.1012745, y: 0.15140438, z: 1.6090662}
-  m_Center: {x: -0.06927872, y: 0.14720488, z: 2.0462708}
+  m_Size: {x: 8.1012745, y: 2.6436992, z: 1.609066}
+  m_Center: {x: -0.06927872, y: 1.3933523, z: 2.0462708}
 --- !u!4 &598990069
 Transform:
   m_ObjectHideFlags: 0
@@ -3533,7 +3536,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 598990066}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -9.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 576265586}
@@ -12631,62 +12634,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 65103776094123816, guid: 47990ac1cfc31fd48a25e8214ef4856b,
-        type: 2}
-      propertyPath: m_Size.z
-      value: 4.367558
-      objectReference: {fileID: 0}
-    - target: {fileID: 65103776094123816, guid: 47990ac1cfc31fd48a25e8214ef4856b,
-        type: 2}
-      propertyPath: m_Center.z
-      value: 3.0387185
-      objectReference: {fileID: 0}
-    - target: {fileID: 33535740749804680, guid: 47990ac1cfc31fd48a25e8214ef4856b,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4300000, guid: e5c9e034e2dc6a6418c586d068bd9c49, type: 3}
-    - target: {fileID: 65467126987225378, guid: 47990ac1cfc31fd48a25e8214ef4856b,
-        type: 2}
-      propertyPath: m_Center.y
-      value: -0.01675088
-      objectReference: {fileID: 0}
-    - target: {fileID: 65467126987225378, guid: 47990ac1cfc31fd48a25e8214ef4856b,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.37382364
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47990ac1cfc31fd48a25e8214ef4856b, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &2060083208 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1866905370345550, guid: 47990ac1cfc31fd48a25e8214ef4856b,
-    type: 2}
-  m_PrefabInternal: {fileID: 2060083206}
---- !u!65 &2060083209
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2060083208}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 12.087452, y: 3.1952834, z: 5.6304893}
-  m_Center: {x: 0.050860167, y: 1.0976417, z: 3.70679}
---- !u!114 &2060083210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2060083208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 098d6cdd7aa62da448f254815f17a668, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2067139359
 GameObject:
   m_ObjectHideFlags: 0
@@ -12789,7 +12739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08358ca54a5fa84883d4b2ab3d8e02f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Teleport: {fileID: 0}
+  Teleport: {fileID: 1537133919}
 --- !u!1 &2091250404
 GameObject:
   m_ObjectHideFlags: 0

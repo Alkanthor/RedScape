@@ -13,4 +13,15 @@ public static class UnityStrings {
 
     public static string TAG_INIT_POINT = "InitPoint";
 
+    //tooltips
+    public static string TOOLTIP_CAR_GRIP = "Throw Away";
+    public static string TOOLTIP_CAR_TOUCHPAD = "Move Car";
+    public static string TOOLTIP_CAR_TRIGGER = "Reset Car";
+
+    public static string TOOLTIP_GENERAL_GRIP = "Grab";
+    public static string TOOLTIP_GENERAL_TOUCHPAD = "Teleport";
+    public static string TOOLTIP_GENERAL_TRIGGER = "Use";
+    public static string TOOLTOP_GENERAL_MENU_BUTTON = "Toggle Tooltips";
+
+
 }

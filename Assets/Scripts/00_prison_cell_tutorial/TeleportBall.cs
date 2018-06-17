@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SinusMovement : MonoBehaviour
+public class TeleportBall : MonoBehaviour
 {
 
     public float amplitude;

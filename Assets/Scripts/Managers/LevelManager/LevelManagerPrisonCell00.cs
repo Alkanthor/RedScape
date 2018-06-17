@@ -79,25 +79,26 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
 
         }
     }
-    private bool _usedTeleportTwice;
-    public bool UsedTeleportTwice
+    private bool _endLevel;
+    public bool EndLevel
     {
         get
         {
-            return _usedTeleportTwice;
+            return _endLevel;
         }
         set
         {
-            _usedTeleportTwice = value;
-            if(IsOutside && UsedTeleportTwice)
+            _endLevel = value;
+            if(IsOutside && EndLevel)
             {
-                Debug.Log("TODO: END LEVEL...CHANGE SCENE");
-                GameSceneManager.Instance.LoadNextScene(true);
+                Debug.Log("END LEVEL...CHANGE SCENE");
+                PlayerManager.Instance.LeftControllerType = UnityEnums.ControllerType.NO_TELEPORT;
+                PlayerManager.Instance.RightControllerType = UnityEnums.ControllerType.NO_TELEPORT;
+                GameSceneManager.Instance.LoadNextScene(true, false);
             }
 
         }
     }
-    private int _usedTeleportOutside = 0;
 
     private Coroutine teleportAppearCoroutine;
   
@@ -119,21 +120,32 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
 
     }
 
+    
     // Use this for initialization
     void Start () {
         GameStarted = false;
         TeleportAppear = false;
         GrabbedTeleport = false;
         IsOutside = false;
-        UsedTeleportTwice = false;
+        EndLevel = false;
 
         PlayerManager.Instance.LeftControllerType = UnityEnums.ControllerType.NO_TELEPORT;
         PlayerManager.Instance.RightControllerType = UnityEnums.ControllerType.NO_TELEPORT;
+        PlayerManager.Instance.ToggleTooltips(true);
+        PlayerManager.Instance.OnTeleportUsed.AddListener(OnTeleportUsed);
 
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void OnTeleportUsed(object sender, ControllerInteractionEventArgs e)
+    {
+        if(GrabbedTeleport && IsOutside)
+        {
+            EndLevel = true;
+        }
+    }
+
+    // Update is called once per frame
+    void Update () {
         //set teleport in main thread
         if(TeleportAppear && Teleport != null)
         {

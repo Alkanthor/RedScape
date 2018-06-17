@@ -55,6 +55,8 @@ GameObject:
   - component: {fileID: 4400656268398658}
   - component: {fileID: 65467126987225378}
   - component: {fileID: 114947842652560970}
+  - component: {fileID: 65293140589679538}
+  - component: {fileID: 114719553523643552}
   m_Layer: 0
   m_Name: collider_for_player
   m_TagString: Untagged
@@ -69,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1764149095802378}
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.16844511, y: 0.009000003, z: -9.81}
+  m_LocalPosition: {x: -0.16844511, y: 0.009, z: -7.691001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4400656268398658}
@@ -144,7 +146,19 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1764149095802378}
-  m_Mesh: {fileID: 4300000, guid: e3aa5fb9d5f98cb40bcc683cfa6be7ec, type: 3}
+  m_Mesh: {fileID: 4300000, guid: e5c9e034e2dc6a6418c586d068bd9c49, type: 3}
+--- !u!65 &65293140589679538
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1866905370345550}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.087452, y: 3.1952834, z: 2.4260192}
+  m_Center: {x: 0.050860405, y: 1.0976417, z: 2.104555}
 --- !u!65 &65326027487736550
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -167,8 +181,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 12.107702, y: 0.3389032, z: 2.586401}
-  m_Center: {x: 0.043304443, y: -0.0342111, z: -0.073913574}
+  m_Size: {x: 12.107702, y: 0.37382364, z: 2.586401}
+  m_Center: {x: 0.043304443, y: -0.01675088, z: -0.073913574}
 --- !u!114 &114561490184482304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -178,6 +192,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aef105c4cb03b4d4ab1e95d355d5b8ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114719553523643552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1866905370345550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098d6cdd7aa62da448f254815f17a668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114947842652560970
