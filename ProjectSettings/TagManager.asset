@@ -22,6 +22,8 @@ TagManager:
   - Fire
   - explosion
   - Teleportable
+  - InitPoint
+  - CarController
   layers:
   - Default
   - TransparentFX

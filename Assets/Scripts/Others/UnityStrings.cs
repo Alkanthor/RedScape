@@ -10,4 +10,7 @@ public static class UnityStrings {
     //tags
     public static string TAG_MAIN_CAMERA = "MainCamera";
     public static string TAG_TELEPORTABLE = "Teleportable";
+
+    public static string TAG_INIT_POINT = "InitPoint";
+
 }

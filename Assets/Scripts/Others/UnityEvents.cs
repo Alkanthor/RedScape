@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using VRTK;
 
 namespace UnityEvents
 {
@@ -21,5 +22,7 @@ namespace UnityEvents
     public class UnityGameObjectCollision : UnityEvent<GameObject, Collision> { }
     [System.Serializable]
     public class UnityGameObjectCollider : UnityEvent<GameObject, Collider> { }
+    [System.Serializable]
+    public class UnityEventObjectControllerInteractionEventArgs : UnityEvent<object, ControllerInteractionEventArgs> { }
 
 }
