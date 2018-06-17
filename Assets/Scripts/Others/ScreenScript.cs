@@ -72,7 +72,7 @@ public class ScreenScript : MonoBehaviour
 
     public void StartGame()
     {
-        levelManager.StartGame();
+        levelManager.GameStarted = true;
         startBtn.interactable = false;
         startBtn.GetComponentInChildren<Text>().text = "ESCAPE PRISON!";
         screenCount = textures.Length;

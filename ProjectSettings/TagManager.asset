@@ -21,6 +21,8 @@ TagManager:
   - shield
   - Fire
   - explosion
+  - InitPoint
+  - CarController
   layers:
   - Default
   - TransparentFX

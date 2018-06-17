@@ -18,6 +18,9 @@ public class GameSceneManager : MonoBehaviour {
     private bool _loadingScene = false;
 
     private bool _shouldLoadLevel = false;
+
+    private bool _adjustPlayerPosition = false;
+
     void Awake()
     {
         //Check if instance already exists
@@ -66,27 +69,36 @@ public class GameSceneManager : MonoBehaviour {
         if(_shouldLoadLevel)
         {
             //TODO: load level 
+            _shouldLoadLevel = false;
+        }
+        if(_adjustPlayerPosition)
+        {
+            var initPoint = GameObject.FindGameObjectWithTag(UnityStrings.TAG_INIT_POINT);
+            if(initPoint == null)
+            {
+                Debug.Log("Init point could not be found...player position not adjusted");
+            }
+            else
+            {
+                PlayerManager.Instance.AdjustPlayerPosition(initPoint.transform.position);
+            }
+            _adjustPlayerPosition = false;
         }
         Debug.Log("Scene " + _sceneNames[_sceneIndex] + " loaded succesfully.");
     }
 
 
-    public void InitScene()
+    public void InitScene(bool adjustPlayerPosition = false)
     {
-        if (!_loadingScene)
-        {
-            if (_startSceneIndex < _sceneNames.Count && _startSceneIndex >= 0)
-            {
-                LoadScene(_startSceneIndex);
-            }
-        }
+        LoadScene(_startSceneIndex, adjustPlayerPosition, false);
     }
-    public void LoadScene(int index, bool loading = false)
+    public void LoadScene(int index, bool adjustPlayerPosition = false, bool loading = false)
     {
         if(!_loadingScene)
         {
             if (index < _sceneNames.Count && index >= 0)
             {
+                _adjustPlayerPosition = adjustPlayerPosition;
                 _loadingScene = true;
                 _previousLoadedSceneIndex = _sceneIndex;
                 _sceneIndex = index;
@@ -107,13 +119,13 @@ public class GameSceneManager : MonoBehaviour {
         }
     }
 
-    public void LoadNextScene(bool loading = false)
+    public void LoadNextScene(bool adjustPlayerPosition = false, bool loading = false)
     {
         LoadScene(_sceneIndex + 1, loading);
 
     }
 
-    public void LoadPreviousScene(bool loading = false)
+    public void LoadPreviousScene(bool adjustPlayerPosition = false, bool loading = false)
     {
         LoadScene(_sceneIndex - 1, loading);
     }

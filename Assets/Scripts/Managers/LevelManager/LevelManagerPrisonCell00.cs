@@ -9,9 +9,35 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
 
     public static LevelManagerPrisonCell00 Instance;
 
-    public bool GameStarted { get; set; }
-    public bool TeleportAppear { get; set; }
+    private bool _gameStarted;
+    public bool GameStarted
+    {
+        get { return _gameStarted; }
+        set
+        {
 
+            if (value == true && !_gameStarted)
+            {
+                StartGame();
+            }
+            _gameStarted = value;
+        }
+    }
+    private bool _teleportAppear;
+    public bool TeleportAppear
+    {
+        get
+        {
+            return _teleportAppear;
+        }
+        set
+        {
+
+            _teleportAppear = value;
+           
+        }
+    }
+    public GameObject Teleport;
 
     private bool _grabbedTeleport;
     public bool GrabbedTeleport
@@ -25,7 +51,9 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
             
             if(!_grabbedTeleport && value)
             {
-                EnableTeleport(true, true);
+                PlayerManager.Instance.LeftControllerType = UnityEnums.ControllerType.NORMAL;
+                PlayerManager.Instance.RightControllerType = UnityEnums.ControllerType.NORMAL;
+
             }
             _grabbedTeleport = value;
         }
@@ -44,7 +72,8 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
             if(_isOutside)
             {
                 Debug.Log("Is Outside Of Cell");
-                EnableTeleport(false, true);
+                PlayerManager.Instance.LeftControllerType = UnityEnums.ControllerType.DISABLED_TELEPORT;
+                PlayerManager.Instance.RightControllerType = UnityEnums.ControllerType.DISABLED_TELEPORT;
             }
 
 
@@ -63,26 +92,13 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
             if(IsOutside && UsedTeleportTwice)
             {
                 Debug.Log("TODO: END LEVEL...CHANGE SCENE");
-                SceneManager.LoadScene(2, LoadSceneMode.Single);
+                GameSceneManager.Instance.LoadNextScene(true);
             }
 
         }
     }
     private int _usedTeleportOutside = 0;
-
-    [Header("Control Level Events")]
-    public UnityEvent TeleportAppearEvent;
-
-
-    [SerializeField]
-    private VRTK_Pointer LeftControllerPointer;
-    [SerializeField]
-    private VRTK_Pointer RightControllerPointer;
-    [SerializeField]
-    private VRTK_BasePointerRenderer LeftControllerPointerRenderer;
-    [SerializeField]
-    private VRTK_BasePointerRenderer RightControllerPointerRenderer;
-
+    private Coroutine teleportAppearCoroutine;
     //Awake is always called before any Start functions
     void Awake()
     {
@@ -109,45 +125,29 @@ public class LevelManagerPrisonCell00 : MonoBehaviour {
         IsOutside = false;
         UsedTeleportTwice = false;
 
-        EnableTeleport(false, false);
-        LeftControllerPointer.ActivationButtonReleased += OnTeleportUsed;
-        RightControllerPointer.ActivationButtonReleased += OnTeleportUsed;
+        PlayerManager.Instance.LeftControllerType = UnityEnums.ControllerType.NO_TELEPORT;
+        PlayerManager.Instance.RightControllerType = UnityEnums.ControllerType.NO_TELEPORT;
     }
 	
 	// Update is called once per frame
 	void Update () {
-
+        //set teleport in main thread
+        if(TeleportAppear && Teleport != null)
+        {
+            Teleport.SetActive(true);
+        }
 	}
 
-    private void OnTeleportUsed(object sender, ControllerInteractionEventArgs e)
-    {
-        Debug.Log("Player used teleport");
-        if(IsOutside)
-        {
-            
-            UsedTeleportTwice = true;
 
-        }
-    }
-
-    void EnableTeleport(bool enableTeleport, bool enableTeleportRenderer)
-    {
-        LeftControllerPointer.enableTeleport = enableTeleport;
-        RightControllerPointer.enableTeleport = enableTeleport;
-        LeftControllerPointerRenderer.enabled = enableTeleportRenderer;
-        RightControllerPointerRenderer.enabled = enableTeleportRenderer;
-    }
-    IEnumerator WaitForTeleportAppear()
+    private IEnumerator WaitForTeleportAppear()
     {
         int waitTime = Random.Range(3, 6);
         yield return new WaitForSeconds(waitTime);
-        TeleportAppearEvent.Invoke();
         TeleportAppear = true;
     }
     public void StartGame()
     {
         Debug.Log("game started");
-        GameStarted = true;
-        StartCoroutine(WaitForTeleportAppear());
+        teleportAppearCoroutine = StartCoroutine(WaitForTeleportAppear());
     }
 }
