@@ -332,5 +332,10 @@ public class PlayerManager : MonoBehaviour {
         var camOffset = (_playerCamera.transform.position - _playerArea.transform.position);
         _playerArea.transform.position = (position - camOffset);
     }
-   
+
+    public Vector3 GetPlayerPosition()
+    {
+        return _playerCamera.transform.position;
+    }
+
 }

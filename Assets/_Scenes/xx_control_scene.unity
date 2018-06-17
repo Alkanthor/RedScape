@@ -7510,7 +7510,7 @@ MonoBehaviour:
   _sceneNames:
   - 00_prison_cell_tutorial
   - 01_mars_facility
-  _startSceneIndex: 0
+  _startSceneIndex: 1
 --- !u!4 &1491674102
 Transform:
   m_ObjectHideFlags: 0

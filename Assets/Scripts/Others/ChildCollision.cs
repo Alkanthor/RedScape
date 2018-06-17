@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class ChildCollision : MonoBehaviour {
 
-    private ParentCollision _parent;
+    public ParentCollision _parent;
 
-    private void Start()
-    {
-        _parent = this.transform.parent.GetComponent<ParentCollision>();
-    }
     private void OnTriggerEnter(Collider other)
     {
         _parent.OnChildTriggerEnter.Invoke(this.gameObject, other);
