@@ -576,7 +576,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.5
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -756,7 +756,7 @@ MonoBehaviour:
   _doorText: {fileID: 1016866873558174}
   IdCardName: id_card_cabin
   AccessingDoorTime: 3
-  DoorOpenSpeed: 2.1
+  DoorOpenSpeed: 2.3
   DoorOpenLimit: 2.1
   _isAccessing: 0
 --- !u!222 &222929797839044844
