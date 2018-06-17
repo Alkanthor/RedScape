@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using VRTK;
 
 namespace UnityEvents
 {
@@ -17,4 +18,6 @@ namespace UnityEvents
     public class UnityEventGameObjectBool : UnityEvent<GameObject, bool> { }
     [System.Serializable]
     public class UnityEventGameObjectArray : UnityEvent<GameObject[]> { }
+    [System.Serializable]
+    public class UnityEventObjectControllerInteractionEventArgs : UnityEvent<object, ControllerInteractionEventArgs> { }
 }
