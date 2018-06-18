@@ -129,6 +129,7 @@ public class CaptchaManager : MonoBehaviour {
             {
                 this.gameObject.SetActive(false);
                 Debug.Log("You win the captcha game");
+                ComputerManager.Instance.NextStage();
                 return;
             }
         }

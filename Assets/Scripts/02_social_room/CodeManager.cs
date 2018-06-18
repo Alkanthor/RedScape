@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,12 +23,23 @@ public class CodeManager : MonoBehaviour {
     private bool _canWrite;
 
 
+    private void Awake()
+    {
+        LevelManagerSocialRoom02.Instance.SendGeneratedCode.AddListener(SendGeneratedCode);
+    }
+
+
     // Use this for initialization
     void Start()
     {
         _canWrite = true;
         _input = GetComponentInChildren<InputField>();
 
+    }
+
+    private void SendGeneratedCode(string code)
+    {
+        Password = code;
     }
 
     public void ClickKey(string character)
@@ -70,6 +82,7 @@ public class CodeManager : MonoBehaviour {
         if (correct)
         {
             _input.text = _inputCorrectText;
+            ComputerManager.Instance.NextStage();
         }
         else
         {

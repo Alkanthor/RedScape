@@ -739,7 +739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1455234168447450
 GameObject:
   m_ObjectHideFlags: 1
@@ -838,6 +838,7 @@ GameObject:
   - component: {fileID: 33233687988604102}
   - component: {fileID: 23925166832153962}
   - component: {fileID: 65992435719898942}
+  - component: {fileID: 114912674955514196}
   m_Layer: 0
   m_Name: Computer_screen
   m_TagString: Untagged
@@ -1260,7 +1261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4159442344877162
 Transform:
   m_ObjectHideFlags: 1
@@ -2784,7 +2785,7 @@ MonoBehaviour:
     m_TypeName: UnityEvents.UnityEventString, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   Sound: {fileID: 0}
-  Password: 123456
+  Password: 
   _inputCorrectText: '*CORRECT*'
   _inputIncorrectText: '*INCORRECT*'
   _correctTimeInterval: 2
@@ -4997,6 +4998,21 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114912674955514196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1556704311083384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5453473fdfd4664438982ef5e28d68d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CaptchaScreen: {fileID: 1978175403423484}
+  CodeScreen: {fileID: 1385903742103948}
+  CameraScreen: {fileID: 1445687109080976}
+  computerStage: 0
 --- !u!114 &114922931179444886
 MonoBehaviour:
   m_ObjectHideFlags: 1
