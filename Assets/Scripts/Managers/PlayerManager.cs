@@ -11,25 +11,13 @@ public class PlayerManager : MonoBehaviour {
     public static PlayerManager Instance;
 
     [HideInInspector]
-    public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnTriggerPressed;
-    [HideInInspector]
-    public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnTriggerReleased;
-    [HideInInspector]
-    public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnTriggerAxisChanged;
-    [HideInInspector]
-    public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnTouchpadPressed;
+    public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnCarReset;
     [HideInInspector]
     public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnTeleportUsed;
     [HideInInspector]
-    public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnTouchpadReleased;
+    public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnCarMove;
     [HideInInspector]
-    public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnTouchpadAxisChanged;
-    [HideInInspector]
-    public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnTouchpadTouchStart;
-    [HideInInspector]
-    public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnTouchpadTouchEnd;
-    [HideInInspector]
-    public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnButtonOnePressed;
+    public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnCarStop;
     [HideInInspector]
     public UnityEvents.UnityEventObjectControllerInteractionEventArgs OnButtonTwoPressed;
 
@@ -110,8 +98,7 @@ public class PlayerManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        //init unity events if null
-        if (OnTriggerPressed == null) OnTriggerPressed = new UnityEvents.UnityEventObjectControllerInteractionEventArgs();
+
 
 
         var manager = SDKSetupObject.GetComponent<VRTK_SDKManager>();
@@ -133,12 +120,79 @@ public class PlayerManager : MonoBehaviour {
         _rightControllerEvents.ButtonTwoPressed += OnButtonTwoPressedEvent;
         _leftControllerEvents.TouchpadReleased += OnTouchpadReleasedEvent;
         _rightControllerEvents.TouchpadReleased += OnTouchpadReleasedEvent;
-
+        _leftControllerEvents.TouchpadAxisChanged += OnTouchpadAxisChangedEvent;
+        _rightControllerEvents.TouchpadAxisChanged += OnTouchpadAxisChangedEvent;
+        _leftControllerEvents.TouchpadTouchEnd += OnTouchpadTouchEndEvent;
+        _rightControllerEvents.TouchpadTouchEnd += OnTouchpadTouchEndEvent;
+        _leftControllerEvents.TriggerPressed += OnTriggerPressedEvent;
+        _rightControllerEvents.TriggerPressed += OnTriggerPressedEvent;
         //initialize unityevents
-        if(OnTeleportUsed == null) OnTeleportUsed = new UnityEvents.UnityEventObjectControllerInteractionEventArgs();
+        if (OnTeleportUsed == null) OnTeleportUsed = new UnityEvents.UnityEventObjectControllerInteractionEventArgs();
+        if (OnCarMove == null) OnCarMove = new UnityEvents.UnityEventObjectControllerInteractionEventArgs();
+        if (OnCarStop == null) OnCarStop = new UnityEvents.UnityEventObjectControllerInteractionEventArgs();
+        if (OnCarReset == null) OnCarReset = new UnityEvents.UnityEventObjectControllerInteractionEventArgs();
 
     }
 
+    private void OnTriggerPressedEvent(object sender, ControllerInteractionEventArgs e)
+    {
+        var controllerEvents = sender as VRTK_ControllerEvents;
+
+        if (controllerEvents.gameObject == _leftControllerEvents.gameObject)
+        {
+            if (_leftControllerType == UnityEnums.ControllerType.CAR_CONTROLLER)
+            {
+                OnCarReset.Invoke(sender, e);
+            }
+        }
+        else if (controllerEvents.gameObject == _rightControllerEvents.gameObject)
+        {
+            if (_rightControllerType == UnityEnums.ControllerType.CAR_CONTROLLER)
+            {
+                OnCarReset.Invoke(sender, e);
+            }
+        }
+    }
+
+    private void OnTouchpadTouchEndEvent(object sender, ControllerInteractionEventArgs e)
+    {
+        var controllerEvents = sender as VRTK_ControllerEvents;
+
+        if (controllerEvents.gameObject == _leftControllerEvents.gameObject)
+        {
+            if (_leftControllerType == UnityEnums.ControllerType.CAR_CONTROLLER)
+            {
+                OnCarStop.Invoke(sender, e);
+            }
+        }
+        else if (controllerEvents.gameObject == _rightControllerEvents.gameObject)
+        {
+            if (_rightControllerType == UnityEnums.ControllerType.CAR_CONTROLLER)
+            {
+                OnCarStop.Invoke(sender, e);
+            }
+        }
+    }
+
+    private void OnTouchpadAxisChangedEvent(object sender, ControllerInteractionEventArgs e)
+    {
+        var controllerEvents = sender as VRTK_ControllerEvents;
+
+        if (controllerEvents.gameObject == _leftControllerEvents.gameObject)
+        {
+            if (_leftControllerType == UnityEnums.ControllerType.CAR_CONTROLLER)
+            {
+                OnCarMove.Invoke(sender, e);
+            }
+        }
+        else if (controllerEvents.gameObject == _rightControllerEvents.gameObject)
+        {
+            if (_rightControllerType == UnityEnums.ControllerType.CAR_CONTROLLER)
+            {
+                OnCarMove.Invoke(sender, e);
+            }
+        }
+    }
     private void OnTouchpadReleasedEvent(object sender, ControllerInteractionEventArgs e)
     {
         var controllerEvents = sender as VRTK_ControllerEvents;
