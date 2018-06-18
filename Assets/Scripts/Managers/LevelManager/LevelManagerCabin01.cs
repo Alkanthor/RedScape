@@ -42,6 +42,8 @@ public class LevelManagerCabin01 : MonoBehaviour {
         //check if it is initialized
         if (OnSafeCodeCheck == null) OnSafeCodeCheck = new UnityEvents.UnityEventGameObjectBool();
         if (OnLockerDoorCheck == null) OnLockerDoorCheck = new UnityEvents.UnityEventGameObjectBool();
+        PlayerManager.Instance.LeftControllerType = UnityEnums.ControllerType.NORMAL;
+        PlayerManager.Instance.RightControllerType = UnityEnums.ControllerType.NORMAL;
     }
     public void SetKeyDoorCombination(GameObject key, GameObject door)
     {

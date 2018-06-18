@@ -28,7 +28,6 @@ public class ScreenScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        levelManager = GameObject.Find("LevelManager").GetComponent<LevelManagerPrisonCell00>();
 
         actualScreen = 1;
         textures = Resources.LoadAll("GUI/Prison_Board", typeof(Texture));
@@ -72,7 +71,7 @@ public class ScreenScript : MonoBehaviour
 
     public void StartGame()
     {
-        levelManager.GameStarted = true;
+        LevelManagerPrisonCell00.Instance.GameStarted = true;
         startBtn.interactable = false;
         startBtn.GetComponentInChildren<Text>().text = "ESCAPE PRISON!";
         screenCount = textures.Length;

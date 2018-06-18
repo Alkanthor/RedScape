@@ -54,17 +54,17 @@ public class GameSceneManager : MonoBehaviour {
         //for debug 
         if(Input.GetKeyDown(KeyCode.B))
         {
-            LoadPreviousScene();
+            LoadPreviousScene(true, false);
         }
         if (Input.GetKeyDown(KeyCode.N))
         {
-            LoadNextScene();
+            LoadNextScene(true, false);
         }
     }
 
-    private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        SceneManager.SetActiveScene(arg0);
+        SceneManager.SetActiveScene(scene);
         UnloadScene(_previousLoadedSceneIndex);
         _loadingScene = false;
         if(_shouldLoadLevel)
@@ -74,7 +74,13 @@ public class GameSceneManager : MonoBehaviour {
         }
         if(_adjustPlayerPosition)
         {
-            var initPoint = GameObject.FindGameObjectWithTag(UnityStrings.TAG_INIT_POINT);
+            var initPoints = GameObject.FindGameObjectsWithTag(UnityStrings.TAG_INIT_POINT);
+            GameObject initPoint = null;
+            for(int i = 0; i < initPoints.Length; ++i)
+            {
+                if (initPoints[i].scene.name == scene.name)
+                    initPoint = initPoints[i];
+            }
             if(initPoint == null)
             {
                 Debug.Log("Init point could not be found...player position not adjusted");
@@ -123,13 +129,13 @@ public class GameSceneManager : MonoBehaviour {
 
     public void LoadNextScene(bool adjustPlayerPosition = false, bool loading = false)
     {
-        LoadScene(_sceneIndex + 1, loading);
+        LoadScene(_sceneIndex + 1, adjustPlayerPosition, loading);
 
     }
 
     public void LoadPreviousScene(bool adjustPlayerPosition = false, bool loading = false)
     {
-        LoadScene(_sceneIndex - 1, loading);
+        LoadScene(_sceneIndex - 1, adjustPlayerPosition, loading);
     }
 
 

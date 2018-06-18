@@ -52,7 +52,11 @@ public class AudioGeneratedCodePlayer : MonoBehaviour
         {
             Debug.Log("Radio stops playing code");
             _isPlaying = false;
-            StopCoroutine(playCoroutine);
+            if(playCoroutine != null)
+            {
+                StopCoroutine(playCoroutine);
+            }
+
         }
     }
 
