@@ -1,21 +1,24 @@
 fileFormatVersion: 2
 guid: c33fe03ae0fd4b949a851ad182d80397
-timeCreated: 1526368241
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: handle_right
-    100002: //RootNode
-    400000: handle_right
-    400002: //RootNode
+    100000: drawer_box
+    100002: handle
+    100004: //RootNode
+    400000: drawer_box
+    400002: handle
+    400004: //RootNode
     2100000: No Name
-    2300000: handle_right
-    2300002: //RootNode
-    3300000: handle_right
-    3300002: //RootNode
-    4300000: drawer_right
-    4300002: handle_right
+    2300000: drawer_box
+    2300002: handle
+    2300004: //RootNode
+    3300000: drawer_box
+    3300002: handle
+    3300004: //RootNode
+    4300000: drawer_front
+    4300002: drawer_box
+    4300004: handle
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -35,6 +38,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

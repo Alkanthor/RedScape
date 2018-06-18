@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1725313229449980}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0020758056, y: 0.48995727, z: -0.0023161315}
+  m_LocalPosition: {x: -0.0020758056, y: -0.479, z: -0.002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4856849429307606}
@@ -67,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1181578044348714}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4108528495286902}
@@ -87,8 +87,9 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e72efee5569f69647bfca7c2411a7ae5, type: 3}
+  - {fileID: 2100000, guid: 15a9f87a0af5d4d448e2ab9dbc34f827, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,8 +122,9 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e72efee5569f69647bfca7c2411a7ae5, type: 3}
+  - {fileID: 2100000, guid: 24ccbd6c3c2936349af0bf0bc74686f8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -148,14 +150,14 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1181578044348714}
-  m_Mesh: {fileID: 4300000, guid: e72efee5569f69647bfca7c2411a7ae5, type: 3}
+  m_Mesh: {fileID: 4300002, guid: 70d8aa7059a5633488dd691eb8550095, type: 3}
 --- !u!33 &33606760524644206
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1725313229449980}
-  m_Mesh: {fileID: 4300002, guid: e72efee5569f69647bfca7c2411a7ae5, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 70d8aa7059a5633488dd691eb8550095, type: 3}
 --- !u!65 &65952341871757410
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -166,8 +168,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.018020557, y: 0.94206846, z: 0.51}
-  m_Center: {x: -0.001766053, y: 0.5130283, z: -3.2194918e-16}
+  m_Size: {x: 0.018020557, y: 0.94579494, z: 0.51}
+  m_Center: {x: -0.001766053, y: 0.008126676, z: -2.5008648e-18}
 --- !u!65 &65958774130619990
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -178,5 +180,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.22999999, y: 0.07226619, z: 0.18}
-  m_Center: {x: 0, y: -0.45385712, z: 0.00000032782555}
+  m_Size: {x: 0.22999999, y: 0.05730772, z: 0.18}
+  m_Center: {x: 0, y: 0.019756109, z: 0.00000032782555}
