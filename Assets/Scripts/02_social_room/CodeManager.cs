@@ -17,7 +17,6 @@ public class CodeManager : MonoBehaviour {
     [SerializeField]
     private float _correctTimeInterval = 2;
 
-    private CanvasGroup _canvasGroup;
     private bool _isAppearing;
     private InputField _input;
     private bool _canWrite;
@@ -27,8 +26,6 @@ public class CodeManager : MonoBehaviour {
     void Start()
     {
         _canWrite = true;
-        _canvasGroup = GetComponent<CanvasGroup>();
-        _canvasGroup.alpha = 0;
         _input = GetComponentInChildren<InputField>();
 
     }
@@ -56,7 +53,7 @@ public class CodeManager : MonoBehaviour {
         }
         else
         {
-            CorrectInputCheck(true);
+            CorrectInputCheck(false);
         }
     }
 
