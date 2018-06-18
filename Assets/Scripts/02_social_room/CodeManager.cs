@@ -8,6 +8,7 @@ public class CodeManager : MonoBehaviour {
     public UnityEvents.UnityEventString OnInputEntered;
     public AudioSource Sound;
 
+    public string Password;
 
     [SerializeField]
     private string _inputCorrectText;
@@ -49,10 +50,17 @@ public class CodeManager : MonoBehaviour {
     public void Enter()
     {
         Debug.Log("entered input is " + _input.text);
-        OnInputEntered.Invoke(_input.text);
+        if(_input.text == Password)
+        {
+            CorrectInputCheck(true);
+        }
+        else
+        {
+            CorrectInputCheck(true);
+        }
     }
 
-    public void CorrectInputCheck(GameObject door, bool correct)
+    public void CorrectInputCheck(bool correct)
     {
         Debug.Log(this.name + ": correct input check");
         StartCoroutine(CorrectInput(correct));
