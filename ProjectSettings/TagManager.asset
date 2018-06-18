@@ -25,6 +25,8 @@ TagManager:
   - InitPoint
   - CarController
   - Teleport
+  - Ground
+  - SecretKey
   layers:
   - Default
   - TransparentFX

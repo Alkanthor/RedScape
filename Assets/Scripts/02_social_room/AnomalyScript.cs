@@ -10,7 +10,7 @@ public class AnomalyScript : MonoBehaviour
 {
     public Transform[] Anomalies;
     public float AnomalyTeleportDelay = 4;
-    public AudioSource teleportSound;
+    public AudioClip TeleportSound;
 
     private Dictionary<GameObject, int> currentAnomalyIndexes;
     private ParentCollision parentCollisitionEvents;
@@ -63,7 +63,9 @@ public class AnomalyScript : MonoBehaviour
             nextAnomalyIndex = 0;
         Debug.Log("teleporting object " + objectToTeleport.name + " from " + Anomalies[currentAnomalyIndexes[objectToTeleport]].name + " to " + Anomalies[nextAnomalyIndex].name);
         objectToTeleport.transform.position = Anomalies[nextAnomalyIndex].position;
-        teleportSound.Play();
+        var anomalyAudioSource = Anomalies[currentAnomalyIndexes[objectToTeleport]].GetComponent<AudioSource>();
+        anomalyAudioSource.clip = TeleportSound;
+        anomalyAudioSource.Play();
 
     }
 
