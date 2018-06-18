@@ -14,6 +14,7 @@ public class Lamp : VRTK_InteractableObject
     public override void StartUsing(VRTK_InteractUse usingObject)
     {
         base.StartUsing(usingObject);
+
         TurnLight();
     }
 
@@ -25,6 +26,7 @@ public class Lamp : VRTK_InteractableObject
     protected void Start()
     {
         lampLight = this.GetComponentInChildren<Light>();
+        lampLight.enabled = false;
     }
 
     protected override void Update()
