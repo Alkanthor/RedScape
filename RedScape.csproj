@@ -674,6 +674,9 @@
     <Compile Include="Assets\Scripts\01_cabin\RadioController.cs" />
     <Compile Include="Assets\Scripts\01_cabin\WhereIsMyBatteryManager.cs" />
     <Compile Include="Assets\Scripts\02_social_room\AnomalyScript.cs" />
+    <Compile Include="Assets\Scripts\02_social_room\CarAssemblyPuzzle.cs" />
+    <Compile Include="Assets\Scripts\02_social_room\CardAttach.cs" />
+    <Compile Include="Assets\Scripts\02_social_room\CarPuzzle.cs" />
     <Compile Include="Assets\Scripts\02_social_room\SecretCabinetDoorController.cs" />
     <Compile Include="Assets\Scripts\02_social_room\SecretCabinetPuzzle.cs" />
     <Compile Include="Assets\Scripts\Managers\GameSceneManager.cs" />
@@ -700,6 +703,8 @@
     <Compile Include="Assets\Scripts\Others\UnityEvents.cs" />
     <Compile Include="Assets\Scripts\Others\UnityStrings.cs" />
     <Compile Include="Assets\Scripts\PolicyScripts\BatteryPolicy.cs" />
+    <Compile Include="Assets\Scripts\PolicyScripts\CarWheelPolicy.cs" />
+    <Compile Include="Assets\Scripts\PolicyScripts\IdCardPolicy.cs" />
     <Compile Include="Assets\Scripts\PolicyScripts\KeyLockerPolicy.cs" />
     <Compile Include="Assets\Scripts\PolicyScripts\TeleportHeadsetCollisionFadePolicy.cs" />
     <Compile Include="Assets\Scripts\PolicyScripts\TeleportHeightAdjustPolicy.cs" />

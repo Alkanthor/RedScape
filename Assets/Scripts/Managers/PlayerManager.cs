@@ -92,7 +92,10 @@ public class PlayerManager : MonoBehaviour {
             //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
             Destroy(gameObject);
         }
-
+        if (OnTeleportUsed == null) OnTeleportUsed = new UnityEvents.UnityEventObjectControllerInteractionEventArgs();
+        if (OnCarMove == null) OnCarMove = new UnityEvents.UnityEventObjectControllerInteractionEventArgs();
+        if (OnCarStop == null) OnCarStop = new UnityEvents.UnityEventObjectControllerInteractionEventArgs();
+        if (OnCarReset == null) OnCarReset = new UnityEvents.UnityEventObjectControllerInteractionEventArgs();
     }
 
     // Use this for initialization
@@ -127,10 +130,7 @@ public class PlayerManager : MonoBehaviour {
         _leftControllerEvents.TriggerPressed += OnTriggerPressedEvent;
         _rightControllerEvents.TriggerPressed += OnTriggerPressedEvent;
         //initialize unityevents
-        if (OnTeleportUsed == null) OnTeleportUsed = new UnityEvents.UnityEventObjectControllerInteractionEventArgs();
-        if (OnCarMove == null) OnCarMove = new UnityEvents.UnityEventObjectControllerInteractionEventArgs();
-        if (OnCarStop == null) OnCarStop = new UnityEvents.UnityEventObjectControllerInteractionEventArgs();
-        if (OnCarReset == null) OnCarReset = new UnityEvents.UnityEventObjectControllerInteractionEventArgs();
+        ToggleTooltips(false);
 
     }
 
@@ -247,8 +247,13 @@ public class PlayerManager : MonoBehaviour {
 
     private void ChangeControllerSetup(int controllerId)
     {
+        
        if(controllerId == LEFT_CONTROLLER_ID)
         {
+            if(_leftToggleTooltips)
+            {
+                ToggleTooltips(LEFT_CONTROLLER_ID, false);
+            }
             switch(LeftControllerType)
             {
                 case UnityEnums.ControllerType.NO_TELEPORT:
@@ -274,9 +279,17 @@ public class PlayerManager : MonoBehaviour {
                 case UnityEnums.ControllerType.NOT_INITIALIZED:
                     break;
             }
+            if (_leftToggleTooltips)
+            {
+                ToggleTooltips(LEFT_CONTROLLER_ID, true);
+            }
         }
        else if(controllerId == RIGHT_CONTROLLER_ID)
         {
+            if (_rightToggleTooltips)
+            {
+                ToggleTooltips(RIGHT_CONTROLLER_ID, false);
+            }
             switch (LeftControllerType)
             {
                 case UnityEnums.ControllerType.NO_TELEPORT:
@@ -301,6 +314,10 @@ public class PlayerManager : MonoBehaviour {
                     break;
                 case UnityEnums.ControllerType.NOT_INITIALIZED:
                     break;
+            }
+            if (_rightToggleTooltips)
+            {
+                ToggleTooltips(RIGHT_CONTROLLER_ID, true);
             }
         }
     }

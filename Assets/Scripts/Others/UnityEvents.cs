@@ -7,9 +7,13 @@ using VRTK;
 namespace UnityEvents
 {
     [System.Serializable]
+    public class UnityEventEmpty : UnityEvent { }
+    [System.Serializable]
     public class UnityEventString : UnityEvent<string> { }
     [System.Serializable]
     public class UnityEventBool : UnityEvent<bool> { }
+    [System.Serializable]
+    public class UnityEventBoolTransform : UnityEvent<bool, Transform> { }
     [System.Serializable]
     public class UnityEventGameObject : UnityEvent<GameObject> { }
     [System.Serializable]
