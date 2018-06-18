@@ -5799,7 +5799,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000014175454880, guid: 910be6460ba00dc4bb13725c3ff972cb, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4000012396937550, guid: 910be6460ba00dc4bb13725c3ff972cb, type: 2}
       propertyPath: m_RootOrder
@@ -5807,11 +5807,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 414302, guid: 910be6460ba00dc4bb13725c3ff972cb, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 427840, guid: 910be6460ba00dc4bb13725c3ff972cb, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 11415184, guid: 910be6460ba00dc4bb13725c3ff972cb, type: 2}
       propertyPath: grip
@@ -7138,7 +7138,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000014175454880, guid: 910be6460ba00dc4bb13725c3ff972cb, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4000012396937550, guid: 910be6460ba00dc4bb13725c3ff972cb, type: 2}
       propertyPath: m_RootOrder
@@ -7146,11 +7146,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 414302, guid: 910be6460ba00dc4bb13725c3ff972cb, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 427840, guid: 910be6460ba00dc4bb13725c3ff972cb, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 11415184, guid: 910be6460ba00dc4bb13725c3ff972cb, type: 2}
       propertyPath: grip
@@ -7510,7 +7510,8 @@ MonoBehaviour:
   _sceneNames:
   - 00_prison_cell_tutorial
   - 01_mars_facility
-  _startSceneIndex: 1
+  - Sandbox
+  _startSceneIndex: 2
 --- !u!4 &1491674102
 Transform:
   m_ObjectHideFlags: 0
@@ -10219,22 +10220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c8fed00c7c6246b4fcb6075ef58e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnTriggerPressed:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  OnTriggerReleased:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  OnTriggerAxisChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  OnTouchpadPressed:
+  OnCarReset:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
@@ -10244,27 +10230,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  OnTouchpadReleased:
+  OnCarMove:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  OnTouchpadAxisChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  OnTouchpadTouchStart:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  OnTouchpadTouchEnd:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  OnButtonOnePressed:
+  OnCarStop:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEvents.UnityEventObjectControllerInteractionEventArgs, Assembly-CSharp,
