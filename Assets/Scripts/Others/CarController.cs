@@ -1,23 +1,29 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
 
 public class CarController : MonoBehaviour {
 
+    public UnityEvents.UnityEventBoolTransform IsCardGrabbed;
+
     public float maxAcceleration = 3f;
+    public Transform GrabCardPoint; 
 
     private float acceleration = 0.05f;
     private float movementSpeed = 0f;
     private float rotationSpeed = 180f;
     private Vector2 touchAxis;
     private float triggerAxis;
+
     private Rigidbody rb;
     private Vector3 defaultPosition;
     private Quaternion defaultRotation;
 
+    private ParentCollision _parentCollision;
     private bool isOnGround = true;
-
+    private GameObject _idCard;
     public void SetCarAxis(object sender, ControllerInteractionEventArgs e)
     {
         touchAxis = e.touchpadAxis;
@@ -43,16 +49,43 @@ public class CarController : MonoBehaviour {
 
     private void Start()
     {
+        if (IsCardGrabbed == null) IsCardGrabbed = new UnityEvents.UnityEventBoolTransform();
+        _parentCollision = this.GetComponent<ParentCollision>();
+        _parentCollision.OnChildTriggerEnter.AddListener(CardGrabbed);
+        _parentCollision.OnChildTriggerExit.AddListener(CardUngrabbed);
         PlayerManager.Instance.OnCarMove.AddListener(SetCarAxis);
         PlayerManager.Instance.OnCarReset.AddListener(ResetCar);
         PlayerManager.Instance.OnCarStop.AddListener(StopCar);
+
+        //for testing
         PlayerManager.Instance.LeftControllerType = UnityEnums.ControllerType.CAR_CONTROLLER;
+    }
+
+    public void SetIdCard(GameObject idCard)
+    {
+        Debug.Log("Id card Set " + idCard);
+        _idCard = idCard;
+    }
+    private void CardGrabbed(GameObject child, Collider collider)
+    {
+        if(collider.gameObject.name == _idCard.name)
+        {
+            IsCardGrabbed.Invoke(true, GrabCardPoint);
+        }
+    }
+
+    private void CardUngrabbed(GameObject child, Collider collider)
+    {
+        if (collider.gameObject.name == _idCard.name)
+        {
+            IsCardGrabbed.Invoke(false, GrabCardPoint);
+        }
     }
     private void FixedUpdate()
     {
         if(!isOnGround)
         {
-            touchAxis = Vector2.zero;
+           // touchAxis = Vector2.zero;
         }
 
         CalculateSpeed();
